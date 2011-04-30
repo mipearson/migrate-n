@@ -130,7 +130,7 @@ nmlength=10
 datatype=BrownianMicrosatelliteData
 include-unknown=NO
 inheritance-scalars={1.00000000000000000000}
-population-relabel={1, 1}
+population-relabel={1, 2}
 usertree=AUTOMATIC
 #
 ################################################################################
@@ -374,7 +374,7 @@ fst-type=THETA
 #        this describes a circular stepping stone model with 5 symmetric rates
 #         and independent sizes, a very basic stepping stone with 2 parameters would
 #        look like this custom-migration={mm00m mmm00 0mmm0 00mmm m00mm}
-custom-migration={**}
+custom-migration={*0**}
 #
 # Influence of geography on migration rate
 # a distance matrix between populations changes the migration rate matrix so that
@@ -458,15 +458,15 @@ bayes-updatefreq=0.500000
 bayes-posteriorbins=500 500
 bayes-posteriormaxtype=TOTAL
 bayes-file=YES:bayesfile
-bayes-allfile=YES:1:bayesallfile
+bayes-allfile=NO
 bayes-proposals= THETA SLICE Sampler
 bayes-proposals= MIG SLICE Sampler
 bayes-priors= THETA UNIFORMPRIOR: 0.000000 20.000000 2.000000 
 bayes-priors= MIG UNIFORMPRIOR: 0.000000 20.000000 2.000000 
 #
 long-chains=1
-long-inc=200
-long-sample=500
+long-inc=100
+long-sample=5000
 burn-in=10000 
 #
 #-------------------------------------------------------------------------------
