@@ -1,0 +1,14 @@
+migrate-n
+migrate-n-mpi
+*.o
+MIGRATE_SUBVERSION
+Makefile
+SFMT-alti.h
+SFMT-params.h
+SFMT-params19937.h
+SFMT-sse2.h
+SFMT.c
+SFMT.h
+config.log
+config.status
+*.a
