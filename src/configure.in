@@ -1,0 +1,413 @@
+dnl Configure migrate version 3.1 and newer 
+dnl Process this file with autoconf to produce a configure script.
+dnl @MIGRATEVERSION@
+dnl @prefix@
+dnl @ARCH@
+dnl @MACOSVERSION@
+dnl @SYSTEM@
+dnl @SYSTEMVERSION@
+dnl @EXCEPTION@
+dnl @STDCPLUS@
+dnl @CC@
+dnl @CXX@
+dnl @INSTALL@
+dnl @TAR@
+dnl @MPICC@
+dnl @GMAKE@
+dnl @CPUTYPE@
+dnl @OSTYPE@
+dnl @MT_FILES@
+dnl @HARDWARECFLAGS@ 
+dnl @PAPERFORMAT@
+dnl @THREADCFLAGS@
+dnl @LIBS@
+dnl @THREADLIB@ 
+dnl @RANDOMLIBS@
+dnl Check for a file in the source
+AC_INIT(main.c)
+dnl Checks for system and operating system.
+AC_CANONICAL_SYSTEM
+AC_SUBST(CPUTYPE)
+CPUTYPE="$host_cpu"
+AC_SUBST(OSTYPE)
+OSTYPE="$host_os"	
+AC_SUBST(MIGRATESUBVERSION)
+MIGRATESUBVERSION=""
+MIGRATESUBVERSION=`svn info | grep Revision | awk '{printf "%s",\$2}'`;
+`svn info | grep Revision | awk '{printf "MIGRATESUBVERSION=%s\n",\$2}' > MIGRATE_SUBVERSION`
+dnl Checks for programs.
+AC_SUBST(CFLAGS)
+
+dnl to allow the PDF subsystem (haru) to compile using gmake
+AC_CHECK_PROG(GMAKE, gmake, gmake, make)
+
+dnl to allow the PDF subsystem (haru) to compile the correct makefile.SYSTEM
+OS=`uname -s`
+echo $OS
+case $OS in
+     Linux) SYSTEM="gcc"; 
+     	    SYSTEMVERSION="";
+	    CPUINFO="egrep  'name|GHz|MHz' /proc/cpuinfo";;
+     Darwin) SYSTEM="osx";
+	    CPUINFO="sysctl machdep.cpu.brand_string";
+     	     SYSTEMVERSION=`sw_vers | grep ProductVersion | awk '{ printf "%s", $2 }' | tr -d "." |  awk '{if(substr($1,1,3)+0.0 > 105) { printf "-DSNOWLEOPARD"}}'`;;
+esac
+
+#SYSTEM="osx"
+AC_SUBST(SYSTEM)
+AC_SUBST(CPUINFO)
+echo $SYSTEMVERSION
+echo "===============================";
+echo $MIGRATESUBVERSION .
+echo $host_vendor;
+echo $host_os + " " + $OS + " " + $SYSTEMVERSION;
+echo $host_cpu;
+echo "===============================";
+echo "";
+
+dnl to allow for compilers that fail to recognize -fexceptions
+AC_SUBST(EXCEPTION)
+dnl to allow for compilers that use -lstdc++ or not
+AC_SUBST(STDCPLUS)
+AC_PROG_CC(gcc icc pgcc cc)
+AC_PROG_CXX(g++ xlC cxx cc++ aCC c++ )
+case $CC in
+             gcc) EXCEPTION="-fexceptions";
+		  STDCPLUS="-lstdc++";
+	     	  case "$host_vendor" in
+	     	  apple) CFLAGS="-O3 -tree-vectorize -Wall -funroll-loops -fomit-frame-pointer  -falign-loops=16  -D$CPUTYPE" ;
+	     	  SYSTEM="osx";;
+	     	  *) CFLAGS="-O3 -Wall -funroll-loops -fomit-frame-pointer  -falign-loops=16  -D$CPUTYPE" ;
+	     	  SYSTEM="gcc";;
+	     	  esac ;;
+     	     pgcc) CFLAGS="-B -fast ";
+	     	  SYSTEM="gcc";;
+#            icc)  CFLAGS=" -O3 -tpp7 -xKW -pad -ip ";
+             icc)  CFLAGS=" -fast ";
+	     	  SYSTEM="icc";;
+             cc)   case "$host_vendor" in
+	     	   sgi) CFLAGS="-O2 -Xcpluscomm -DSGI";
+	     		SYSTEM="gcc";;
+		   dec) CFLAGS="-fast -inline speed -DCOMPAQ"; libdec="-lm";
+	     	   	SYSTEM="gcc";;
+                   ibm) CFLAGS="-O3 -Dinline='/*inline*/' -q cpluscmt -DIBM";
+	     	         SYSTEM="aixcc";;
+                   *)   CFLAGS="-O " ;
+	     	        SYSTEM="gcc";;
+             esac;;
+	     xlc) CFLAGS="-O3  -Dinline='/*inline*/' -q cpluscmt -DIBM";
+	     	  SYSTEM="aixcc";; 
+	     xlc_r) CFLAGS="-O3  -Dinline='/*inline*/' -q cpluscmt -DIBM";
+	     	  SYSTEM="aixcc";;
+	     xlC) CFLAGS="-O3  -Dinline='/*inline*/' -q cpluscmt -DIBM";
+	     	  SYSTEM="aixcc";; 
+	     xlC_r) CFLAGS="-O3  -Dinline='/*inline*/' -q cpluscmt -DIBM";
+	     	  SYSTEM="aixcc";;
+esac
+echo "+++++++++++++++++++++++++++++++++++++++"
+echo $CC 
+echo $CXX
+echo $CFLAGS
+echo "+++++++++++++++++++++++++++++++++++++++"
+
+AC_PROG_INSTALL
+dnl Checks for libraries.
+
+
+AC_SUBST(RANDOMCFLAGS)
+AC_SUBST(RANDOMLIBS)
+
+RANDOMLIBS=" "
+RANDOMCFLAG=" "
+
+
+AC_SUBST(TAR)
+TAR="tar"
+
+AC_SUBST(THREADCFLAGS)
+AC_SUBST(THREADLIB)
+THREADLIBS=" "
+
+case "`$ac_config_guess`" in
+	powerpc-apple-darwin*) LIBS=""; TAR="gnutar";;
+	*) ;;
+esac
+	
+AC_CHECK_LIB(pthread, pthread_create, [
+        pthreadlib=yes
+        pthreadlib="-lpthread" ])
+if test -n "$pthreadlib"; then
+	THREADLIB="$pthreadlib"
+fi
+savelibs=$LIBS
+AC_SUBST(MPICC)
+AC_CHECK_LIB(mpi,MPI_Init)
+
+case "`$ac_config_guess`" in
+	powerpc-apple-darwin*) MPICC="mpicc";;
+	*aix*) MPICC="mpcc_r";;
+	*) MPICC=mpicc;;
+esac
+LIBS=$savelibs
+
+AC_CHECK_LIB(m, exp)
+
+if test -n "$libdec"; then
+	LIBS="$libdec"
+fi
+
+
+dnl Checks for header files.
+AC_CONFIG_HEADER(conf.h)
+AC_HEADER_STDC
+AC_CHECK_HEADERS(limits.h strings.h)
+
+if test -n "$pthreadlib"; then
+	AC_CHECK_HEADERS(pthread.h,THREADCFLAGS="-D_REENTRANT -DPTHREADS")
+fi
+
+
+case "`$ac_config_guess`" in
+	powerpc-apple-darwin*) 	AC_CHECK_HEADERS(pthread.h,THREADCFLAGS="-D_REENTRANT -DPTHREADS");;
+	*) ;;
+esac
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_TYPE_SIZE_T
+AC_CHECK_TYPE(int, long)
+AC_STRUCT_TM
+AC_C_INLINE
+
+dnl Checks for library functions.
+AC_TYPE_SIGNAL
+AC_FUNC_STRFTIME
+AC_CHECK_FUNCS(strcspn)
+AC_CHECK_FUNCS(strsep)
+
+case "`$ac_config_guess`" in
+        *aix*) ;;
+        *) AC_CHECK_FUNCS(lgamma);;
+esac
+
+dnl checking for architecture settings
+AC_SUBST(ARCH)
+ARCH=""
+AC_ARG_ENABLE(allmac,
+  [AS_HELP_STRING([--enable-allmac], [enable Macintosh architectures: intel, intel64, powerpc])], 
+  have_allmac=$enableval, have_allmac=no)
+
+AC_ARG_ENABLE(macintel,
+  [AS_HELP_STRING([--enable-macintel], [enable Macintosh architectures: intel, intel64])], 
+  have_macintel=$enableval, have_macintel=no)
+
+AC_ARG_ENABLE(macppc,
+  [AS_HELP_STRING([--enable-macppc], [enable Macintosh architectures: ppc])], 
+  have_macppc=$enableval, have_macppc=no)
+
+if test "$have_allmac" = "yes"; then
+  AC_DEFINE(HAVE_ALLMAC, 1, [Define to enable multiple architectures])
+  ARCH="-arch i386 -arch x86_64 -arch ppc "
+  MACOSVERSION=" -mmacosx-version-min=10.4"
+  CPUTYPE="universal"
+  OSTYPE="MacOS10.4"		 
+fi
+
+if test "$have_macintel" = "yes"; then
+  AC_DEFINE(HAVE_MACINTEL, 1, [Define to enable multiple architectures])
+  ARCH=" -arch i386 -arch x86_64 "
+  MACOSVERSION=" -mmacosx-version-min=10.6"
+  CPUTYPE="Intel"
+  OSTYPE="MacOS10.6"		 
+fi
+
+if test "$have_macppc" = "yes"; then
+  AC_DEFINE(HAVE_MACPPC, 1, [Define to enable multiple architectures])
+  ARCH="-arch ppc "
+  CPUTYPE="PPC"
+  MACOSVERSION=" -mmacosx-version-min=10.5"
+  OSTYPE="MacOS10.5"
+  SYSTEMVERSION=""			 		 
+fi
+
+AC_SUBST(MACOSVERSION)
+MACOSVERSION=""
+AC_ARG_ENABLE(macos,
+  [AS_HELP_STRING([--enable-macos], [enable older Macintosh systems from 10.4])], 
+  have_macos=$enableval, have_macos=no)
+
+if test "$have_macos" = "yes"; then
+  AC_DEFINE(HAVE_MACOS, 1, [Define to enable older Operating Systems])
+  MACOSVERSION=" -mmacosx-version-min=10.4"
+  OSTYPE="MacOS10.4+"
+  SYSTEMVERSION=""			 
+fi
+
+dnl replacing system version
+AC_SUBST(SYSTEMVERSION)
+
+
+dnl the user can choose which zlib to use
+AC_ARG_WITH(
+	[zlib],
+	AS_HELP_STRING([--with-zlib=shipped|system|no],[Specify the zlib to use, shipped or system. Default is to autodetect system and fallback to shipped.]),
+	[[zlib=$withval]],
+	[[zlib=detect]]
+)
+
+dnl Check the value for the --with-zlib switch
+AC_MSG_CHECKING([which zlib implementation to use])
+case "$zlib" in
+     "detect")
+	AC_MSG_RESULT([autodetect])
+	AC_CHECK_LIB(z, main,
+		[zlib="system"],
+		[zlib="shipped"]
+	)
+	;;
+     "shipped")
+	AC_MSG_RESULT(shipped)
+	(cd zlib;configure -static)
+	;;
+     "system")
+	AC_MSG_RESULT(system)
+	AC_CHECK_LIB(z, main, [zlib="system"],
+        		AC_MSG_ERROR([migrate did not find zlib on your system])
+	)
+	;;
+      "no")
+	AC_MSG_RESULT(none)
+	#AC_MSG_ERROR([migrate setting changed so that no compression is available])
+        ;;
+      *)
+	AC_MSG_RESULT()
+	AC_MSG_ERROR([Unknown zlib option "$zlib". Use either "system" or "shipped".])
+	;;
+esac
+if [[ "$zlib" = "shipped" ]]; then
+   ZLIB="-lz"
+   ZLIBDIR="-Lzlib"
+   ZLIBINCL="-Izlib"
+   ZLIBHARUINCL="-I../zlib"
+   ZLIBTARGET="zlib"	
+   NOZLIB=""
+   HAVE_ZNZ=" -DHAVE_ZLIB -DZNZ"
+#   AC_CONFIG_FILES(zlib/Makefile)
+elif [[ "$zlib" = "system" ]]; then
+     ZLIB="-lz"
+     ZLIBDIR=""
+     ZLIBINCL=""
+     ZLIBHARUINCL=""	
+     ZLIBTARGET="zlibsystem"
+     NOZLIB=""
+     HAVE_ZNZ=" -DHAVE_ZLIB -DZNZ"
+     AC_CHECK_FUNCS(gzbuffer)
+elif [[ "$zlib" = "no" ]]; then
+     ZLIB=""
+     ZLIBDIR=""
+     ZLIBINCL=""
+     ZLIBHARUINCL=""	
+     ZLIBTARGET=""
+     NOZLIB="-DNOZLIB"
+     HAVE_ZNZ=""
+fi
+
+dnl make ZLIB and ZLIBDIR visible to Makefiles
+AC_SUBST([ZLIBTARGET])
+AC_SUBST([ZLIB])
+AC_SUBST([ZLIBDIR])
+AC_SUBST([ZLIBINCL])
+AC_SUBST([ZLIBHARUINCL])
+AC_SUBST([NOZLIB])
+AC_SUBST([HAVE_ZNZ])
+
+dnl checking for SSE2 or ALTIVEC
+AC_SUBST(HARDWARECFLAGS)
+HARDWARECFLAGS=""
+AC_ARG_ENABLE(sse2,
+  [AS_HELP_STRING([--enable-sse2], [enable SSE2 optimizations for random number generator])], 
+  have_sse2=$enableval, have_sse2=no)
+
+AC_ARG_ENABLE(altivec, 
+  [AS_HELP_STRING([--enable-altivec], [enable Altivec optimizations for random number generator])],
+  have_altivec=$enableval, have_altivec=no)
+
+if test "$have_allmac" = "no"; then
+if test "$have_sse2" = "yes"; then
+  AC_DEFINE(HAVE_SSE2, 1, [Define to enable SSE2 optimizations])
+  HARDWARECFLAGS="-msse2 -DSSE2"
+fi
+
+if test "$have_altivec" = "yes"; then
+  AC_DEFINE(HAVE_ALTIVEC, 1, [Define to enable Altivec optimizations.])
+  HARDWARECFLAGS=" -faltivec -maltivec"
+fi
+fi
+
+dnl substitute which files to compile for mersenne twister
+AC_SUBST(MT_FILES)
+MT_FILES="SFMT.c"
+# SFMT.h SFMT-params19937.h"
+if test "$have_sse2" = "yes"; then
+MT_FILES="SFMT.c"
+# SFMT.h SFMT-sse2.h SFMT-sse2.c"
+fi
+if test "$have_altivec" = "yes"; then
+MT_FILES="SFMT.c"
+# SFMT.h SFMT-alti.h SFMT-alti.c"
+fi
+echo "Copying source from Mersenne-Twister directory into main source directory"
+sh copy_mt_to_src
+
+AC_SUBST(PAPERFORMAT)
+PAPERFORMAT="-DLETTERPAPER"
+AC_ARG_ENABLE(A4,
+  [AS_HELP_STRING([--enable-A4], [use A4 paper format for PDF outputfile -- Default is Letter paper format])], 
+  have_A4=$enableval, have_A4=no)
+
+if test "$have_A4" = "yes"; then
+  PAPERFORMAT="-DA4PAPER"
+fi
+
+
+
+
+AC_OUTPUT(Makefile)
+echo "-----------------------------------------------------------------------"
+echo " MIGRATE-N is now setup"
+echo " to compile the program you need to type one of the"
+echo " commands below (ordered by preference):"
+echo " "
+echo " SINGLE CPU machines "
+echo "     make           # with PDF output support"
+echo "                    # this might fail on first attempt,"
+echo "                    # if the make fails, please let me know" 
+echo "                    # often linking fails because the C++ pdf library"
+echo "                    # and the core migrate parts (C) mismatch"
+echo "                    # check the Makefile line for STDLIB= -lstdc++"
+echo " "
+echo " SMP machines  [more than 1 CPU in machine] "
+echo "     make thread    # uses the thread library if present"
+echo "     make           # on macs running macos 10.6+ using GrandCentral"
+echo " "
+echo " PARALLEL Computers, Clusters with MPI software "
+echo "     make mpis        # each cpu-core can be treated as a node"
+echo "     make mpis-thread # experimental, may increase load per node!"
+echo "------------------------------------------------------------------------"
+echo "SPEED and other TESTING "
+echo "     make single_short_test  #this will run a short test and produce"
+echo "                             #a single_short_test.log file showing "
+echo "                             #the speed of your machine for a single"
+echo "                             # CPU run, send this file to beerli@fsu.edu"
+echo "------------------------------------------------------------------------"
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+################################################################################
+# Parmfile for Migrate debug 3.0.7-x [do not remove these first TWO lines]
+theta=URANDOM: {0.000000 10.000000}
+migration=FST
+end

@@ -1,0 +1,322 @@
+%PDF-1.2
+%·¾­ª
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [6 0 R ]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Producer (HARU\040Free\040PDF\040Library\040Version\0401.2.0\040Beta5)
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/FirstChar 32
+/LastChar 255
+/Encoding /StandardEncoding
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Oblique
+/FirstChar 32
+/LastChar 255
+/Encoding /StandardEncoding
+>>
+endobj
+6 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 5 0 R
+>>
+>>
+/MediaBox [0 0 596 842 ]
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 8 0 R
+>>
+stream
+1 w
+50 50 496 732 re
+S
+/F0 24 Tf
+BT
+225.304 792 Td
+(Line\040Example) Tj
+ET
+0 w
+/F0 10 Tf
+BT
+60 760 Td
+(line\040width\040=\0400) Tj
+ET
+60 755 m
+280 755 l
+S
+1 w
+/F0 10 Tf
+BT
+60 730 Td
+(line\040width\040=\0401.0) Tj
+ET
+60 725 m
+280 725 l
+S
+2 w
+/F0 10 Tf
+BT
+60 700 Td
+(line\040width\040=\0402.0) Tj
+ET
+60 695 m
+280 695 l
+S
+1 w
+[3]0 d
+/F0 10 Tf
+BT
+60 670 Td
+(SetDash\0503,\0400,\0400\051\040--\0403\040units\040on,\0403\040units\040off,...) Tj
+ET
+60 665 m
+280 665 l
+S
+[4]2 d
+/F0 10 Tf
+BT
+60 640 Td
+(SetDash\0504,\0402,\0400\051\040--\0402\040on,\0404\040off,\0404\040on,\0404\040off,...) Tj
+ET
+60 635 m
+280 635 l
+S
+[3 7]2 d
+/F0 10 Tf
+BT
+60 610 Td
+(SetDash\0503,\0407,\0402\051\040--\0402\040off,\0403\040on,\0407\040off,\0403\040on,\0407\040off,..) Tj
+ET
+60 605 m
+280 605 l
+S
+30 w
+[]0 d
+0 0.5 0 RG
+0 J
+/F0 10 Tf
+BT
+60 570 Td
+(PDF_BUTT_END) Tj
+ET
+90 545 m
+220 545 l
+S
+1 J
+/F0 10 Tf
+BT
+60 505 Td
+(PDF_ROUND_END) Tj
+ET
+90 480 m
+220 480 l
+S
+2 J
+/F0 10 Tf
+BT
+60 440 Td
+(PDF_PROJECTING_SCUARE_END) Tj
+ET
+90 415 m
+220 415 l
+S
+30 w
+0 0 0.5 RG
+0 j
+120 300 m
+160 340 l
+200 300 l
+S
+BT
+60 360 Td
+(PDF_MITER_JOIN) Tj
+ET
+1 j
+120 195 m
+160 235 l
+200 195 l
+S
+BT
+60 255 Td
+(PDF_ROUND_JOIN) Tj
+ET
+2 j
+120 90 m
+160 130 l
+200 90 l
+S
+BT
+60 150 Td
+(PDF_BEVEL_JOIN) Tj
+ET
+2 w
+0 0 0 RG
+0.75 0 0 rg
+/F0 10 Tf
+BT
+300 760 Td
+(Stroke) Tj
+ET
+300 730 220 25 re
+S
+/F0 10 Tf
+BT
+300 710 Td
+(Fill) Tj
+ET
+300 680 220 25 re
+f
+/F0 10 Tf
+BT
+300 660 Td
+(Fill\040then\040Stroke) Tj
+ET
+300 630 220 25 re
+B
+q
+/F0 10 Tf
+BT
+300 610 Td
+(Clip\040Rectangle) Tj
+ET
+300 580 220 25 re
+W
+S
+/F1 13 Tf
+BT
+290 600 Td
+12 TL
+(Clip\040Clip\040Clip\040Clip\040Clip\040Clipi\040Clip\040Clip\040Clip) Tj
+(Clip\040Clip\040Clip\040Clip\040Clip\040Clip\040Clip\040Clip\040Clip) '
+(Clip\040Clip\040Clip\040Clip\040Clip\040Clip\040Clip\040Clip\040Clip) '
+ET
+Q
+0 0 0 rg
+BT
+300 540 Td
+(CurveTo2\050x1,\040y1,\040x2.\040y2\051) Tj
+ET
+BT
+335 435 Td
+(Current\040point) Tj
+100 90 Td
+(\050x1,\040y1\051) Tj
+50 -60 Td
+(\050x2,\040y2\051) Tj
+ET
+[3]0 d
+0.5 w
+430 530 m
+480 470 l
+S
+[]0 d
+1.5 w
+330 440 m
+430 530 480 470 v
+S
+BT
+300 390 Td
+(CurveTo3\050x1,\040y1,\040x2.\040y2\051) Tj
+ET
+BT
+335 285 Td
+(Current\040point) Tj
+100 90 Td
+(\050x1,\040y1\051) Tj
+50 -60 Td
+(\050x2,\040y2\051) Tj
+ET
+[3]0 d
+0.5 w
+330 290 m
+430 380 l
+S
+[]0 d
+1.5 w
+330 290 m
+430 380 480 320 y
+S
+BT
+300 240 Td
+(CurveTo\050x1,\040y1,\040x2.\040y2,\040x3,\040y3\051) Tj
+ET
+BT
+335 135 Td
+(Current\040point) Tj
+100 80 Td
+(\050x1,\040y1\051) Tj
+60 -30 Td
+(\050x2,\040y2\051) Tj
+-10 -100 Td
+(\050x3,\040y3\051) Tj
+ET
+[3]0 d
+0.5 w
+330 140 m
+430 220 l
+S
+490 190 m
+480 90 l
+S
+[]0 d
+1.5 w
+330 140 m
+430 220 490 190 480 90 c
+S
+
+endstream
+endobj
+8 0 obj
+2607
+endobj
+xref
+0 9
+0000000000 65535 f
+0000000016 00000 n
+0000000071 00000 n
+0000000136 00000 n
+0000000234 00000 n
+0000000370 00000 n
+0000000514 00000 n
+0000000689 00000 n
+0000003357 00000 n
+trailer
+<<
+/Root 1 0 R
+/Info 3 0 R
+/Size 9
+>>
+startxref
+3380
+%%EOF

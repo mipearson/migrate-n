@@ -1,0 +1,15 @@
+#!/bin/bash
+# this script assumes that the openmpi
+# is available on the machine in a standard place
+#echo "Setting environment";
+#export PATH=.:/tmp/openmpi/bin:$PATH
+#export LD_LIBRARY_PATH=/tmp/openmpi/lib
+#echo $PATH
+cores=`findcores`;
+echo "$cores compute nodes and one director node"
+let cores=$cores+1;
+dir=`which fastmigrate-n | sed 's/fastmigrate-n//'`;
+echo "$dir.hostfile";
+cat  $dir/hostfile;
+export PATH=$PATH:/Applications/migrateshell.app/migrate_kit
+mpirun -v -x PATH -np $cores --hostfile $dir/hostfile migrate-n-mpi $1 $2

@@ -1,0 +1,327 @@
+# makefile for Haru-PDF-Library on AIX with gcc
+# Copyright (C) 2002 Takeshi Kanno
+
+CC=gcc
+CPP=gcc
+
+PREFIX=/usr/local
+INCPATH=$(PREFIX)/include
+LIBPATH=$(PREFIX)/lib
+
+#MYCPPFLAGS=
+MYCPPFLAGS2=
+#MYLDFLAGS=-lpng -lz -ljpeg
+
+# if you din't have libpng and never use PNG image, use these options.
+#MYCPPFLAGS=-DNOPNG
+#MYLDFLAGS=-lz -ljpeg
+
+# if you don't have jpeglib and never use JPEG image, use these options.
+#MYCPPFLAGS=-DNOJPEG
+#MYLDFLAGS=-lz -lpng
+
+# if you don't have either jpeglib and libpng, use these options.
+#MYCPPFLAGS=-DNOJPEG -DNOPNG
+#MYLDFLAGS=-lz
+# if you don't have either jpeglib and libpng, zlib use these options.
+MYCPPFLAGS=-O3 -DNOJPEG -DNOPNG -DNOZLIB
+MYLDFLAGS=
+
+# if you dou't want to encryption feature, comment out the following line.
+#MYCPPFLAGS2=-DUSE_ENCRYPTION
+
+# release mode.
+CPPFLAGS=-I.  -O3 -DNDEBUG $(MYCPPFLAGS) $(MYCPPFLAGS2)
+
+# debug mode (no message).
+#CPPFLAGS=-I.  -O0 $(MYCPPFLAGS) $(MYCPPFLAGS2) -g -p
+
+# debug mode (with message).
+#CPPFLAGS=-I.  -O0 -DDEBUG $(MYCPPFLAGS) $(MYCPPFLAGS2) -g
+
+LDFLAGS=-L. -lharu -lm -lbsd -lstdc++ $(MYLDFLAGS)
+
+RANLIB=ranlib
+
+OBJS = \
+	PdfExceptions.o \
+	PdfList.o \
+	PdfUtils.o \
+	PdfStreams.o \
+	PdfAutoPtrObjects.o \
+	PdfObjects.o \
+	PdfContents.o \
+	PdfPages.o \
+	PdfFonts.o \
+	PdfXref.o \
+	PdfDestinations.o \
+	PdfOutlines.o \
+	PdfBorderStyle.o \
+	PdfAnnotations.o \
+	PdfDoc.o \
+	PdfCatalog.o \
+	PdfInfo.o \
+	PdfEncoding.o \
+	PdfFontDef.o \
+	PdfXObjects.o \
+	PdfFontDef_Courier.o \
+	PdfFontDef_Helvetica.o \
+	PdfFontDef_Times.o \
+	PdfFontDef_Symbol.o \
+	PdfFontDef_ZapfDingbats.o \
+	PdfEncoding_ISO8859.o \
+	PdfEncoding_KOI8.o \
+	PdfEncoding_MSCP.o \
+	PdfMbFonts.o \
+	PdfCMap.o \
+	PdfUnicodeText.o \
+	PdfMbFontDef_Gothic.o \
+	PdfMbFontDef_Mincyo.o \
+	PdfMbFontDef_SimHei.o \
+	PdfMbFontDef_SimSun.o \
+	PdfMbFontDef_Ming.o \
+	PdfMbFontDef_Batang.o \
+	PdfMbFontDef_Dotum.o \
+	PdfCMap_RKSJ.o \
+	PdfCMap_EUC.o \
+	PdfCMap_GB_EUC.o \
+	PdfCMap_ETen_B5.o \
+	PdfCMap_KSC_EUC.o \
+    PdfCMap_KSCms_UHC.o \
+	PdfPngImage.o \
+	PdfJpegImage.o \
+	PdfEncrypt.o \
+	libharuc.o \
+	libharuc_jpfonts.o \
+	libharuc_krfonts.o \
+	libharuc_cnsfonts.o \
+	libharuc_cntfonts.o \
+	libharu_png.o \
+	libharu_jpeg.o \
+
+PROGRAMS = \
+	examples/EncodingList \
+	examples/GraphPaper \
+	examples/FontExample1 \
+	examples/FontExample2 \
+	examples/LineExample \
+	examples/LinkExample \
+	examples/OutlineExample \
+	examples/PngExample \
+	examples/JpegExample \
+	examples/Encrypt \
+	examples/Permission \
+	examples/JpFontExample1 \
+	examples/JpFontExample2 \
+	examples/TextAnnotation \
+
+.SUFFIXES:      .cc .o
+
+all: libharu.a
+
+libharu.a: $(OBJS)
+	ar rc $@ $(OBJS)
+	$(RANLIB) $@
+
+example: $(PROGRAMS)
+
+clean:
+	/bin/rm -f *.o libharu.a libharu.so*
+	/bin/rm -f examples/*.o
+	/bin/rm -f $(PROGRAMS)
+
+install: all installfiles
+
+installfiles:
+	cp -p libharu.a $(LIBPATH)/libharu.a
+	cp -p libharu*.h $(INCPATH)
+
+.cc.o:
+	$(CPP) $(CPPFLAGS) -c $*.cc
+
+.c.o:
+	$(CC) $(CPPFLAGS) -c $*.c
+
+examples/DocMaker: examples/DocMaker.cc libharu.a
+	$(CPP) -o $@ examples/DocMaker.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+
+examples/EncodingList: examples/EncodingList.cc libharu.a
+	$(CPP) -o $@ examples/EncodingList.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./EncodingList
+
+examples/PngExample: examples/PngExample.cc libharu.a
+	$(CPP) -o $@ examples/PngExample.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./PngExample *.png
+
+examples/JpegExample: examples/JpegExample.cc libharu.a
+	$(CPP) -o $@ examples/JpegExample.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./JpegExample *.jpg
+
+examples/GraphPaper: \
+	examples/GraphPaper.cc libharu.a
+	$(CPP) -o $@ examples/GraphPaper.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./GraphPaper
+
+examples/LinkExample: examples/LinkExample.cc libharu.a
+	$(CPP) -o $@ examples/LinkExample.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./LinkExample
+
+examples/OutlineExample: examples/OutlineExample.cc libharu.a
+	$(CPP) -o $@ examples/OutlineExample.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./OutlineExample
+
+examples/FontExample1: examples/FontExample1.cc libharu.a
+	$(CPP) -o $@ examples/FontExample1.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./FontExample1
+
+examples/FontExample2: examples/FontExample2.cc libharu.a
+	$(CPP) -o $@ examples/FontExample2.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./FontExample2
+
+examples/LineExample: examples/LineExample.cc libharu.a
+	$(CPP) -o $@ examples/LineExample.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./LineExample
+
+examples/Encrypt: examples/Encrypt.cc libharu.a
+	$(CPP) -o $@ examples/Encrypt.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./Encrypt
+
+examples/Permission: examples/Permission.cc libharu.a
+	$(CPP) -o $@ examples/Permission.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./Permission
+
+examples/JpFontExample1: examples/JpFontExample1.cc libharu.a
+	$(CPP) -o $@ examples/JpFontExample1.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./JpFontExample1
+
+examples/JpFontExample2: examples/JpFontExample2.cc libharu.a
+	$(CPP) -o $@ examples/JpFontExample2.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./JpFontExample2
+
+examples/TextAnnotation: examples/TextAnnotation.cc libharu.a
+	$(CPP) -o $@ examples/TextAnnotation.cc $(CPPFLAGS) $(LDFLAGS)
+	strip $@
+	cd examples; ./TextAnnotation
+
+libharuc.o : libharuc.cc libharu.h
+
+libharuc_jpfonts.o : libharuc_jpfonts.cc libharuc_jpfonts.h
+
+libharu_png.o : libharu_png.cc libharu.h
+
+libharu_jpeg.o : libharu_jpeg.cc libharu.h
+
+libharuc_jpfonts.o : libharuc_jpfonts.cc libharuc_jpfonts.h
+
+libharuc_cntfonts.o : libharuc_cntfonts.cc libharuc_cntfonts.h
+
+PdfExceptions.o : PdfExceptions.cc libharu.h
+
+PdfCatalog.o : PdfCatalog.cc libharu.h
+
+PdfContents.o : PdfContents.cc libharu.h
+
+PdfDestinations.o : PdfDestinations.cc libharu.h
+
+PdfDoc.o : PdfDoc.cc libharu.h
+
+PdfEncoding.o : PdfEncoding.cc libharu.h
+
+PdfFontDef_Courier.o : PdfFontDef_Courier.cc libharu.h
+
+PdfFontDef_Helvetica.o : PdfFontDef_Helvetica.cc libharu.h
+
+PdfFontDef_Times.o : PdfFontDef_Times.cc libharu.h
+
+PdfFontDef_Synbol.o : PdfFontDef_Symbol.cc libharu.h
+
+PdfFontDef_ZapfDingbats.o : PdfFontDef_ZapfDingbats.cc libharu.h
+
+PdfFonts.o : PdfFonts.cc libharu.h
+
+PdfInfo.o : PdfInfo.cc libharu.h
+
+PdfUtils.o : PdfUtils.cc libharu.h
+
+PdfList.o : PdfList.cc libharu.h
+
+PdfUtils.o : PdfUtils.cc libharu.h
+
+PdfAutoPtrObjects.o : PdfAutoPtrObjects.cc libharu.h
+
+PdfObjects.o : PdfObjects.cc libharu.h
+
+PdfOutlines.o : PdfOutlines.cc libharu.h
+
+PdfAnnotations.o : PdfAnnotations.cc libharu.h
+
+PdfBorderStyle.o : PdfBorderStyle.cc libharu.h
+
+PdfPages.o : PdfPages.cc libharu.h
+
+PdfJpegImage.o : PdfJpegImage.cc libharu.h
+
+PdfPngImage.o : PdfPngImage.cc libharu.h
+
+PdfStreams.o : PdfStreams.cc libharu.h
+
+PdfXObjects.o : PdfXObjects.cc libharu.h
+
+PdfUnicodeText.o : PdfUnicodeText.cc libharu.h
+
+PdfXref.o : PdfXref.cc libharu.h
+
+PdfFontDef.o : PdfFontDef.cc libharu.h
+
+PdfMbFonts.o : PdfMbFonts.cc libharu.h
+
+PdfMbFontDef_Gothic.o : PdfMbFontDef_Gothic.cc libharu_jpfonts.h
+
+PdfMbFontDef_Mincyo.o : PdfMbFontDef_Gothic.cc libharu_jpfonts.h
+
+PdfMbFontDef_SimHei.o : PdfMbFontDef_SimHei.cc libharu_cnsfonts.h
+
+PdfMbFontDef_SimSun.o : PdfMbFontDef_SimSun.cc libharu_cnsfonts.h
+
+PdfMbFontDef_Ming.o : PdfMbFontDef_Ming.cc libharu_cntfonts.h
+
+PdfMbFontDef_Batang.o : PdfMbFontDef_Batang.cc libharu_krfonts.h
+
+PdfMbFontDef_Dotum.o : PdfMbFontDef_Dotum.cc libharu_krfonts.h
+
+PdfCMap.o : PdfCMap.cc libharu.h
+
+PdfCMap_EUC.o :  PdfCMap_EUC.cc libharu_jpfonts.h
+
+PdfCMap_RKSJ.o : PdfCMap_RKSJ.cc libharu_jpfonts.h
+
+PdfCMap_GB_EUC.o : PdfCMap_GB_EUC.cc libharu_cnsfonts.h
+
+PdfCMap_ETen_B5.o : PdfCMap_ETen_B5.cc libharu_cntfonts.h
+
+PdfCMap_KSC_EUC.o : PdfCMap_KSC_EUC.cc libharu_krfonts.h
+
+PdfCMap_KSCms_UHC.o : PdfCMap_KSCms_UHC.cc libharu_krfonts.h
+
+PdfEncrypt.o : PdfEncrypt.cc libharu.h
+
+PdfEncoding_ISO8859.o : PdfEncoding_ISO8859.cc libharu_ISO8859.h libharu.h
+
+PdfEncoding_KOI8.o : PdfEncoding_KOI8.cc libharu_KOI8.h libharu.h
+
+PdfEncoding_MSCP.o : PdfEncoding_MSCP.cc libharu_MSCP.h libharu.h
+

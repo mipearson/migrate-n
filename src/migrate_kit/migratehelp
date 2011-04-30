@@ -1,0 +1,32 @@
+#!/bin/bash
+echo "==================================================================="
+echo "                Help/overview  for the MIGRATE shell"
+echo "                   (website: popgen.sc.fsu.edu)"
+echo "==================================================================="
+echo "If the commands do not work send an"
+echo "email to me (beerli@sc.fsu.edu) [version 2.0, November 2010]"
+echo " "
+echo " "
+cores=`findcores`;
+echo "Available commands:"
+echo "-------------------"
+echo "install_migrate    This installs the MIGRATE package"
+echo "migrate-n          runs migrate-n on a single CPU," 
+echo "                   heated chains are multithreaded"
+echo "fastmigrate-n      parallel version and will run on $cores processors"
+echo "                   when using multiple loci/replicates" 
+echo "migratehelp        this help document"
+echo "migrate_kitintro   show the migrate shell splash screen"
+echo "status             reports pathes used to find appplications and a"
+echo "                   number of system parameters"
+echo "findcores          reports number of available cores"
+echo "                   [this computer has $cores]"
+#echo "migrate_admin      you can specify the machines that are part of the "
+#echo "                   cluster, you need to know the machine names"
+#echo "                   and you must be able to use ssh to those machines"
+echo " "
+
+
+
+
+

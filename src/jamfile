@@ -1,0 +1,36 @@
+#### cflags 
+MIGRATEVERSION = 3.0.8 ;
+MIGRATESUBVERSION = 1551 ;
+COMMONCFLAGS = -DNEWVERSION -DTESTINGDATE -DMERSENNE_TWISTER -DMEXP=19937 -DHIGHBITS -DHAVE_MALLOCWRAP -DLAGUERRE -DPRETTY -DWIN32 -DWINDOWS -DMIGRATEVERSION=\"\\\" $(MIGRATEVERSION)\\\"\" ;
+CCFLAGS = /EHa -DMERSENNE_TWISTER -DNEWVERSION -DTESTINGDATE -DMEXP=19937 -DHIGHBITS -DHAVE_MALLOCWRAP -DLAGUERRE -DPRETTY -DWIN32  -DWINDOWS -DMIGRATEVERSION=\"\\\" $(MIGRATEVERSION)\\\"\" -DPRETTY -DNOJPEG -DNOZLIB -DNOPNG -D_NOT_SUPPORT_STD -Iharu ;
+C++FLAGS = /EHa -DMERSENNE_TWISTER -DMEXP=19937 -DNEWVERSION -DTESTINGDATE -DHIGHBITS -DHAVE_MALLOCWRAP -DLAGUERRE -DPRETTY -DWIN32  -DWINDOWS -DMIGRATEVERSION=\"\\\" $(MIGRATEVERSION)\\\"\" -DPRETTY -DNOJPEG -DNOZLIB -DNOPNG -D_NOT_SUPPORT_STD -Iharu ;
+#### compiling
+##
+##
+Main migrate : aic.c altivec.c bayes.c broyden.c calculator.c combroyden2.c data.c gammalike.c fst.c \
+                    heating.c histogram.c inthp.c joint-chains.c laguerre.c lrt.c main.c migrate_mpi.c \
+                    mutationmodel.c mcmc1.c mcmc2.c menu.c migevents.c options.c profile.c random.c reporter.c   \
+                    spline.c tools.c tree.c sequence.c sighandler.c slice.c sort.c uep.c world.c \
+                    pretty.c skyline.c watterson.c pretty-win32.cpp SFMT.c ;
+
+#### linking
+##
+##
+#LINKFLAGS = ;
+LIBS migrate : haru/libharu.a ;
+LINKLIBS    = $(MSVCNT)\\lib\\advapi32.lib
+                $(MSVCNT)\\lib\\libc.lib
+                $(MSVCNT)\\lib\\oldnames.lib
+                $(MSVCNT)\\lib\\kernel32.lib ;
+OPTIM       = "" ;
+STDHDRS     = $(MSVCNT)\\include ;
+
+
+#### CLEAN
+##
+##
+	rule ResourceCompiler
+	{
+	   DEPENDS $(<) : $(>) ;
+	   Clean clean : $(<) ;
+	}

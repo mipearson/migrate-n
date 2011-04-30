@@ -1,0 +1,98 @@
+#!/usr/bin/perl -w
+#@def=("\$HOME","simple", "thread", "mpi");
+@def=(".", "mpi");
+splice(@def,0,scalar(@ARGV),@ARGV);
+$thisdir = $def[0];
+print "@def\n";
+shift @def;
+if($def[0] eq "all" || scalar(@def)==0)
+{
+    @def=("mpi");
+#    @def=("simple", "thread", "mpi");
+}
+else
+{
+    if(scalar(@def)==1)
+    {
+	$def[1] = $def[2] = "";
+    }
+    if(scalar(@def)==2)
+    {
+	$def[2] = "";
+    }
+}
+print "@def\n";
+
+$thedir = "cd $thisdir";
+$thesource = "cd $thisdir/..";
+
+print $thedir
+print $thesource
+
+clean("*.log");
+clean("bayes*");
+clean("outfile*");
+
+if(($def[0] eq "simple") || ($def[1] eq "simple") || ($def[2] eq "simple"))
+{
+    print "\nSINGLE CPU ----------------------------------------\nmake >> make-simple.log\n";
+    system("$thesource; make clean 2>&1 > testsuite/make-simple.log; make 2>&1 >> testsuite/make-simple.log");
+    run("Bayes inference using IAM mutation model","parmfile.iam","iam.log");
+    run("Bayes inference using SSM mutation model","parmfile.ssm","ssm.log");
+    run("Bayes inference using DNA mutation model","parmfile.dna","dna.log");
+    run("ML inference using IAM mutation model","parmfile.iam-ml","iam.log");
+    run("ML inference using SSM mutation model","parmfile.ssm-ml","ssm.log");
+    run("ML inference using DNA mutation model","parmfile.dna-ml","dna.log");
+}
+if(($def[0] eq "thread") || ($def[1] eq "thread") || ($def[2] eq "thread"))
+{
+    print "\n\nSMP (threaded) CPU ----------------------------------------\nmake >> make-thread.log\n";
+    system("$thesource; make clean 2>&1 > testsuite/make-thread.log; make thread 2>&1 >> testsuite/make-thread.log");
+    run("Bayes inference using IAM mutation model","parmfile.iam","iam.log");
+    run("Bayes inference using SSM mutation model","parmfile.ssm","ssm.log");
+    run("Bayes inference using DNA mutation model","parmfile.dna","dna.log");
+    run("ML inference using IAM mutation model","parmfile.iam-ml","iam.log");
+    run("ML inference using SSM mutation model","parmfile.ssm-ml","ssm.log");
+    run("ML inference using DNA mutation model","parmfile.dna-ml","dna.log");
+}
+
+
+if(($def[0] eq "mpi") || ($def[1] eq "mpi") || ($def[2] eq "mpi"))
+{
+    print "\n\nMPI parallel processing using 4 nodes  ----------------------------------------\nmake >> make-mpi.log\n";
+    system("$thesource; make clean 2>&1 > testsuite/make-mpi.log; make mpis 2>&1 >> testsuite/make-mpi.log");
+    runmpi("Bayes inference using IAM mutation model","parmfile.iam","iam.log");
+    runmpi("Bayes inference using SSM mutation model","parmfile.ssm","ssm.log");
+    runmpi("Bayes inference using DNA mutation model","parmfile.dna","dna.log");
+    runmpi("ML inference using IAM mutation model","parmfile.iam-ml","iam.log");
+    runmpi("ML inference using SSM mutation model","parmfile.ssm-ml","ssm.log");
+    runmpi("ML inference using DNA mutation model","parmfile.dna-ml","dna.log");
+}
+
+sub clean
+{
+    my $text = $_[0];
+    system("rm $text");
+}
+
+sub run
+{
+    my $text = $_[0];
+    my $file = $_[1];
+    my $log  = $_[2];
+    print "$text\n";
+    system("$thedir; (time ../migrate-n " .  $file . " -nomenu) 2>&1 >" . $log . ";");
+}
+sub runmpi
+{
+    my $text = $_[0];
+    my $file = $_[1];
+    my $log  = $_[2];
+    print "$text\n";
+    system("$thedir; (time mpirun -np 4 ../migrate-n-mpi " .  $file . " -nomenu) 2>&1 >>" . $log . ";");
+}
+system("egrep \\(ERROR\\|WARNING\\) *.log > report");
+print "Error report -------------------------\n";
+print `egrep \\(ERROR\\|WARNING\\) *.log`;
+print "End error report ---------------------\n";
+ 

@@ -1,0 +1,497 @@
+################################################################################
+# Parmfile for Migrate debug 2.1.9-x [do not remove these first TWO lines]
+# generated automatically on
+# Tue Dec 12 15:35:08 2006
+#
+# please report problems to Peter Beerli
+#  email: beerli@scs.fsu.edu
+#  http://popgen.csit.fsu.edu/migrate.html
+################################################################################
+#
+################################################################################
+# General options
+################################################################################
+#
+# Interactive or batch job usage
+#   Syntax: menu= < YES | NO > 
+# For batch runs it needs to be set to NO
+menu=YES
+#
+# Specification of length of names of indiviudals
+#    Syntax: nmlength=<INTEGER between 0 .. 30>
+nmlength=10
+#
+#
+################################################################################
+# Data options
+################################################################################
+#
+# Several different main datatypes are possible:
+# INFINITE ALLELE: usable for electrophoretic markers,
+#                  other markers with unknown mutation model
+# STEPWISE MUTATION: usable for microsatellite data or
+#                  other markers with stepwise change
+#                  from one allele to another
+# FINITE SITES MUTATION: standard DNA/RNA sequence mutation
+#                  model, usable for DNA or RNA contiguous
+#                  sequences or varialbe sites only (SNP)
+# GENEALOGY SUMMARY: reanalyzing an old migrate run
+#
+#-------------------------------------------------------------------------------
+# INFINITE ALLELE
+#  Syntax: datatype=ALLELICDATA 
+#          include-unknown=<YES | NO> with YES unknown alleles
+#                are included into analysis, NO is the default
+#
+#-------------------------------------------------------------------------------
+#
+# STEPWISE MUTATION
+#  Syntax: datatype=<MICROSATELLITEDATA | BROWNIANDATA
+#                MICRO specifies the standard stepwise mutation
+#                model, the BROWNIAN is an approximation to this
+#          micro-threshold=<INTEGER> Default is 10 [MICRO only, NEEDS TO BE EVEN!],
+#                smaller values speed up analysis, but might also
+#                crash, large values slow down analysis considerably.
+#                Change this value only when you suspect that your
+#                data has huge gaps in repeat length.
+#          include-unknown=<YES | NO> with YES unknown alleles
+#                are included into analysis, NO is the default
+#
+#-------------------------------------------------------------------------------
+#
+# FINITE SITES MUTATION
+#  Syntax: datatype=<SEQUENCEDATA | NUCLEOTIDE | UNLINKEDSNPS | ANCESTRAL
+#         SEQENCEDATA: typical linked stretches of DNA, for example mtDNA
+#         NUCLEOTIDE: linked DNA stretches, all invariable sites removed
+#         UNLINKEDSNPS: each variable site is a locus, DO NOT USE THIS YET
+#         ANCESTRAL: instead taking into account all posible states, use
+#                use only the most likely state probability, DON'T USE THIS YET
+#
+#          freqs-from-data=<YES | NO: freq(A), freq(C), freq(G), freq(T)>
+#                calculate the prior base frequencies from the data,
+#                or specify the frequencies
+#          ttratio=<RATIO1 RATIO2 ....> Default is 2.0,
+#                ratio between transitions and transversions.
+#          seq-error=<VALUE> Default is 0.0, typical values for ABI 3700 
+#                sequencers after base calling are around 0.001 (1/650)
+#          categories=<VALUE:CATFILE> The categories are integers or letters
+#                specified in file called CATFILE, this assumes that all
+#                sites belong to known categories, this can be used to
+#                weight third positions etc.
+#          rates=<VALUE1 VALUE2 ...> the rates are specified arbitrarily or
+#                then are from a Gamma distribution with alpha=x, currently
+#                 the alpha value gets lost and is not recorded in the parmfile
+#          prob-rates=<RATE2 RATE1 ... > These rates can be arbitrary or 
+#                generated with gamma-deviated rates and then are derived
+#                using Laguerre's quadrature, this should get better
+#                results than equal probability methods.
+#          autocorrelation=<NO | YES:VALUE> Default is NO
+#                autocorrelation makes only sense with rates,
+#                VALUE should be >1.0
+#          weights=<NO | YES:WEIGHTFILE> The weights are specified
+#                in file called WEIGHTFILE, this assumes that all sites
+#                belong to known weights, this can be used to weight
+#                portions of the sequence etc.
+#          interleaved=<YES | NO> Use either an interleaved or 
+#                non-interleaved format. Default is NO,
+#                interleaved=YES is discouraged
+#          fast-likelihood=<YES | NO> Default is YES, use NO when you
+#                have many hundred individuals and get strange errors
+#                during a run, NO is scaling the conditional likelihood
+#                so that very small values are >0.00000
+#          usertree=<NO | TREE:TREEFILE | DISTANCE:DISTFILE | RANDOM>
+#                Default is RANDOM, NO delivers a UPGMA tree using the data
+#                with TREE and DISTANCE the user needs to 
+#                give a usertreefile or a pairwise distance file, with RANDOM
+#                a random tree will be the starting tree
+#
+#-------------------------------------------------------------------------------
+#
+#
+datatype=SequenceData
+ttratio=2.000000 
+freqs-from-data=YES
+seqerror-rate=0.000000
+categories=1 #no categories file specified
+rates=1: 1.000000 
+prob-rates=1: 1.000000 
+autocorrelation=NO
+weights=NO
+interleaved=NO
+fast-likelihood=YES
+usertree=RANDOMTREE
+#
+################################################################################
+# Input options
+################################################################################
+#
+# input file location
+#   Syntax infile=FILEPATH
+infile=infile.dna
+#
+# Random number seed specification
+#   Syntax random-seed=<AUTO | OWN:< seedfile | value >
+#      AUTO           uses computer system clock to generate seed
+#      OWN:seedfile   uses file seedfile with random number seed
+#      OWN:value      uses number value for seed
+random-seed=OWN:285548372
+#
+# Specify the title of the run, will be overridden by title in datafile
+#    Syntax: title=title text [up to 80 characters]
+title=infinite alleles geo + custom
+#
+#
+################################################################################
+# Output options
+################################################################################
+#
+# Progress report to the window where the program was started
+#    Syntax: progress=<NO | YES | VERBOSE>
+#          NO       nothing is printed to the console
+#          YES      some messages about progress are reported [default]
+#          VERBOSE  more messages are reported to console
+progress=YES
+#
+#-------------------------------------------------------------------------------
+#
+# Recording messages to screen into logfile
+#   Syntax logfile=<NO | YES:logfilename>
+#       NONE     no recording of progress
+#       logfilename  path to logfile
+logfile=YES:logfile
+#
+#-------------------------------------------------------------------------------
+#
+# Print the data as read into the program
+#   Syntax print-data=<NO | YES>
+print-data=NO
+#
+#-------------------------------------------------------------------------------
+#
+# Print output to file [default is outfile]
+#   Syntax outfile=outfilename
+outfile=outfile-dna
+#
+#-------------------------------------------------------------------------------
+#
+# Print output to a PDF file [default is outfile.pdf]
+#   Syntax pdf-outfile=outfilename.pdf
+pdf-outfile=outfile-dna.pdf
+#
+#-------------------------------------------------------------------------------
+#
+# Report M (=migration rate/mutation rate) instead of 4Nm or 2 Nm or Nm
+#   Syntax use-M=<NO | YES> Default is YES, the name 4Nm is ambiguous
+#      for non-diploid data
+use-M=YES
+#
+#-------------------------------------------------------------------------------
+#
+# Plotting parameters: migration versus population size, such that Theta1 x immigration_.1
+# this shows the sum of all imigrations int a population
+#   Syntax plot=<NO | YES:<BOTH | OUTFILE>:<LOG | STD>
+#          {x-start, x-end, y-start, y-end}:<N | M>:interval>
+#      NO   do not show a plot
+#      YES  show plot with following specifications
+#           BOTH    print raw coordinates into MATHFILE and plot to OUTFILE
+#           OUTFILE plot only to OUTFILE
+#             LOG   scaling of both axes
+#             STD   non-log scaling
+#             {...} plot range of both parameters
+#             N     use xNm to plot immigration, x=<1,2,3,4>
+#                   depending on the inheritance characteristic of the data
+#             M     plot migration rate/mutation rate as immigration axis
+#             interval the plot range is broken up into interval intervals
+plot=NO
+#
+# Print plot data into a file 
+#   Syntax: mathtfile=mathfile the values are printed in a mathematica readable way
+mathfile=mathfile
+#
+#-------------------------------------------------------------------------------
+#
+# Profile likelihood for each estimated parameter
+#   Syntax profile=<NONE | <ALL | TABLES | SUMMARY>:
+#               <PRECISE | SPLINE | DISCRETE | QUICKANDDIRTY | FAST>  >
+#      NONE    do not calculate profile likelihoods
+#      ALL     print individual profile tables and summary [default]
+#      TABLES  show only tables and no summary
+#      SUMMARY show only summary
+#           PRECISE  evaluate profile likelihood at percentiles [Default]
+#           SPLINE   use splines to calculate precentile values [DOES NOT WORK!]
+#           FAST     assumes that there is no interaction of parameters
+#           QUICKANDDIRTY same as FAST except in last calculation cycle assumes interaction
+#           DISCRETE .........
+profile=ALL:PRECISE
+#
+#-------------------------------------------------------------------------------
+#
+# Print tree into treefile
+#   Syntax print-tree=< NONE | ALL | BEST | LASTCHAIN >
+#         NONE no tree printed [Default, and only choice using parallel
+#         ALL  print all visited genealogies [careful this will be huge]
+#         BEST print only the best tree visited
+#         LASTCHAIN print all trees in last chain
+print-tree=NONE
+#
+#-------------------------------------------------------------------------------
+#
+# write intermediate minimal statistics into a file for later use
+#   Syntax write-summary=<NO | YES:SUMFILE >
+#                Default is NO, with YES the user needs to 
+#                give a file to record the summary statistics
+write-summary=NO
+#
+#-------------------------------------------------------------------------------
+#
+# Likelihood ratio test
+#   Syntax l-ratio=<NO | YES:values_to_test>
+#       Values_to_test are compared to the values generated in the run
+#   values_to_test={ab..bbab..ba ... a}
+#        the {} is a square matrix with values for the population sizes
+#        on the diagonal and migration rates off-diagonal
+#        the values a for the diagonal can be any of these:
+#        number  constant, the value is for example 0.002
+#        *       free to vary, the default is * for every parameter
+#        m       mean of theta, this can be a subgroup of all thetas
+#                for example the theta 1-3 are averaged and thetas 4,5 are estimated
+#        the values b for the migration rates can be any of these:
+#        number  constant, the value is for example 45.0 or 0.0
+#        *       free to vary, the default is * for every parameter
+#        m       mean of M_ij, this can be a subgroup of migration rates
+#                for example the M_1-3i are averaged and M_4,5i are estimated
+#        M       means of 4Nm (diploid), 2Nm (haploid), Nm (mtDNA, Y-chromosome)
+#        s       symmetric migration rates M
+#        S       symmetric migrants 4Nm
+#        an example for 5 populations could look like this:
+#        l-ratio=YES:{*s00s s*s00 0s*s0 00s*s s00s*
+#        this describes a circular stepping stone model with 5 symmetric rates
+#         and independent sizes, a very basic stepping stone with 2 parameters would
+#        look like this l-ratio=YES:{mm00m mmm00 0mmm0 00mmm m00mm}
+#        [The L-RATIO statement can be repeated]
+#  Default: l-ratio=NO
+#
+#-------------------------------------------------------------------------------
+#
+# AIC model selection [do not use yet, will come in Summer 2004]
+#   Syntax aic-modeltest=<NO | YES:<FAST | EXHAUSTIVE>>
+#       FAST        [do not use yet]
+#       EXHAUSTIVE  [do not use yet]
+aic-modeltest=NO
+#
+#-------------------------------------------------------------------------------
+#
+# Print a histogram of the time of migration events for each M(i->j)
+mig-histogram=ALL:mighistfile
+skyline=YES:0.100000:skylinefile      #needs mig-histogram
+#
+#
+################################################################################
+# Parameter start settings
+################################################################################
+#
+#   Syntax: theta=<FST | OWN:<{value} | {value1, value2, ...., valuen} | RANDOM:{mean std}>
+#      migrationt=<FST | OWN:<{value} | {value1, value2, ...., valuen} | RANDOM:{mean std}>
+#        FST     starting parameter are derived from
+#                an FST-like calculation (Beerli&Felsenstein 1999
+#        OWN     starting values are supplied by user
+#           {value}   if only one value is supplied then all population
+#                     have the same starting value
+#           {value1, value2, ..., valuen} each population has its
+#                     own starting value, if the number of values is
+#                     insuffient, then the last value is the template
+#                     for the remaining populations
+#        RANDOM  starting parameter is drawn randomely from a Normal distribution
+#           {mean std} with mean and standard deviation
+theta=FST
+migration=FST
+#
+#-------------------------------------------------------------------------------
+# Mutation rate modifiers
+#
+#   Syntax: mutation=<NOGAMMA | GAMMA:alpha | OWN:loci: rate1 rate2 ... rate_loci>
+#      NOGAMMA      all loci have same mutation rate
+#      GAMMA:alpha  mutation rate has Gamma distribution with alpha
+#      OWN          mutation rate is different for every locus, but fixed
+#         :loci: rate1, ...     number of loci, rate of locus 1, locus 2 etc.
+#      DATA         mutation rate modifier is deducted from loci in the data
+#                   using Watterson's Theta and then scaling all rates Theta_locus/mean(Theta_loci
+mutation=DATA#
+#-------------------------------------------------------------------------------
+# FST model
+#
+fst-type=THETA
+#
+#-------------------------------------------------------------------------------
+# Custom migration model
+#
+#    Syntax: custom-migration={ab..bbab..ba ... a}
+#        the {} is a square matrix with values for the population sizes
+#        on the diagonal and migration rates off-diagonal
+#        the values a for the diagonal can be any of these:
+#        c       constant, the value needs to be defined in the theta option
+#        *       free to vary, the default is * for every parameter
+#        m       mean of theta, this can be a subgroup of all thetas
+#                for example the theta 1-3 are averaged and thetas 4,5 are estimated
+#        the values b for the migration rates can be any of these:
+#        c       constant, the value needs to be defined in the theta option
+#        *       free to vary, the default is * for every parameter
+#        m       mean of M_ij, this can be a subgroup of migration rates
+#                for example the M_1-3i are averaged and M_4,5i are estimated
+#        M       means of 4Nm (diploid), 2Nm (haploid), Nm (mtDNA, Y-chromosome)
+#        s       symmetric migration rates M
+#        S       symmetric migrants 4Nm
+#        an example for 5 populations could look like this:
+#        custom-migration={*s00s s*s00 0s*s0 00s*s s00s*
+#        this describes a circular stepping stone model with 5 symmetric rates
+#         and independent sizes, a very basic stepping stone with 2 parameters would
+#        look like this custom-migration={mm00m mmm00 0mmm0 00mmm m00mm}
+custom-migration={****************}
+#
+# Influence of geography on migration rate
+# a distance matrix between populations changes the migration rate matrix so that
+# (genetic?) migration rates =  inferred migration rate / distance ~ a dispersion coefficient
+# the geofile contains a number of populations, names for populations (10 characters), they
+# need to be in order of the dataset. And the distances between the populations, they do not
+# need to be symmetric
+#    Syntax: geo:<NO | YES:filename>
+#             NO       distances among populations are considered to be 1 [all equal]
+#             YES      distances are read from a file
+geo=NO
+#
+#
+################################################################################
+# Search strategies
+################################################################################
+#
+# MCMC Strategy method
+#    Syntax: bayes-update=< NO | YES>
+#        NO      maximum likelihood method
+#        YES     Bayesian method [will come in version 2.0]
+# Some of the options are only available in one or other mode
+# BAYESIAN OPTIONS
+#        bayes-updatefreq=VALUE 
+#            VALUE      is a ratio between 0 and 1
+#                       ratio of how many times the genealogy is updated compared to the parameters
+#                       If the value is 0.4 in a 2 population scenario and with 1000000 steps
+#                       The tree will be evaluated 400000 times, Theta_1, Theta_2, M_21, and M_12
+#                        will be each evaluated 125000 times.
+#        bayes-posteriorbins=VALUE VALUE
+#            VALUE      is the number of bins in the psterior distribution histogram for Theta or M
+#        bayes-posteriormaxtype=< ALL | P99 | MAXP99 | P100 >
+#            ALL        plots the WHOLE prior-parameter range
+
+#            P99        plots from the minimum prior range value to
+
+#                       the 99% percentile value of EACH parameter
+
+#            MAXP99     sets all axes from minimum to the maximal
+
+#                       99% percentile value of ALL parameter
+
+#            P100       plots from the minimum prior range value to
+
+#                       the 100% percentile value of EACH parameter
+
+#        bayes-file=<YES|NO>:FILENAME
+#            FILENAME is the name of the file that will contain
+#                    the results for the posterior distribution
+#        bayes-allfile=<YES|NO>:FILENAME
+#            FILENAME is the name of the file that will contain
+#                    all parameters of the posterior distribution [HUGE]
+#        bayes-allfileinterval=INTERVAL
+#            INTERVAL is the interval at which all parameters are written to file
+
+#        
+#        bayes-proposals= THETA < SLICE | METROPOLIS >
+#        bayes-proposals= MIG < SLICE | METROPOLIS >
+#               SLICE uses the slice sampler to propose new parameter values
+#               METROPOLIS uses the Metropolis-Hastings sampler
+#               (this is done for each parameter group: THETA or MIGration)
+#        
+#        bayes-priors= THETA <UNIFORM unipriorvalues | EXP exppriorvalues | WINDOWEXP wexppriorvalues | MULT multpriorvalues | FIXED>
+#        bayes-priors= MIG <UNIFORM unipriorvalues | EXP exppriorvalues | WINDOWEXP wexppriorvalues | MULT multpriorvalues | FIXED>
+#                unipriorvalues: min max
+#                exppriorvalues: min mean max
+#                wexppriorvalues: min mean max delta
+#                multpriorvalues: min max mult
+#                fixed = no value is changed during the run
+#
+# Maximum likelihood OPTIONS
+#        short-chains=VALUE   VALUE is 1..n [Default is 10]
+#        short-inc=VALUE      VALUE is the number of updates that are not recorded
+#        short-sample=VALUE   VALUE is the number of sampled updates
+#
+# Search OPTIONS for both strategies
+#        long-chains=VALUE   VALUE is 1..n [Default is 3]
+#        long-inc=VALUE      VALUE is the number of updates that are not recorded
+#        long-sample=VALUE   VALUE is the number of sampled updates
+#        burn-in=VALUE       VALUE is the number of updates to discard at the beginning
+#
+bayes-update=YES
+bayes-updatefreq=0.500000
+bayes-posteriorbins=500 500
+bayes-posteriormaxtype=TOTAL
+bayes-file=YES:bayesfile-dna
+bayes-allfile=YES:bayesallfile-dna
+bayes-allfileinterval=1
+bayes-proposals= THETA METROPOLIS-HASTINGS Sampler
+bayes-proposals= MIG METROPOLIS-HASTINGS Sampler
+bayes-priors= THETA UNIFORMPRIOR: 0.000000 0.100000 
+bayes-priors= MIG UNIFORMPRIOR: 0.000000 1000.000000 
+#
+long-chains=1
+long-inc=10
+long-sample=10000
+burn-in=10000
+#
+#-------------------------------------------------------------------------------
+# Schemes to improve MCMC searching
+#
+# Heating schemes {MCMCMC = MC cubed}
+#    Syntax: heating=< NO | <YES | ADAPTIVE>:SKIP:TEMPERATURES
+#        NO    No heating
+#        YES   heating using TEMPERATURES
+#        ADAPTIVE adaptive heating using start TEMPERATURES
+#        SKIP skip that many comparisons, this lengthens the run by SKIP
+#            TEMPERATURES    { 1.0, temp1, temp2, temp3 .. tempn}
+#     Example: heating=YES:1:{1.0, 1.2, 3.0,6.0}
+heating=YES:1:{1.0, 1.2, 3.0,6.0}
+#
+# Lengthening chain schemes
+#    Syntax: moving-steps=< NO | YES:VALUE>
+#       VALUE   frequency is between 0..1
+moving-steps=NO
+#
+#    Syntax: long-chain-epsilon=VALUE
+#       VALUE    is between 0..INFINITY
+#                the VALUE is the likelihood ratio between the old and thew chain
+#                the VALUE depends on the number of parameters: with 1 values of 0.5 are great
+#                but with many parameters values and bad data >20 is more reasonable
+long-chain-epsilon=INFINITY
+#
+#    Convergence statistic [Gelman and Rubin]
+#    Syntax: gelman-convergence=< YES:Pairs|Summary | NO >
+#       NO      do not use Gelman's convergence criterium
+#       YES     use Gelman's convergence criteria between chain i, and i-1
+#               PAIRS reports all replicate pairs
+#               SUM   reports only mean and maxima
+gelman-convergence=Yes:Sum
+#
+#    Syntax: replicate=< NO | YES:<VALUE | LastChains> >
+#       NO     no replication of run
+#       YES    replicate run
+#           VALUE     number between 2 and many, complete replicates
+#           LastChains  replications over last chains
+replicate=YES:5
+#
+# Migration rates are attracted to zero (fatal attraction)
+# Resistance is the lowest migration value for all but the last chain
+#    Syntax resistance=VALUE
+#        VALUE is the lowest migration rate value allowed during all but the last chain
+#              typical values are 0.01 or _lower_ for data with sequences and 0.0001 or _lower_ for other data
+resistance=0.000100
+#
+#-------------------------------------------------------------------------------
+#
+end

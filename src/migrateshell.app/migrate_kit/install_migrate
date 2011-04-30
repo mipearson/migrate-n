@@ -1,0 +1,91 @@
+#!/usr/bin/env python                                                                                                  
+
+#import sys
+import errno
+import os
+import platform
+#import shlex
+import subprocess
+#import pexpect
+
+__author__ = "beerli"
+__date__ = "$Nov 26, 2010 3:10:04 PM$"
+
+def find_os():
+    return platform.system()
+
+def mkdir_p(path):
+    try:
+        os.makedirs(path)
+    except OSError as exc: # Python >2.5
+        if exc.errno == errno.EEXIST:
+            pass
+        else: raise
+                        
+
+def main():
+    myos = find_os()
+    homedir = os.path.expanduser('~')
+    mypath = os.path.dirname(os.path.realpath(__file__))
+    arg = ['./findshell']
+    myprocess = subprocess.Popen(arg,
+                                 shell=True,
+                                 stdout=subprocess.PIPE)
+    shelllist = myprocess.communicate()
+    shell = shelllist[0].rstrip()            
+    if myos == 'Darwin':
+        (migshell,migkit) = os.path.split(mypath)
+        print migshell
+        print migkit
+        if migkit == "migrate_kit":
+            (ownpath,dummy) = os.path.split(migshell)
+            app = True
+        else:
+            ownpath = mypath
+            migshell = mypath+"/migrateshell.app"
+            app = False
+    print
+    print "Current directory:       "+ownpath
+    print "Migrateshell application:"+migshell
+    print "Home directory           "+homedir
+    print "To install MIGRATE you need the administrator password for this machine."
+    answer =""
+    answer = raw_input("If this is OK, press return, otherwise press NO: ")
+    if answer == '':
+        if myos == 'Darwin':
+            if os.path.exists(migshell):            
+                os.system("sudo rsync -a "+migshell+"/* /Applications/migrateshell.app")
+        else:
+            if os.path.exists(migshell):
+                linux=True
+        if not os.path.exists("/usr/local/migrate/bin"):
+            os.system("sudo mkdir -p /usr/local/migrate/bin")
+            os.system("sudo mkdir -p /usr/local/migrate/share")
+        if os.path.exists(mypath+"/migrate-n"):
+            os.system( "sudo rsync -a "+mypath+"/migrate-n /usr/local/migrate/bin/")
+        if os.path.exists(mypath+"/migrate-n-mpi"):
+            os.system("sudo rsync -a "+mypath+"/migrate-n-mpi /usr/local/migrate/bin/")
+        found = False
+        for path in os.environ.get('PATH', '').split(':'):
+            if path == "/usr/local/migrate/bin":
+                found=True
+                break
+        if found == True: 
+            print "No insertion of execution path needed, because it is already present"
+        else:
+            if "bash" in shell.split("/"):
+                f = open(homedir+'/.bash_profile', 'a')
+                f.write("### migrate (popgen.sc.fsu.edu) start Path addition\n")
+                f.write("PATH=$PATH:/usr/local/migrate/bin\n")
+                f.write("export PATH\n")
+                f.write("### migrate (popgen.sc.fsu.edu) end Path addition\n\n")
+                f.close()
+            else:
+                print "Not implemented yet"
+    else:
+        print "goodbye"
+
+
+if __name__ == "__main__":
+    main()
+    

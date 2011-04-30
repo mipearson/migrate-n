@@ -1,0 +1,2 @@
+time mpirun -np 3 ../migrate-n parmfile.testml -nomenu > ml.log
+time mpirun -np 3 ../migrate-n parmfile.testbayes -nomenu > bi.log

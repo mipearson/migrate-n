@@ -1,0 +1,334 @@
+.\" Copyright (c) 1997-2003 Peter Beerli and Joseph Felsenstein
+.\" Copyright (c) 2004-2005 Peter Beerli
+.\" All rights reserved. 
+.\" You can distribute this free with no charge.
+.\" For commercial usage please contact
+.\" beerli@csit.fsu.edu
+.\"
+.TH MIGRATE 1 "July 20 2006"
+.UC 5
+.SH NAME
+MIGRATE \- estimate population parameters: migration rate and population size
+.SH SYNOPSIS
+\fBmigrate-n\fP
+.\"
+.\"\fBmigrate-0.4\fP
+.SH DESCRIPTION
+Migrate estimates population parameters (effective population size 
+and migration rates) using genetic data (Electrophoretic
+markers, microsatellite markers, sequence data, and single nucleotide polymorphism data). It is a 
+maximum likelihood estimator or Bayesian estimator and uses a coalescent theory 
+approach taking into account history of mutations 
+and uncertainty of the genealogy.
+.\".B Migrate-n estimates parameters for 
+.\".B n populations.
+
+.BPlease read the manual for details about theory, implementation etc
+.Bif you cannot find it on this system ask you system
+.Badministrator, or try "locate migrate"\fP
+.B or get a copy of the manual in PDF format from
+.I http://popgen.scs.fsu.edu
+.fi
+.sp
+.SH OPTIONS
+there are no options on the commandline, but you can specify the options in
+a
+.B parmfile
+or in the 
+.B menu
+.
+.SH PARMFILE OPTIONS
+The parmfile options are split into
+Datatype, Input/Output, Start parameters, Search strategy
+
+.SH DATATYPE
+.TP
+.B datatype=<Allele | Microsatellites | Brownian | Sequences | Nucleotide-polymorphisms | Panel-SNP | Genealogies >
+specifies the datatype used for the analyses, needless to say that 
+if you have the wrong data for the chosen type the program will crash.
+.B Allele:  
+infinite allele model, suitable for electrophoretic markers, 
+perhaps the "best" guess for codominant markers of which we do not know 
+the mutation model.
+.B Microsatellite: 
+a simple electrophoretic ladder model is used for the change along the branches
+in genealogy.
+.B Brownian: 
+a Brownian motion approximation to the stepwise mutation model for microsatellites us used (this is MUCH faster than exact model, but is not a good approximation if population sizes are small (say below 10).
+.B Sequences:  
+Data are DNA or RNA sequences and the mutation model used is F84, first used
+by Felsenstein 1984 (actually the same as in dnaml (Phylip version 3.5), 
+a description of this model can be found in Swofford et al. 1996.
+.B Nucleotide-polymorphism:
+[SNP] the data likelihood is corrected for sampling only variable
+sites. We assume that the data was used to find the SNP.
+.B Panel-SNP: 
+the data likelihood is corrected for using a panel of SNP sites, that were polymorphic. The panel has to be population 1.
+.B Genealogies:  Reads the 
+.B sumfile 
+of a previous run, with this options the genealogy sampling step will 
+not be done and the genealogies provided in the
+sumfile are analyzed. This datatype makes it easy to rerun the program 
+for different likelihood ratio test or different settings for the 
+profile likelihood printouts.
+.SH Sequence data specific options
+.TP
+.B freq-from-data=< Yes | No:freqA freqG freqC freqT>
+.TP
+.B ttratio=< r1 r2 .....>
+.TP
+.B interleaved=<Yes | No >
+.TP
+.B categories=<Yes | No>
+If you specify Yes you need a file named 
+.B catfile
+ in the same directory with the following Syntax:  number_of_categories cat1 cat2 cat3 .. categorylabel_for_each_site for each locus, a #
+in the first column can be used to start a comment-line.
+Example is for a data set with 2 loci and 20 base pairs each
+.
+   # Example catfile for two loci
+   # in migrate you can use # as comments
+   2 1 10          11111111112222222222
+   5 0.1 2 5 23 3 11111122223333445555
+.
+
+.TP
+.B rates=< n : r1 r2 r3 ..rn>
+
+.TP
+.B prob-rates=< n : p1 p2 p3 ... pn>
+
+.TP
+.B autocorrelation=<Yes:value | No>
+.TP
+.B weights=<Yes | No>
+If you specify Yes you need a file weightfile with weights for each 
+site, the weights can be the following numbers 0-9 and letters A-Z, so 
+you have 35 possible weights available.
+.
+     # Example weightfile for two loci
+     11111111112222222222
+     1111112222AAAA445XXXX5
+.
+.TP
+.B distfile=<Yes | No>
+You can supply a distance file for each locus (using PHYLIP syntax). 
+The sequence of indiviudals must be same as in the infile. 
+This option appears in the menu when you choose
+     
+.B 0     Start genealogy is estimated using a UPGMA topology
+
+The distance file is then used to create an UPGMA tree with a minimal 
+number of migration events. For large trees this is options help to 
+get better starting trees than the automatic tree
+     generation which uses a rather unsophisticated distance 
+method (differences).
+.TP
+.B usertree=<Yes | No>
+If you specify Yes you need a file intree. In this file you have 
+starting trees for each locus. BUT these trees need to have 
+migration events in them!
+
+.SH Microsatellite data
+.TP
+.B micro-threshold=value
+specifies the window in which probabilities of change are calculated if we have allele 34 then only probabilities of a change from 34 to 35-44 and 24-34 are considered, the higher this value is the longer you wait for your
+      result, choosing it too small will produce wrong results. Default is
+.B micro-threshold=10
+
+.SH Electrophoretic data
+No special variables.
+
+.SH Nucleotide polymorphism
+Similar to sequence data.
+
+.SH INPUT/OUTPUT
+.TP
+.B infile=filename
+Default is 
+.B infile
+.TP
+.B random-seed=<Auto | Noauto | Own:seedvalue>
+The random number seed guarantees that you can reproduce a run exactly.  
+Good random number seeds are 
+.B (values * 4) + 1.
+If you do not specify the random number seed (
+.B seed=Auto
+) the program will use the system clock. With
+.B seed=Noauto 
+the program expects to find a file named 
+.B seedfile 
+with the random number seed. With 
+.B random-seed=Own:seedvalue 
+you can specify the seed value in the parmfile (or in the menu).
+.TP
+.B title=titletext
+.TP
+.B progress=<Yes|No|Verbose>
+The default is
+.B progress=Yes
+.TP
+.B outfile=filename
+The default is obviously 
+.B outfile=outfile
+.TP
+.B print-data=<Yes|No>
+Print the data in the outfile. Default is 
+.B print-data=No.
+.TP
+.B print-fst=<Yes|No>
+Print a table of an FST estimate for comparison (Beerli and Felsenstein 1999, Beerli 1998) [not recommended].
+.TP
+.B plot=<No | Yes>[:<Outfile|Both>[:<std|log>:{mig-axis-start,mig-axis-end,theta-axis-start,theta-axis-end}<:printpos<M | Nm>>]]
+If 
+.B plot=No 
+then no plot of the parameter space is shown in the outfile, if 
+.B Yes 
+then you can specify whether you want to have the accurate numbers in 
+a separate file (
+.B mathfile
+) using
+.B printpos 
+ "pixel" in each direction,or only the ASCII-graphics plot in the 
+.B outfile. 
+The last option (
+.B M 
+or 
+.B N
+)let you define whether you want the plot in 
+.B M=m/mu 
+or (default) 
+.B 4Nm
+units. 
+Default is
+.B plot=Yes:Outfile.
+Example of a more complicated statement: 
+.B plot=Yes:Both:std:0,10,0,0.025:100N
+For syntax in 
+.B mathfile 
+see documentation
+.TP
+.B profile=<No|Yes<:<Fast|Percentile|Spline|Discrete|Quick >><:M | Nm >
+     Print profile likelihood. See section Likelihood ratio tests and profile likelihood. Default
+     is 
+.B profile=Yes:Fast:N.
+.TP
+.B l-ratio=<None | <Mean|Loci>:testparam> (N-POP)
+      Likelihood ratio tests. See section Likelihood ratio tests and profile likelihood. Default is 
+.B l-ratio=None.
+.TP
+.B print-trees=<All | None | Last | Best>
+Default is print-trees=None
+.TP
+.B mathfile=filename
+.TP
+.B sumfile=<No | Yes | Yes:filename >
+Intermediate results of the genealogy sampling process are save into a file named 
+.B sumfile 
+or into the file for that you specify the filename.  You can use this sumfile to rerun the program for further analysis,  e.g.  calculating likelihood ratios or profile likelihoods,  see
+.B datatype=Genealogy.
+
+.SH START VALUES FOR THE PARAMETERS
+.TP
+.B theta=<Fst | Own:{value1,value2 ,...}>
+With Fst the programs tries to use an FST  based measure 
+(Maynard Smith 1970, Nei and Feldman 1972) 
+.B Own: { value1, value2, ... }
+ defines arbitrary start values.
+.TP
+.B migration=<Fst|Own:Migration matrix > (N-POP)
+The migration matrix is a n by n table with - on the diagonal and can look like this for four populations 
+.B migration=OWN:{ - 1.0 1.1 1.2 0.9 - 0.8 0.7 2.1 2.2 - 2.3 1.4 1.5 1.6 - }
+or like this
+.
+    migration=OWN:{ -    1.0 1.1 1.2
+                    0.9 -    0.8 0.7
+                    2.1 2.2 -    2.3
+                    1.4 1.5 1.6 -    }
+.
+.TP
+.B mutation=<Gamma | NoGamma>
+The default is mutation=Nogamma
+.TP
+.B fst-type=<Theta | Migration >
+.TP
+.B custom-migration=< NONE|migration - matrix >
+The migration matrix contains the migration rates from j to i on row i, and the
+are on the diagonal. The migration matrix can consist of connections that are
+.
+.B      *: no restriction
+
+.B      0: not estimated
+
+.B      m: mean value of either 4Nm  or M.
+
+.B      s: symmetric migration [only for M]
+
+.B      c: constant value (together with migration=OWN.. or theta=OWN..) 
+
+.
+The values can be spaced by blanks, newlines. 
+A few examples for 4 populations:  
+
+.B Full model:
+custom-migration={**** **** **** ****}
+
+.B N-island model: custom-migration={m m m m mm mm m mmm mmmm}
+
+.B Stepping Stone model: 
+with symmetric migrations, and unrestricted  estimates:
+.B custom-migration={*s00 s*s0 0s*s 00s*}
+
+.B Source-Sink: 
+(the first population is the source):
+.B custom-migration={*000**000**0*000}
+
+.SH SEARCH STRATEGY
+Please read the documentation ,these settings are important
+and will influence the accuracy of your results.
+.TP
+.B short-chains=value
+Default is 10.
+.TP
+.B short-inc=value
+Default is 20.
+.TP
+.B short-sample=value
+Default is 500.
+.TP
+.B long-chains=value
+Default is 2.
+.TP
+.B long-inc=value
+Default is 20.
+.TP
+.B long-sample=value
+Default is 5000.
+.TP
+.B burn-in=value
+Default is 10000.
+.TP
+.B replicate=<NO | YES<:LONGCHAINS | number>>
+.TP
+.B heating=<NO | YES<:{1,1.1,1.2,1.3}>>
+.TP
+.SH Obscure options
+see documentation
+.SH BUGS
+This man page is not up to date and misses the Bayesian inference section, but see documentation.
+.SH MAIN DISTRIBUTION WEBSITE
+http://popgen.csit.fsu.edu
+.SH SEE ALSO
+coalesce, fluctuate, recombine, lamarc (the program)
+available from 
+.I http://evolution.gs.washington.edu/lamarc.html
+.SH AUTHOR
+Peter Beerli <beerli@csit.fsu.edu>
+.TP
+[if you use this man page, please let me know]
+
+
+
+
+
+

@@ -1,0 +1,200 @@
+%PDF-1.2
+%·¾­ª
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [5 0 R ]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Producer (HARU\040Free\040PDF\040Library\040Version\0401.2.0\040Beta5)
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Times-Roman
+/FirstChar 32
+/LastChar 255
+/Encoding /StandardEncoding
+>>
+endobj
+5 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+>>
+>>
+/MediaBox [0 0 400 500 ]
+/Contents 6 0 R
+/Annots [8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R ]
+>>
+endobj
+6 0 obj
+<<
+/Length 7 0 R
+>>
+stream
+BT
+/F0 16 Tf
+130 450 Td
+(Annotation\040Example) Tj
+ET
+/F0 11 Tf
+BT
+85 380 Td
+(Comment\040Icon.) Tj
+ET
+BT
+245 380 Td
+(Key\040Icon) Tj
+ET
+BT
+85 280 Td
+(Note\040Icon.) Tj
+ET
+BT
+245 280 Td
+(Help\040Icon) Tj
+ET
+BT
+85 180 Td
+(NewParagraph\040Icon) Tj
+ET
+BT
+245 180 Td
+(Paragraph\040Icon) Tj
+ET
+BT
+85 80 Td
+(Insert\040Icon) Tj
+ET
+BT
+245 80 Td
+(Text\040Icon\050ISO8859-2\040text\051) Tj
+ET
+
+endstream
+endobj
+7 0 obj
+382
+endobj
+8 0 obj
+<<
+/Type /Annot
+/Subtype /Text
+/Rect [50 350 150 400 ]
+/Contents (Annotation\040with\040Comment\040Icon.\040\012This\040annotation\040set\040to\040be\040opened\040initially.)
+/Open true
+/Name /Comment
+>>
+endobj
+9 0 obj
+<<
+/Type /Annot
+/Subtype /Text
+/Rect [210 350 350 400 ]
+/Contents (Annotation\040with\040Key\040Icon)
+/Open false
+/Name /Paragraph
+>>
+endobj
+10 0 obj
+<<
+/Type /Annot
+/Subtype /Text
+/Rect [50 250 150 300 ]
+/Contents (Annotation\040with\040Note\040Icon)
+/Open false
+/Name /Note
+>>
+endobj
+11 0 obj
+<<
+/Type /Annot
+/Subtype /Text
+/Rect [210 250 350 300 ]
+/Contents (Annotation\040with\040Help\040Icon)
+/Open false
+/Name /Help
+>>
+endobj
+12 0 obj
+<<
+/Type /Annot
+/Subtype /Text
+/Rect [50 150 150 200 ]
+/Contents (Annotation\040with\040NewParagraph\040Icon)
+/Open false
+/Name /NewParagraph
+>>
+endobj
+13 0 obj
+<<
+/Type /Annot
+/Subtype /Text
+/Rect [210 150 350 200 ]
+/Contents (Annotation\040with\040Paragraph\040Icon)
+/Open false
+/Name /Paragraph
+>>
+endobj
+14 0 obj
+<<
+/Type /Annot
+/Subtype /Text
+/Rect [50 50 150 100 ]
+/Contents (Annotation\040with\040Insert\040Icon)
+/Open false
+/Name /Insert
+>>
+endobj
+15 0 obj
+<<
+/Type /Annot
+/Subtype /Text
+/Rect [210 50 350 100 ]
+/Contents <FEFF0041006E006E006F0074006100740069006F006E00200077006900740068002000490053004F003800380035003900200074006500780074002000D300D4015000D600D70158016E>
+/Open false
+>>
+endobj
+xref
+0 16
+0000000000 65535 f
+0000000016 00000 n
+0000000071 00000 n
+0000000136 00000 n
+0000000234 00000 n
+0000000372 00000 n
+0000000602 00000 n
+0000001045 00000 n
+0000001067 00000 n
+0000001296 00000 n
+0000001455 00000 n
+0000001610 00000 n
+0000001766 00000 n
+0000001937 00000 n
+0000002103 00000 n
+0000002261 00000 n
+trailer
+<<
+/Root 1 0 R
+/Info 3 0 R
+/Size 16
+>>
+startxref
+2517
+%%EOF

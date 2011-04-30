@@ -1,0 +1,16 @@
+echo "
+  There is no \"configure\" script for Haru Free PDF Library.  Instead, 
+  please use these make files as following. 
+
+    Generic makefile (gcc 2.9 or later)     make -f makefile.gcc
+    Cygwin + gcc(2.9 or later)              make -f makefile.cygwin
+    Windows + Borland C++ Compiler(32bit)   make -f makefile.bcc
+    AIX(4.3.X, 5.X) + gcc(2.9 or later)     make -f makefile.aixgcc
+    AIX(5.X) + IBM C++ Compiler             make -f makefile.aix
+    BeOS(X86) + gcc(2.9 or later)           make -f makefile.beos
+    Open Watcom C++ Compiler(32bit)         wmake -f makefile.watcom
+    Microsoft Visual C++ (5.0 or later)     nmake -f makefile.msvc
+
+  if you create a makefile for other platform, please send it to 
+    \"takeshi_kanno@est.hi-ho.ne.jp\"
+  " 

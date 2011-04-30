@@ -1,0 +1,258 @@
+  =============================================
+    Example: Microsatellite data set           
+  =============================================
+  MIGRATION RATE AND POPULATION SIZE ESTIMATION
+  using Markov Chain Monte Carlo simulation
+  =============================================
+  Version 3.2.8
+
+  Program started at Wed Apr 13 00:03:08 2011
+                                                   
+
+
+Options in use:
+---------------
+
+Analysis strategy is                                    Bayesian
+
+Proposal distribution:
+Parameter group          Proposal type
+-----------------------  -------------------
+Population size (Theta)       Slice sampling
+Migration rate      (M)       Slice sampling
+
+
+Prior distribution:
+Parameter group          Prior type   Minimum    Mean(*)    Maximum    Delta
+-----------------------  ------------ ---------- ---------- ---------- ----------
+Population size (Theta)      Uniform  0.000000  10.000000  20.000000   2.000000 
+Migration rate      (M)      Uniform  0.000000  10.000000  20.000000   2.000000 
+
+
+
+Datatype: Microsatellite data [Brownian motion]
+Missing data is not included
+
+Inheritance scalers in use for Thetas (specified scalars=1)
+1.00 1.00 1.00 1.00 1.00 
+1.00 1.00 1.00 1.00 1.00 
+
+[Each Theta uses the (true) ineritance scalar of the first locus as a reference]
+
+
+Pseudo-random number generator: Mersenne-Twister                                
+Random number seed (from parmfile)            310705631
+
+Start parameters:
+   First genealogy was started using a UPGMA-tree
+   Theta values were generated  RANDOM start value from U(min,max)
+   M values were generated from the FST-calculation
+
+Migration model: Arbitrary migration matrix model            
+[Legend: m = average (average over a group of Thetas or M]
+[s = symmetric M, S = symmetric 4Nm,
+ 0 = zero, and not estimated,   ]
+[* = free to vary, Thetas are on diagonal]
+population     * 0 
+population     * * 
+
+
+
+Mutation rate is constant for all loci
+
+Markov chain settings:
+   Long chains (long-chains):                              1
+      Steps sampled (inc*samples*rep):               1000000
+      Steps recorded (sample*rep):                     10000
+   Combining over replicates:                              2
+   Static heating scheme
+      4 chains with  temperatures
+       1.00, 1.50, 3.00,1000000.00
+      Swapping interval is 1
+   Number of discard trees per chain:                  10000
+
+Print options:
+   Data file:                                    infile.msat
+   Output file (ASCII text):                   outfile-bayes
+   Output file (PDF):                      outfile-bayes.pdf
+   Posterior distribution:                         bayesfile
+   Print data:                                            No
+   Print genealogies:                                     No
+   Plot data: No                                            
+
+Summary of data:
+Title:                      Example: Microsatellite data set
+Data file:                                       infile.msat
+Datatype:                                Microsatellite data
+Number of loci:                                           10
+
+Population                   Locus   Gene copies    
+                                     ---------------
+                                     data  (missing)
+----------------------------------------------------
+  1 population_number___0        1     50 (0)
+  1                              2     50 (0)
+  1                              3     50 (0)
+  1                              4     50 (0)
+  1                              5     50 (0)
+  1                              6     50 (0)
+  1                              7     50 (0)
+  1                              8     50 (0)
+  1                              9     50 (0)
+  1                             10     50 (0)
+  2 population_number___1        1     42 (0)
+  2                              2     42 (0)
+  2                              3     42 (0)
+  2                              4     42 (0)
+  2                              5     42 (0)
+  2                              6     42 (0)
+  2                              7     42 (0)
+  2                              8     42 (0)
+  2                              9     42 (0)
+  2                             10     42 (0)
+    Total of all populations     1     92 (0)
+                                 2     92 (0)
+                                 3     92 (0)
+                                 4     92 (0)
+                                 5     92 (0)
+                                 6     92 (0)
+                                 7     92 (0)
+                                 8     92 (0)
+                                 9     92 (0)
+                                10     92 (0)
+
+Allele frequency spectra
+========================
+
+Locus 1
+Allele  Pop1   Pop2   All
+----------------------------
+    16  0.220  0.167  0.193
+    19  0.040  0.071  0.056
+    18  0.060  0.119  0.090
+    15  0.220  0.024  0.122
+    21  0.020  0.167  0.093
+    23  0.020  0.119  0.070
+    17  0.280  0.095  0.188
+    22  0.060  0.119  0.090
+    25  0.060  0.024  0.042
+    24  0.020    -    0.010
+    26    -    0.024  0.012
+    27    -    0.048  0.024
+    29    -    0.024  0.012
+Total     10     12     13
+
+Locus 2
+Allele  Pop1   Pop2   All
+----------------------------
+    16  0.520  0.571  0.546
+    19  0.040    -    0.020
+    18  0.220  0.119  0.170
+    17  0.160  0.167  0.163
+    15  0.020    -    0.010
+    21  0.020  0.071  0.046
+    20  0.020  0.024  0.022
+    22    -    0.048  0.024
+Total      7      6      8
+
+Locus 3
+Allele  Pop1   Pop2   All
+----------------------------
+    19  0.240  0.262  0.251
+    20  0.280  0.476  0.378
+    18  0.080  0.095  0.088
+    21  0.280  0.119  0.200
+    22  0.120  0.048  0.084
+Total      5      5      5
+
+Locus 4
+Allele  Pop1   Pop2   All
+----------------------------
+    16  0.080  0.071  0.076
+    24  0.180  0.024  0.102
+    15  0.020  0.048  0.034
+    25  0.160  0.167  0.163
+    14  0.020  0.048  0.034
+    19  0.100  0.143  0.121
+    12  0.060    -    0.030
+    20  0.080  0.190  0.135
+    23  0.060  0.119  0.090
+    28  0.020    -    0.010
+    22  0.060  0.024  0.042
+    21  0.160  0.119  0.140
+    13    -    0.024  0.012
+    26    -    0.024  0.012
+Total     12     12     14
+
+Locus 5
+Allele  Pop1   Pop2   All
+----------------------------
+    20  0.400  0.524  0.462
+    21  0.420  0.357  0.389
+    19  0.180  0.119  0.150
+Total      3      3      3
+
+Locus 6
+Allele  Pop1   Pop2   All
+----------------------------
+    19  0.060    -    0.030
+    20  0.100  0.024  0.062
+    18  0.300  0.214  0.257
+    22  0.200  0.119  0.160
+    21  0.120  0.476  0.298
+    16  0.060    -    0.030
+    24  0.160  0.048  0.104
+    17    -    0.119  0.060
+Total      7      6      8
+
+Locus 7
+Allele  Pop1   Pop2   All
+----------------------------
+    23  0.040  0.238  0.139
+    20  0.660  0.143  0.401
+    22  0.180  0.190  0.185
+    21  0.100  0.333  0.217
+    19  0.020  0.095  0.058
+Total      5      5      5
+
+Locus 8
+Allele  Pop1   Pop2   All
+----------------------------
+    19  0.520  0.524  0.522
+    17  0.040  0.048  0.044
+    18  0.100  0.071  0.086
+    20  0.140  0.190  0.165
+    16  0.080    -    0.040
+    22  0.100  0.048  0.074
+    15  0.020  0.048  0.034
+    23    -    0.071  0.036
+Total      7      7      8
+
+Locus 9
+Allele  Pop1   Pop2   All
+----------------------------
+    24  0.080  0.024  0.052
+    19  0.300  0.429  0.364
+    20  0.300  0.167  0.233
+    23  0.180  0.143  0.161
+    22  0.080  0.024  0.052
+    18  0.020  0.071  0.046
+    21  0.040  0.095  0.068
+    25    -    0.048  0.024
+Total      7      8      8
+
+Locus 10
+Allele  Pop1   Pop2   All
+----------------------------
+    22  0.100  0.214  0.157
+    20  0.440  0.214  0.327
+    23  0.080  0.167  0.123
+    24  0.020    -    0.010
+    19  0.160  0.167  0.163
+    21  0.060  0.048  0.054
+    18  0.080    -    0.040
+    15  0.020  0.071  0.046
+    17  0.040  0.048  0.044
+    25    -    0.071  0.036
+Total      9      8     10
+

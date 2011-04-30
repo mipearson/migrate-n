@@ -1,0 +1,11 @@
+#!/bin/bash
+# reports fastmigrate settings
+echo "Search path:  $PATH "
+echo "Library path: $LD_LIBRARY_PATH "
+
+cores=`findcores`;
+echo "CPU cores:            $cores "  
+let cores=$cores+1;
+echo "Usable compute nodes: $cores"
+
+

@@ -1,0 +1,86 @@
+%PDF-1.2
+%·¾­ª
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+/OpenAction 6 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [5 0 R ]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Producer (HARU\040Free\040PDF\040Library\040Version\0401.2.0\040Beta5)
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/FirstChar 32
+/LastChar 255
+/Encoding /StandardEncoding
+>>
+endobj
+5 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+>>
+>>
+/MediaBox [0 0 600 800 ]
+/Contents 7 0 R
+>>
+endobj
+6 0 obj
+[5 0 R /Fit ]
+endobj
+7 0 obj
+<<
+/Length 8 0 R
+>>
+stream
+BT
+/F0 20 Tf
+104.9 400 Td
+25 TL
+(When\040this\040file\040is\040opened,\040the\040size\040of\040page\040is\040) Tj
+(adjusted\040to\040the\040size\040of\040viewer\040window.) '
+ET
+
+endstream
+endobj
+8 0 obj
+178
+endobj
+xref
+0 9
+0000000000 65535 f
+0000000016 00000 n
+0000000090 00000 n
+0000000155 00000 n
+0000000253 00000 n
+0000000389 00000 n
+0000000553 00000 n
+0000000585 00000 n
+0000000824 00000 n
+trailer
+<<
+/Root 1 0 R
+/Info 3 0 R
+/Size 9
+>>
+startxref
+846
+%%EOF

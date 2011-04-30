@@ -1,0 +1,1184 @@
+%T"Haru Free PDF Library" "Version 1.2.0" "Copyright 2000-2004 © Takeshi Kanno"
+
+%S"Introduction" 0
+
+%S"What is Haru" 1
+
+Haru is a library that has the ability to generate PDF document for free.
+It supports most of the standerd features of the Portable Document Format.
+
+%S"The features of HARU." 1
+ 1. Generation of PDF file with text, graphics, images and so on.
+ 2. Using Base14 Fonts.
+ 3. Type1 font embededing.
+ 4. Compression of contents stream of deflator.
+ 5. PNG and JPEG images.
+ 6. Using Multibyte Fonts (Japanese, Chinese, Korean).
+ 7. Generating PDF files with outline.
+ 8. Link annotation.
+ 9. Using font with custom encoding.
+10. Vertical writing of Japanese fonts.
+11. 40 bit key length encryption. 
+
+%S"Requirements" 1
+
+%S"C++ Compiler" 2
+
+Haru is written in C++ and it uses only standard features of C++. Thus with 
+modifying the makefile, it can be used in many platforms.
+%S"Tested Platforms" 2
+Haru is tested in the following environment.
+%;
+%A10 "∑ makefile.gcc"
+Linux + gcc (2.95, 3.2))
+%A10 "∑ makefile.cygwin"
+Cygwin + gcc (2.95, 3.2)
+%A10 "∑ makefile.bcc"
+Windows + Borland C++ 5.5
+%A10 "∑ makefile.msvc"
+Windows + Microsoft VC++ Compiler (5.0 or later)
+%A10 "∑ makefile.watcom"
+Windows + Open Watcom Compiler 1.0
+%A10 "∑ makefile.aixgcc"
+AIX4.3/5L + gcc(2.9)
+%A10 "∑ makefile.aixcc"
+AIX5L + IBM C/C++ Compiler
+%A10 "∑ makefile.beos"
+BeOS(5.03) + gcc(2.95)
+
+%S"Required Libraries" 1
+
+1.Zlib compression library(version 1.1.X)
+%L1
+To use flate-decode compression, zlib is required.
+Zlib compression library is available at the following URL: 
+%CTimes-Italic
+http://www.gzip.org/zlib/
+%CTimes-Roman
+%;
+%L-1
+2.PNG Reference Library(version 1.1.X, 1.2.X)
+%L1
+To use png images, libpng is required.
+PNG Reference Library is available at the following URL:
+%CTimes-Italic
+http://www.libpng.org/pub/png/libpng.html
+%CTimes-Roman
+%;
+%L-1
+3.JPEGLIB(IJG JPEG LIBRARY) 
+%L1
+To use jpeg images, jpeglib is required.
+The IJG JPEG LIBRARY is available at the following URL:
+%CTimes-Italic
+http://www.ijg.org/
+%CTimes-Roman
+
+%S"Installation" 0
+
+%S"Make Library" 1
+
+Make files for some platforms are prepared named makefile.XXX.
+If the makefile for your platform is prepared and all required libraries are installed in your pc, simply run make command as following.
+%;
+%A19 "∑ Linux + gcc"
+make -f makefile.gcc
+%A19 "∑ Cygwin + gcc
+make -f makefile.cygwin
+%A19 "∑ Windows + Borland C++ Compiler"
+make -f makefile.bcc
+%A19 "∑ Windows + Open Watcom Compiler"
+wmake -f makefile.watcom
+%A19 "∑ Windows + Microsoft VC++ Compiler"
+wmake -f makefile.msvc
+%A19 "∑ AIX(4.3/5L) + gcc"
+make -f makefile.aixgcc
+%A19 "∑ AIX(5L) + IBM C/C++ Compiler"
+make -f makefile.aixcc
+%A19 "∑ BeOS(5.0.X) + gcc"
+make -f makefile.beos
+
+%S"Installation of the Library Files" 1
+If you want to install HARU in the default directory, the command is the following.
+%; 
+%CCourier
+%L1
+make -f makefile.XXX install (Change XXX to your platform)
+%CTimes-Roman
+%;
+%L-1
+The default nstallation directory for the library file.
+%L1
+%;
+%A12 "∑ Linux, AIX, Cygwin"
+/usr/local/lib
+%A12 "∑ Beos"
+/home/config/lib
+%A12 "∑ Windows"
+the install command is not prepared.
+%L0
+%;
+The default installation directory for the header file.
+%;
+%L1
+%A12 "∑ Linux, AIX, Cygwin"
+/usr/local/include
+%A12 "∑ Beos"
+/home/config/include
+%A12 "∑ Windows"
+the install command is not prepared.
+%;
+%L0
+%CTimes-Italic
+In Windows + BCC, the install command is not prepared, copy libharu.lib to your library directory manually.
+%;
+%CTimes-Roman
+If you want to install HARU to your own library directory, modify the PREFIX
+variable of makefile.xxx.
+For example, if you want to install HARU in "/home/myhome/lib" modify makefile.xxx as the following.
+%;
+%CCourier
+%L1
+PREFIX=/home/myhome/lib
+%L-1
+%CTimes-Roman
+%;
+%S"Compile and Run the Example Programs" 1
+To make the sample programs, Run make command as the following.
+%;
+%CCourier
+%L1
+make -f makefile.XXX example
+%L-1
+%CTimes-Roman
+%;
+
+%S"Make a Program with Using Haru" 0
+
+%S"The flow of PDF file creation." 1
+Creation of a PDF file with HARU is following bellow.
+1. Including "libharu.h" in your program.
+%;
+%CCourier
+   #include "libharu.h"
+%CTimes-Roman
+%;
+2. Create a instance of PdfDoc object.
+%;
+%CCourier
+   PdfDoc *doc = new PdfDoc();
+%CTimes-Roman
+%;
+3. Call NewDoc() method of a PdfDoc object to create a new PDF document.
+%;
+%CCourier
+   doc->NewDoc();
+%CTimes-Roman
+%;
+4. Add Fonts which is used in the current document to the PdfDoc object.
+%;
+%CCourier
+   doc->AddType1Font(new PdfTimesRomanFontDef());
+   doc->AddType1Font(new PdfHelveticaFontDef());
+%CTimes-Roman
+%;
+5. Call AddPage() method of a PdfDoc object and get PdfPage object.
+%;
+%CCourier
+   PdfPage *page = doc->AddPage();
+%CTimes-Roman
+%;
+6. Get PdfContents object by calling Canvas() method of PdfPage object.
+%;
+%CCourier
+   PdfContents *canvas = page->Canvas();
+%CTimes-Roman
+%;
+7. Create the contents of the page by calling various methods of a PdfContentns object.
+%;
+%CCourier
+   canvas->SetFontAndSize("Times-Roman", 24);
+   canvas->BeginText();
+   canvas->MoveTextPos(150, 400);
+   canvas->ShowText("Hello");
+   canvas->EndText();
+%CTimes-Roman
+%;
+8. Call WriteToFile() method of PdfDoc object and save the document to file.
+%;
+%CCourier
+   doc->WriteToFile("Hello.pdf");
+%CTimes-Roman
+%;
+9. Delete the instance of PdfDoc object.
+%;
+%CCourier
+   delete doc;
+%CTimes-Roman
+%;
+10. To handle exception, protect from NewDoc() to WriteToFile() using try and catch block.
+%;
+%CCourier
+   PdfDoc *doc = new PdfDoc();
+   try {
+       doc->NewDoc();
+       .
+       .
+       .
+       doc->WriteToFile("Hello.pdf");
+   } catch (exception& e) {
+       fprintf(stderr, "%s\n", e.what());
+   }
+   delete doc;
+%CTimes-Roman
+%;
+
+%S"Graphics State" 1
+PdfContents holds the parameter named Graphics State which shows the state of canvas, and the method which can be used according to a state is restricted. 
+GraphicsState is changed by calling a drawing method and the value can be referred to by PdfContents::GMode().
+
+PDF_GMODE_PAGE_DESCRIPTION
+%;
+Is standard drawing mode. The method belonging to General graphics state, and Special graphic state and Text positioning and a MoveTo() method, and a BeginText() method can be used. 
+By calling a MoveTo() method, it changes to PDF_GMODE_PATH_OBJECT. Moreover, it changes to PDF_GMODE_TEXT_OBJECT mode by calling a BeginText() method.
+%;
+PDF_GMODE_PATH_OBJECT
+%;
+Is the mode which describes a line.
+%;
+PDF_GMODE_TEXT_OBJECT
+%;
+Is the mode which draws a character. By the EndText() method, it returns to PDF_GMODE_PAGE_DESCRIPTION mode.
+%;
+PDF_GMODE_CLIPPING_PATH
+%;
+%;
+PDF_GMODE_SHADINGÅAPDF_GMODE_INLINE_IMAGEÅAPDF_GMODE_EXTERNAL_OBJECT
+%;
+There is no method which uses this state now.
+
+
+%S"Using Base 14 Fonts" 1
+In Haru, it is possible to use three kinds of fonts Base14Font, Type1 Font, and CID font. Base14Font and a Type1 Font object are combining with an Encoding object, and can be dealt in various languages. 
+With using CID font, the 2-byte font in the Asian area will be available.
+%;
+%S"Base 14 Font" 2
+In Haru, the 14 following kinds of fonts currently called standard fonts are incorporated. Since these fonts do not have the necessity of surely being able to use it with the viewer application of every PDF file, and incorporating a font file, they can also make size of a PDF file small.
+%;
+%S"The list of Base 14 Font"
+%A10 "∑Helvetica"
+PdfHelveticaFontDef
+%A10 "∑Helvetica.Bold"
+PdfHelveticaBoldFontDef
+%A10 "∑Helvetica.Oblique"
+PdfHelveticaObliqueFontDef
+%A10 "∑Helvetica.BoldOblique"
+PdfHelveticaBoldObliqueFontDef
+%A10 "∑Times.Roman"
+PdfTimesRomanFontDef
+%A10 "∑Times.Bold"
+PdfTimesBoldFontDef
+%A10 "∑Times.Italic"
+PdfTimesItalicFontDef
+%A10 "∑Times.BoldItalic"
+PdfTimesBoldItalicFontDef
+%A10 "∑Courier"
+PdfCourierFontDef
+%A10 "∑Courier.Bold"
+PdfCourierBoldFontDef
+%A10 "∑Courier.Oblique"
+PdfCourierObliqueFontDef
+%A10 "∑Courier.BoldOblique"
+PdfCourierBoldObliqueFontDef
+%A10 "∑Symbol"
+PdfSymbolFontDef
+%A10 "∑ZapfDingbats"
+PdfZapfDingbatsFontDef
+%;
+
+%S"Predefined Encoding" 2
+The Following encodings are predefined in Haru.
+%A10 "∑StandardEncoding"
+PdfStandardEncoding
+%A10 "∑WinAnsiEncoding"
+PdfWinAnsiEncoding
+%A10 "∑MacRomanEncoding"
+PdfMacRomanEncoding
+%A10 "∑SymbolFontEncoding"
+PdfSymbolFontEncoding
+%A10 "∑ZapfDingbatsFontEncoding"
+PdfZapfDingbatsFontEncoding
+
+SymbolFontEncoding and ZapfDingbatsFontEncoding can be used among these encodings only combining a Symbol font and a ZapfDingbats font, respectively. Three kinds of other encodings can be combined with all fonts other than a Symbol font and a ZapfDingbats font.
+
+%S"The usage of Base 14 Font" 2
+
+
+%S"Type1 Font Embeding Feature." 1
+
+%S"Using Multibyte Fonts" 1
+
+%S"Using Flatedecode compression." 1
+
+%S"PNG Image." 1
+%S"JPEG Image." 1
+%S"Encryption." 1
+
+
+%S"Class Reference" 0
+
+%S"Base Objects." 1
+
+%S"PdfObject" 2
+%S"PdfBoolean" 2
+%S"PdfNumber" 2
+%S"PDfReal" 2
+%S"PdfName" 2
+%S"PdfText" 2
+%S"PdfArray" 2
+%S"PdfDictionary" 2
+%S"PdfBinary" 2
+%S"PdfUnicodeText" 2
+
+%S"Document Objects." 1
+%S"PdfDoc" 2
+%S"PdfCatalog" 2
+%S"PdfInfo" 2
+%S"PdfPages" 2
+%S"PdfPage" 2
+%S"PdfLinkAnnot" 2
+%S"PdfDestination" 2
+%S"PdfContents" 2
+%S"PdfFont" 2
+%S"PdfImage" 2
+%S"PdfPngImage" 2
+%S"PdfJpegImage" 2
+%S"PdfOutlineRoot" 2
+%S"PdfOutlineItem" 2
+
+%S"Font Objects." 1
+%S"Objects for single byte fonts." 2
+%S"PdfType1FontDef" 3
+%S"PdfEncoding" 3
+%S"Objects for multibytes fonts.." 2
+%S"PdfCIDFontDef" 3
+%S"PdfCMap" 3
+
+
+
+%S"Operator Summary of PdfContentns Class." 0
+
+%S"General graphics state" 1
+%S"SetLineWidth" 2
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetLineWidth(
+    double linewidth);
+%:
+%CHelvetica-Bold
+Arguments
+%:
+%CTimes-Italic
+linewidth
+%CTimes-Roman
+%L1
+Is the width of the line drawn by path painting operator.
+%L-1
+
+%S"SetLineCap" 2
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetLineCap(
+    pdf_line_cap_style linecap);
+%:
+%CHelvetica-Bold
+Arguments
+%:
+%CTimes-Italic
+linecap
+%CTimes-Roman
+%L1
+Is the cap style of the line drawn by path painting operator.
+%L-1
+%;
+%CHelvetica-Bold
+pdf_linecap_style
+%CTimes-Roman
+%:
+%A16 "∑ PDF_BUTT_END"
+Butt cap. The stroke is squared off at the endpoint of 
+the path.(Default)
+%A16 "∑ PDF_ROUND_END"
+Round cap. The stroke is ended with a semicircular arc.
+%A16 "∑ PDF_PROJECTING_SCUARE_END"
+Projecting square cap. The stroke is squared off beyond 
+the endpoint of the path with a distance equal to half 
+the line width.
+
+%S"SetLineJoin" 2
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetLineJoin(
+    pdf_line_join_style linejoin);
+%:
+%CHelvetica-Bold
+Arguments
+%:
+%CTimes-Italic
+linecap
+%CTimes-Roman
+%L1
+Is the join style of the line drawn by path painting operator.
+%L-1
+%;
+pdf_line_join_style
+%CTimes-Roman
+%:
+%A16 "∑ PDF_MITER_JOIN"
+Miter joins
+%A16 "∑ PDF_ROUND_JOIN"
+Round joins
+%A16 "∑ PDF_BEVEL_JOIN"
+Bevel joins
+
+%S"SetMiterLimit" 2
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetMiterLimit(
+    double miterlimit);
+%:
+%CHelvetica-Bold
+Arguments
+%:
+%CTimes-Italic
+miterlimit
+%CTimes-Roman
+%L1
+Is used in order to calculate mitterlength of two line segments.
+%L-1
+
+%S"SetDash" 2
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetDash(
+    unsigned int on,
+    unsigned int off,
+    unsigned int phase);
+%:
+%CHelvetica-Bold
+Arguments
+%:
+%CTimes-Italic
+on
+%CTimes-Roman
+%L1
+Is the length of dashs. The default value is 0.
+%L-1
+%:
+%CTimes-Italic
+off
+%CTimes-Roman
+%L1
+Is the length of gaps. The default value is 0.
+%L-1
+%:
+%CTimes-Italic
+phase
+%CTimes-Roman
+%L1
+Is a number to specify at which to begin marking the path. the default value is 0.
+%L-1
+
+%S"SetFlat" 2
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetFlat(
+    unsigned int flatness);
+%:
+%CHelvetica-Bold
+Arguments
+%:
+%CTimes-Italic
+flatness
+%CTimes-Roman
+%L1
+Is the flatness parameter in the graphics state. the parameter has to set between 0 to 100. The default is 0.
+%L-1
+
+%S"Special graphics state" 1
+
+%S"GSave" 2
+%CTimes-Roman
+Save the current graphics state to the stack. the graphics state restore by GRestore() method.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void GSave();
+
+%S"GReatore" 2
+%CTimes-Roman
+Restore the most recent graphics state saved by GSave() method.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void GSave();
+
+%S"Concat" 2
+%CTimes-Roman
+Set the current transformation matrix to specified values. The default matrix is [1, 0, 0, 1, 0, 0].
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void Concat(
+    double a,
+    double b,
+    double c,
+    double d,
+    double e,
+    double f);
+
+%S"Path construction" 1
+
+%S"MoveTo" 2
+%CTimes-Roman
+Moves the current point to the specified positioni.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void MoveTo(
+    double x,
+    double y);
+
+%S"LineTo" 2
+%CTimes-Roman
+Appends a line segment from the current point to the specified position.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void LineTo(
+    double x,
+	double y);
+
+%S"CurveTo" 2
+%CTimes-Roman
+Appends a BÈzier curve from the current point to (x3, y3).
+CurveTo uses (x1, y1) and (x2, y2) as the control point of a BÈzier curve. 
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void CurveTo(
+    double x1,
+    double y1,
+    double x2,
+    double y2,
+    double x3,
+    double y3);
+
+%S"CurveTo2" 2
+%CTimes-Roman
+Appends a BÈzier curve from the current point to (x3, y3).
+CurveTo uses current point and (x2, y2) as the control point of a BÈzier curve. 
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void CurveTo(
+    double x2,
+    double y2,
+    double x3,
+    double y3);
+
+%S"CurveTo2" 2
+%CTimes-Roman
+Appends a BÈzier curve from the current point to (x3, y3).
+CurveTo uses (x1, y1) and (x3, y3) as the control point of a BÈzier curve. 
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void CurveTo(
+    double x1,
+    double y1,
+    double x3,
+    double y3);
+
+%S"ClosePath" 2
+%CTimes-Roman
+Appends a strait line from the current point and the starting. 
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void ClosePath();
+
+%S"Rectangle" 2
+%CTimes-Roman
+Adds a rectangle to the current path.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void Rectangle(double x, double y, double width, 
+    double height);
+
+%S"Path painting" 1
+
+%S"Stroke" 2
+%CTimes-Roman
+Stroke the current path.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void Stroke();
+
+%S"ClosePathStroke" 2
+%CTimes-Roman
+Close the path then stroke.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void ClosePathStroke();
+
+%S"Fill" 2
+%CTimes-Roman
+Fill the region enclosed by the path.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void Fill();
+
+%S"EoFill" 2
+%CTimes-Roman
+Fill the region enclosed by the path with even-odd rule.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void EoFill();
+
+%S"FillStroke" 2
+%CTimes-Roman
+Fill the region enclosed by the path and stroke the path.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void FillStroke();
+
+%S"EoFillStroke" 2
+%CTimes-Roman
+Fill the region enclosed by the path with even-odd rule and stroke the path.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void EoFillStroke();
+
+%S"ClosePathFillStroke" 2
+%CTimes-Roman
+Close the path then fill the region enclosed by the path and stroke the path.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void ClosePathFillStroke();
+
+%S"ClosePathEoFillStroke" 2
+%CTimes-Roman
+Close the path then fill the region enclosed by the path with even-odd rule and stroke the path.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void ClosePathEoFillStroke();
+
+%S"Clipping paths" 1
+
+%S"Clip" 2
+%CTimes-Roman
+Clipping the region enclosed by the path.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void Clip();
+
+%S"EoClip" 2
+%CTimes-Roman
+Clipping the region enclosed by the path with even-odd rule.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void EoClip();
+
+%S"Text object" 1
+
+%S"BeginText" 2
+%CTimes-Roman
+Begin text object. As side effect, the Graphics State is set to 
+PDF_GMODE_TEXT_OBJECT. 
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void BeginText();
+
+%S"EndText" 2
+%CTimes-Roman
+End text object. The Graphics State is set to PDF_GMODE_PAGE_DESCRIPTION as 
+side effect.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void EndText();
+
+%S"Text state" 1
+
+%S"SetCharSpace" 2
+%CTimes-Roman
+Set the character space of the text to the specified value.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetCharSpace(
+    double value);
+
+%S"SetWordSpace" 2
+%CTimes-Roman
+Set the word space of the text to the specified value.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetWordSpace(
+    double value);
+
+%S"SetHorizontalScalling" 2
+%CTimes-Roman
+Set the horizontal scalling of the font to the specified value.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetHorizontalScalling(
+    double value);
+
+%S"SetTextLeading" 2
+%CTimes-Roman
+Set the text leading to the specified value. The default value is 0.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetTextLeading(
+    double value);
+
+%S"SetFontAndSize" 2
+%CTimes-Roman
+Set the font of the text. It throws PDF_RUNTIME_ERROR when a invalid font is specified.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetFontAndSize(
+    const char* fontname,
+    double size);
+%:
+void SetFontAndSize(
+    PdfFont* font,
+    double size);
+%:
+%CHelvetica-Bold
+Arguments
+%:
+%CTimes-Italic
+fontname
+%CTimes-Roman
+%L1
+Is the name of the font registered by PdfDoc::AddType1Font.
+%L-1
+%:
+%CTimes-Italic
+font
+%CTimes-Roman
+%L1
+Is the pointer of a PdfDoc object.
+%:
+%CTimes-Italic
+size
+%CTimes-Roman
+%L1
+Is the size of the font. The size must be more than 0.
+%L-1
+
+%S"SetTextRenderingMode" 2
+%CTimes-Roman
+Set the rendering mode of the character.
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetTextRenderingMode(
+    pdf_text_rendering_mode mode);
+%:
+%CHelvetica-Bold
+Arguments
+%:
+%CTimes-Italic
+mode
+%CTimes-Roman
+%L1
+Is the rendering mode. It must be one of the following.
+%L-1
+%;
+pdf_text_rendering_mode
+%CTimes-Roman
+%:
+%A16 "∑ PDF_FILL"
+Fill text by the current filling color.
+%A16 "∑ PDF_STROKE"
+Stroke text by the current stroke color.
+%A16 "∑ PDF_FILL_THEN_STROKE"
+Fill, then stroke text. 
+%A16 "∑ PDF_FILL_CLIPPING"
+Fill text and add to path for clipping.
+%A16 "∑ PDF_STROKE_CLIPPING"
+Stroke text and add to path for clipping.
+%A16 "∑ PDF_FILL_STROKE_CLIPPING"
+Fill, then stroke, text and add to path for clipping.
+%A16 "∑ PDF_CLIPPING"
+Add text to path for clipping.
+
+%S"SetTextRaise" 2
+%CTimes-Roman
+Move baseline of the text from the current position.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetTextRaise(
+    double value);
+
+%S"Text positioning" 1
+
+%S"MoveTextPos" 2
+%CTimes-Roman
+Move the current text position to the specified X and Y values. 
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void MoveTextPos(
+    double value);
+
+%S"MoveTextPos2" 2
+%CTimes-Roman
+Move the current text position to the specified X and Y values. And set the text
+reading to -Y. This method is a same as the following.
+%CCourier
+    MoveTextPos(x, y);
+    SetTextLeading(-y);
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void MoveTextPos2(
+    double value);
+
+%S"SetTextMatrix" 2
+%CTimes-Roman
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetTextMatrix(
+    double a, 
+    double b,
+    double c,
+    double d,
+    double x,
+    double y);
+
+%S"MoveToNextLine" 2
+%CTimes-Roman
+Move the current text position to the next line.
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void MoveToNextLine();
+
+%S"Text showing" 1
+
+%S"ShowText" 2
+%CTimes-Roman
+Show a text at the current text position.
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void ShowText(
+    const char* text);
+
+%S"ShowTextNextLine" 2
+%CTimes-Roman
+Move to the next line and show a text. 
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void ShowTextNextLine(
+    const char* text);
+void ShowTextNextLine(
+    double aw,
+    double ac,
+    const char* text);
+
+%S"Color showing" 1
+
+%S"SetGrayFill" 2
+%CTimes-Roman
+Set Gray-scale color for filling operations. The gray parameter must be decimal between 0.0 to 1.0
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetGrayFill(
+    double gray);
+
+%S"SetGrayStroke" 2
+%CTimes-Roman
+Set Gray-scale color for stroke operations. The gray parameter must be decimal between 0.0 to 1.0
+%:
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetGrayStroke(
+    double gray);
+
+%S"SetRGBFill" 2
+%CTimes-Roman
+Set RGB color for filling operations.
+On first format, each color is specified for the integers from 0 to 255.
+On second format, each color is specified for the decimals from 0.0 to 1.0.
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetRGBFill(
+    int r,
+    int g,
+    int b);
+void SetRGBFill(
+    double r,
+    double g,
+    double b);
+
+%S"SetRGBStroke" 2
+%CTimes-Roman
+Set RGB color for stroking operations.
+On first format, each color is specified for the integers from 0 to 255.
+On second format, each color is specified for the decimals from 0.0 to 1.0.
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetRGBStroke(
+    int r,
+    int g,
+    int b);
+void SetRGBStroke(
+    double r,
+    double g,
+    double b);
+
+%S"SetCMYKFill" 2
+%CTimes-Roman
+Set CYMK color for filling operations.
+%:
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetCMYKFill(
+    double c,
+    double m,
+    double y,
+    double k);
+
+%S"SetCMYKStroke" 2
+%CTimes-Roman
+Set CMYK color for stroking operations.
+%:
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void SetCMYKStroke(
+    double c,
+    double m,
+    double y,
+    double k);
+
+%S"XObjects" 1
+
+%S"ExecuteXObject" 2
+%CTimes-Roman
+Paint the specified XObject on the area specified by PdfContents::Concat. 
+On first format, specify name parameter to the name spesified at PdfDoc::AddXObject. On second format, specify the pointer to PdfXObject directly. 
+%:
+%CCourier
+%:
+%CHelvetica-Bold
+Syntax
+%:
+%CCourier
+void ExecuteXObject (
+    const char *name);
+void ExecuteXObject (
+    PdfXObject* xobject);
+
+
+
+%S"Copyright Permission" 0
+%CTimes-Roman
+HARU takes the ZLIB/PNG license. The license is discribing bellow.
+%;
+Copyright (C) 1999-2004 Takeshi Kanno <takeshi_kanno@est.hi-ho.ne.jp>
+%;
+This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+%;
+Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+%;
+1. The origin of this software must not be misrepresented; you must not claim 
+    that you wrote the original software. If you use this software in a product, an 
+    acknowledgment in the product documentation would be appreciated but is not 
+    required.
+2. Altered source versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+%S"Bibliography"
+
+%S"PDF Resources." 1
+
+∑Adobe Reader (Acrobat Reader).
+  URL: http://www.adobe.com/products/acrobat/readermain.html
+
+
+%S"Programing Resources" 1
+
+∑PDF References are available at the following
+  URL: http://partners.adobe.com/asn/developer/acrosdk/docs.html
+%;
+∑Charsets Index is available at the following
+  URL: http://www.kostis.net/charsets/
+
+%S"Type1 Font Resources" 1
+
+∑Adobe Type 1 Font Format
+  URL: http://partners.adobe.com/asn/tech/type/opentype/otover.jsp
+%;
+∑Ghostscript 6.0 fonts
+  URL: http://sourceforge.net/projects/gs-fonts/
+%;
+∑Type1 KOI8-R font set
+  URL: ftp://ftp.kapella.gpi.ru/pub/cyrillic/psfonts/
+%;
+∑CM-Super font package
+  Copyright © 2001, 2002 Vladimir Volovich <vvv@vsu.ru>.
+  URL: http://www.ctan.org/tex-archive/fonts/ps-type1/cm-super/
+%;
+∑TTF2PTF (True Type Font to Type 1 Font Converter)
+  URL: http://ttf2pt1.sourceforge.net/
+
+%S"Copyright Notice" 1
+
+∑The IJG JPEG LIBRARY
+  Copyright © 1991-1998, Thomas G. Lane.
+%;
+∑The PNG Reference Library
+  Copyright © 1998-2001 Glenn Randers-Pehrson
+%;
+∑The Zlib compression library
+  Copyright © 1995-2002 Jean-loup Gailly and Mark Adler
+%;
+∑arc4.h,arc4.c (ARC4 crypt)
+  Copyright(c) 2003 Markus Friedl <markus@openbsd.org>
+%;
+∑Adobe, Acrobat are registered trademarks of Adobe Systems Incorporated.
+
+

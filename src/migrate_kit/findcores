@@ -1,0 +1,5 @@
+#!/bin/bash
+# find how many cores are present
+# 
+cores=`sysctl hw.logicalcpu | awk '{print $2}'`;
+echo $cores;

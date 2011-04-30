@@ -1,0 +1,730 @@
+H I S T O R Y    O F      M I G R A T E 
+
+
+[people] in brackets helped with resources or reported problems.
+
+
+Version numbers: 3 major version 
+                 2 subversion    
+		 7 fix minor problems  
+-------------------------------------------------------------------------
+                                     2011
+-------------------------------------------------------------------------
+March 21       Migrate 3.2.8 Cleaning of little nuisances detected by the 
+               static analyzer in xcode, investigation of strange posterior
+               with parallel runs and custom migration matrices and replicates.
+               Revised the "Warning" section, to "Suggestions". 
+January 12     Migrate 3.2.7 Parallel Migrate had difficulties with Maximum
+               likelihood printing of profiles tables (it crashed),
+               temporary fix (the exchange of data among computer nodes 
+               needs to be more streamlined (time frame depends on funding)).
+-------------------------------------------------------------------------
+                                     2010
+-------------------------------------------------------------------------
+December 5     Migrate 3.2.6 Parallel Migrate broke for Bayesian inference
+               when the reporting file bayesallfile was set to NO: fixed.
+November 27    Migrate 3.2.5 a memory overflow in reporting large migration
+               matrices in the ML-mode is fixed [Daniel T. R.]
+November 21    Migrate 3.2.4 cleaning up of printing and using inheritance 
+               scalars. First trial distribution of a general fastmigrate
+               python script.
+November 5     Migrate 3.2.3 the PDF library was not able recognize the shipped
+               zlib.h, hopefully fixed now.
+October 31     Migrate 3.2.2 clean up problems with zlib in the configure file.
+               No change in functions in the program.
+October 25     Migrate 3.2.1 addition of a compression scheme for the recording
+               of all parameter values in the Bayesian inference (simple add
+               a .gz to the filename of the bayesallfile filename and it will be
+               compressed, the source distribution now distributes also the zlib
+               library and configure can be forced to use that, default is the
+               system, but that may be slow. Little tests with very large datasets
+               have been done for the compression scheme. Printing of trees 
+               now also works for microsatellite trees. Currently the printing of 
+               ALL trees using the parallele migrate does not work (use the single
+               cpu version).
+October 5      Migrate 3.2 addition of new microsatellite reading method
+               with an additional inputline in the infile, Migrate can now
+               use fragmentlength as input. Even decimal values (as delivered
+               by the .... machine as raw data can be used when the additional
+               input lines specifies the repeat lengths, ambiguous alleles will be 
+	       assigned to repeats using a simple probability model that assigns to
+               to the lower repeat number with a triangular probability distribution, crossing 0.5
+               when the actual fragmentlength is exacly in the middle of two repeat alleles.
+               Addition of a system to report problematic configuration or runtime issues, this is
+               work in progress and may need some user feedback. Currently problems with upper bounds
+               of prior specifications and too low Effective sample sizes are reported.   
+September 15   Migrate 3.1.10 fix of a glitch with replicates and marginal
+               likelihoods and replication (replication was not divided out)
+               [thanks to Anders].
+September 8    Migrate 3.1.9 reestablish the reading of old bayesallfile to
+               recreate the output of an older run, I am still working on the 
+               tool to combine several old bayesallfiles so that users can run
+               loci indpendently on different machines and then later get a 
+               combined estimate [thanks to Chris Drummond for helping to squash
+               several of the key problems]
+August 9       Migrate 3.1.8 memory fixes so that very large datasets
+               (>100 populations) have a chance to run [whether these converge
+               I do not know].
+July ~15       Migrate 3.1.7 Cosmetic changes so that my Bayes factor tutorial
+               and the migrate menu match.
+May 24         Migrate 3.1.6 turned heating back on that got turned off to 
+               find a problem in 3.1.4. [Yuma More]
+May 14         Migrate 3.1.5 Fixed problem in combining multiple loci when the
+               Bayesian inference was using exponential prior distributions.
+April 30       Migrate 3.1.4 problem with not allowing very very low migration
+               rates anymore fixed [my fix on March 21 was obviously to 
+               brush.
+March 21       Migrate 3.1.3 fixed two issues that affected microsatellite
+               data (migration rates had tendency to be close to zero,
+               population sizes overcompensated for that, this problem was
+               introduced with 3.0.8/3.1).
+February 6     Migrate 3.1.2 after way too many ours of porting the new
+               migrate version to windows (relearning what I thought was 
+               standard on decent platforms). Many little changes to 
+               accomodate windows. 
+January 15     Migrate 3.1.1 fix a bug that prevented to show results for
+               the first migration rate.
+January 1      Migrate 4.0alpha allows for haplotypic data using mixed
+               data types (sequence, msat, snps, ... ) all with different
+               mutation models. Free combination of completely linked and
+               and unlinked segments. Migrate allows the use of
+               libhmsbeagle to calculate likelihoods on trees using the
+               GPU and other speedups [not all options are allowed yet
+               because beagle is not supporting all options.
+-------------------------------------------------------------------------
+                                     2009
+-------------------------------------------------------------------------
+October 30     Migrate 3.1 stable version -- some minor errors fixed. 
+               Improvement and correction of the marginal likelihood 
+               calculations.
+August 1       Migrate 3.0.8 problems with tree printing and dated samples
+               reported (thanks to Trevor Bedford) hopefully fixed. 
+May 24         Migrate 3.0.7 Population relabeling possible, but only 
+               using the parmfile,
+               several small problems with relabeling may still persist.
+May 5          Migrate 3.0.6 Memory issue with MPI printing resolved, 
+               Slice sampler speed-up results in about 25% faster runs 
+               (for small runs). 
+January 8      Migrate 3.0.5 Dated samples with multiple loci should work now
+-------------------------------------------------------------------------
+                                     2008
+-------------------------------------------------------------------------
+December 8     Migrate 3.0.4 reporting of ESS and autocorrelation in MPI parallel runs
+               fixed, this problem does not appear in single or thread runs and does not affect 
+               accuracy in the MPI runs.
+December 3     Migrate 3.0.3 Bayes factors tested and seems to work fine, first exploration of 
+               approximation of Thermodynamic integration using only 4 chains to approximate true
+               integral (using Bezier curve that approximates curve from 32 chains).
+October 22     Migrate 3.0.2 Added a configure option (at compile time) so that one can
+               force the PDF outputfiles to be letter size (default) or A4 size.
+October 20     Migrate 3.0.1 Fixed bugs in the ML calculation on parallel computers with 
+               replication (thanks Jeff Row).  
+August 1       Migrate 3.0 updated manual, cleaned some small things, included skyline plots,
+               and migration events, dated samples. 
+July 10        Migrate 2.5.2 Internal rearrangements for preparation of 
+               skyline plot calculations. Change Makefile so that all particular
+               Apple platforms work.
+June 10        Migrate 2.5.1 
+May 13         Migrate 2.5 Changes of the configure/make files so that the
+               compile choices highlight only the most important compile 
+               targets. The compile on AIX systems should work now, although some
+               tweaking is still needed.
+April          Migrate 2.4.4 Fix of a random number seed problem in the windows
+               distribution, some earlier version delivered always the same 
+               automatic random number seed.
+February 19    Migrate 2.4.3 The Bayesian inference printed wrong values when
+               the prior was excessively large compared to the posterior,
+               if your posteriors cover only a small fraction of the prior
+               range you need to rerun (an indicator of the problem is the
+               large discrepancy of the mean and mode. This problem does not 
+               affect likelihoods.
+January 22     Migrate 2.4.2 The parallel code was executing the likelihood 
+               ratio test multiple times, on some systems this caused a crash,
+               fixed.
+January 9      Migrate 2.4.1 A problem with reading options for genealogy
+               summaries fixed. Missing file in source code added.
+January 5      Migrate 2.4 Several improvements moved into the mainstream
+               program: marginal likelihood calculations, histogram of 
+               migration events over time and probability of location of
+               most recent common ancestor, standard Mac(Intel) distribution
+               contains now a parallel cluster utility using all avaialable
+               CPU cores. 
+-------------------------------------------------------------------------
+                                     2007
+-------------------------------------------------------------------------
+December 16    Migrate 2.3.4 Fix of a memory problem that made long 
+               runs with some data impossible.
+               Memory management changed considerably for genealogies. 
+August 26      Migrate 2.3.3 Reordering of output (the MCMC run characteristics
+               appear now all at the end.
+August 14      Migrate 2.3.2 An error that affected runs using heating with 
+               the stepwise mutation model is fixed.
+July 20        Migrate 2.3.1 Problem with SNP model solved (thanks to Ivo 
+               Chelo reporting the problem).
+July 12        Change of default threshold value for stepwise 
+               microsatellite mutation model
+June 26        Migrate 2.3 Improvement of the speed of the stepwise model 
+               by a huge factor (reorganizing code).
+January 1      Migrate 2.2.0 Improvement of memory consumption of parallel
+               runs, some cleaning up of wording in output, addition of slice
+               sampling proposal mechanism, revision of manual to reflect the
+               program better. Fix of a problem in Brownian motion datatype
+               introduced late November in 2.1.9 (only in prerelease version).
+               Relative mutation rate estimation from data.  
+-------------------------------------------------------------------------
+                                     2006
+-------------------------------------------------------------------------
+October 21     Migrate-2.1.9 Several minor problems with heating and 
+               custom-migration matrix under Bayesian inference are fixed.
+September 8    Migrate-2.1.9 Problem with switching between ML and Bayes analysis fixed,
+               without this fix a simple switch between methods without adjusting priors
+               resulted in priors that did never change (resulting in an obviously 
+               wrong result).
+August 8       Migrate-2.1.8 Several smaller fixes and improvements
+               fix for wrongly reporting acceptance of swaps between heated chains
+               when using a Bayesian framework, several minor errors: when user mix 
+               infile and parmfile in the commandline option a warning is issued, when 
+               the data looks like an xml file the data import is aborted.[skyline plots are
+               still experimental!!!!!].
+June 8         Migrate 2.1.7 reducing memory footprint for bayesian analysis
+               rearrangments in the migration history code. Changed histogram module
+               now can plot histograms for events (was mig-histogram) and skyline plots
+               similar to the ones by Strimmer and Pybus (2001)[rigorous tests are still not done]
+April 27       Migrate 2.1.6 buf fix in the profile table writer for PDF, that
+               crashed with some datasets and some machines (Macs, Others?)
+April 11       Migrate 2.1.5 working on improvement of the PDF output file, MCMC-ML table 
+               and profile tables, and percentiles tables should work now.
+March 6        Migrate 2.1.4 several cleanups and streamlining of the functions
+               related to microsatellites to gain speed, addition of an option to override 
+               the menu option in the parmfile (migrate-n -nomenu parmfile or
+               migrate-n -nomenu parmfile). 
+February 2     Migrate 2.1.3 Bug that resulted in crashes in windows binary found and fixed
+January 14     Migrate 2.1.2 Memory problem with multiple replicates in ML method
+               fixed, migration-histogram problem fixed, both probably introduced on 2.1.0
+-------------------------------------------------------------------------
+                                     2005
+-------------------------------------------------------------------------
+December 24    Migrate 2.1.1 Use of valgrind to clean up some memory problems,
+               memory footprint should be somewhat reduced
+December 4     Migrate 2.1.0 Bayesian inference overhauled and rechecked,
+               changes in interface in parmfile interface (use write in the
+               menu to bring your parmfile up to date). Addition of a PDF
+               printing interface, the Bayesian analysis is mostly complete
+               in PDF, the maximum likelihood PDF interface is still lacking
+               major parts. The ASCII output file is still the safest resource 
+               for ML. Several minor changes to menu and option printing.
+July 20        Migrate 2.0.7 Sumfile naming option fixed, MPI version 
+               does not stall anymore when number of nodes and loci match.
+               Profile tables code cleaned.
+May 14         Miggui 0.8 release of Macos 10.3+ graphical user interface
+               programmed by Carl McIntosh.
+May 13         Migrate 2.0.6 Cleaning up of Bayesian menu options, 
+               Bayesian method with multilocus-microsatellite data
+               still needs more tests, if you get failures please report them.
+               Several minor memory leaks and one major leak in the Bayes code
+               fixed.  
+January 24     Migrate 2.0.5 A string buffer read error in sgets() and 
+               a memory leak [Kelly Gallagher, Karl Schmid] in the tree 
+               changing algorithm fixed. Some compilation issues on 
+               windows machines fixed, should work now with MS Dev Studio. 
+-------------------------------------------------------------------------
+                                     2004
+-------------------------------------------------------------------------
+December 27    Migrate 2.0.4 Fixed Parmfile-reader that missed the usertree option, 
+               menu was not affected by this problem.
+November 29    Migrate 2.0.3 prior distribution and menu/options revised,
+               Migrate documentation revised and Bayesian Inference added, plotting problem with
+               multiple population solved.
+October 14     Migrate 2.0.2  error in option reader (LRT, theta, and Migration rates) 
+               found and fixed
+September 17   Migrate 2.0.1 parallel runs failed on some machine entering profile calculation
+               memory problem found and fixed.
+July 27        Migrate 2.0 (alpha) Test release for the Molecular Evolution workshop
+               at MBL in Woods Hole, MA. Introduction of Bayesian search strategy, 
+               introduction of distribution of replication scheme 
+               among multiple computers. The parallel version now distributes loci and 
+               replicates over a cluster using the standard message passing interface.             
+July 26        Migrate 1.8.2 Bayesian version nears completion, Bayesian-version
+               runs using MPI in multiple replicates and at the end summarizes 
+               over the loci-histogram, program bayeshist put into the contributed 
+               folder. Bug with recording all trees while using heating fixed [Daniel Myers]
+May 21         Migrate 1.8.1 addition of replication to the parallel scheme
+               now it is possible to run replicates in parallel, if there are
+               enough free compute-nodes.
+May 1          Migrate 1.8 changes to the parmfile writing and reading parts
+               a parmfile contains now the complete syntax of all available
+               options in commentlines. Fix of a memory problem when the custom
+               migration matrix and the number of populations are not in sync.
+
+-------------------------------------------------------------------------
+                                     2003
+-------------------------------------------------------------------------
+December 13    Migrate 1.7.7 under some conditions the parallel version crashed while
+               reading the sequence data into the tree
+October 23     Migrate 1.7.6 with very large numbers of loci the program crashed during reading
+               the data file, for some datasets this fix did not work, and because I
+               had this version up for a short while on the ftp site I increase the version
+               number.
+October 14     Migrate 1.7.5 with very large numbers of loci the program crashed during reading
+               the data file.
+August 04      Migrate 1.7.4 fix accidently deleted line for ADAPTIVE heating.
+June  15       Migrate 1.7.3 MPI works now on IBM regatta (SP4) machines.
+February 24    Migrate 1.7.2 working on problems with heating and gamma-deviated
+               mutation rates.
+February 2     Migrate 1.7.1 more checking, removal of a typo bug that 
+               shortens long chains (introduced in restructuring process in 1.7). 
+January 27     Migrate 1.7 added option so that one can choose whether the
+               missing data gets discarded or not for the allelic data types
+January 3      Migrate 1.7 Revised printout for likelihood ratio test [bug 
+               testing help Peter Pearman], inclusion of AIC (Akaike's 
+               information criterion). Inconsistency for custom migration
+               matrices filled with '0' and 'm' fixed [Peter Pearman].
+               updated list of papers that cite migrate. Migrate compiles 
+               in parallel using MPICH (I still prefer LAM (www.lam-mpi.org)). 
+               Addition of Makefile specification for IBM SP3. 
+               (711 registrations)
+-------------------------------------------------------------------------
+                                     2002
+-------------------------------------------------------------------------
+November 29    Migrate 1.6.9 If you run microsatellite data and used 
+               versions 1.6.7 or 1.6.8 you need to rerun because there was 
+               a data reading problem in that version
+               and this is fixed now [I am sorry about this].
+August 12      Migrate 1.6.8 problem with reading weighfiles and
+               catfile solved [Jon Seger]. Change of printing
+               routines in the parallel version, all workers
+	       send now to the master who is the print-center.
+July 12        Migrate 1.6.7 fixed problem with large sumfiles [Alex Wang].
+June 25        Migrate 1.6.6 fixed a reporting problem with adaptive heating.
+	       Second and hopefully final fix of of "?" for *all* allele data 
+	       types [Eric Simandle]  
+June 16        Migrate 1.6.5 nasty bug in microsatellite and allele code fixed:
+               when "?" were present then the second replicate could end up 
+               with the incorrect number of tips in the genealogy and the 
+               program would fail. [Alex Wang, Deirdre Joy], a related problem
+               that occured when only 1 individual was scored for 1 
+               msat allele in a population is fixed, too [Russell Pfau]. 
+               Memory overrun with brownian mutation model and heating fixed.
+June 05        Migrate 1.6.4 Problem with SNP data reading fixed, currently
+               running simulations to see if SNP works. 
+May 23         Migrate 1.6.3 Some more minor problems in the parallel 
+               implementation fixed.
+May 20         Migrate 1.6.2 Problem with msat data distribution in the
+               parallel version fixed [Eric Simandle]
+May 13         Migrate 1.6.1 Fixed a fatal bug in the profiles when using
+               profile=All:FAST [Martin Damus].
+April 13       Migrate 1.6 In the infile the number of individuals per locus with 
+               sequence data  can now be different, to accomodate different numbers
+               of individuals change the population line to
+               <num ind locus1> <num ind Loc2> ..... <num ind loc m> Population name
+               the old syntax will still work and still assume that in a population all loci
+               have the same number of sequences.  
+April 12       Migrate 1.5.1 Fixed a problem when using sumfiles and replicates
+               the profiles had difficulties to find the maximum.
+March 28       Migrate 1.5 change of maximization routine, jumps far away
+               from the driving values are penalized using a normal distribution
+               with mean=param_0 and std=param_0, this should help that 
+               with some data sets the program will refrain to jump to
+               ridiculously high values, although if your data suggest such values
+               the program will go there, just more slowly. Addition of adaptive
+               heating (MCMCMC) to help to search the solution space better.
+February 18    Migrate-1.4 Problems with custom migration matrix fixed
+               but profile tables with symmetric 4Nm have problems (@#$^&%@),
+               symmetric M works.
+-------------------------------------------------------------------------
+                                     2001
+-------------------------------------------------------------------------
+December 18    Migrate-1.3.3 two buffer over-runs in the parallel part
+               found and fixed, this affected Linux machines but not MacOSX
+December 2     Migrate-1.3.2 Profile tables work again for settings 
+               profile=YES:FIXED and profile=YES:QUICK, I obviously broke 
+               these settings in version 1.2.4 [Martin Damus, Mats Bjorklund]
+November 12    Migrate-1.3.1 In parallel version: the data file is only read 
+               by the master node and the distributed to the worker nodes.
+October 28     Migrate-n 1.3 (minor bug fixes related to plotting and parallel 
+               MPI execution)  changes so that profiles are now calculated 
+               parallelized over parameters instead of loci. This will 
+               reduce network traffic and should finish much faster if there 
+               are as many cpu as there are parameters. Improvement in the
+               the ML calculation [replaced the line search with a newer version]
+August 15      Migrate-n 1.2.4 fix for geographic distance file option, some older 
+               versions [most likely version that were newer than 1.1] were using
+               a similarity matrix instead of a distance matrix.
+August 9       Migrate-n 1.2.3 On Compaq alpha the program crashed with
+               underflows (EXP(-1000)=NaN and not 0 as everywhere else),
+               now every EXP() will be safeguarded on Compaq alphas.
+August 8       Migrate 1.2.2 Several minor fixes to "beautify" outfile and
+               menu printing.
+July 28        Migrate-n 1.2.1 changes to the menu to incorporate AIC for
+               migration model selection, needs documentation.
+July 15        Migrate-n 1.2 Reworking of microsat likelihood calculation.
+               It seems that my change on April 15 was only doing half
+               of the job, the conditional likelihood calculation
+               were not taking into account unobserved alleles above and
+               below the smallest and largest repeatnumber.
+               Everybody using microsatellite data should upgrade. 
+April 30       Migrate-n 1.1 Reworking of likelihood calculation,
+               should speed up parameter estimation about 10-20%.
+               Inconsistency between manual likelihood-ratio description
+               and program fixed, manual is now at version 1.1.
+               If you want to use likelihood ratio test you should
+               run 'long' runs or then use replication or heating.        
+April 20       Migrate-n 1.0.4 Harmonizing the use of end-of-line
+               characters,  migrate had several problems 
+               reading files that were moved between different
+               operating systems, hope this is all fixed now. 
+               Fix of FAST and QUICK profile options [Raphaelle Chaix].  
+April 18       Migrate-N 1.0.3. More fixes, plots should work now 
+               [Steven Irvin], windows binary now is compiled with 
+               correct set of C-files and not old ones [Mats Bjoerklund].
+April 15       Migrate-N 1.0.2 Serious problem in microsatellite code
+               found and fixed: the stepwise-mutation model was only 
+               approximated due to a programming error. The probability 
+               of the number if steps for a given length of time was only
+               too crudely approximated. Without the error reports of
+               Steven Irvin and Raphaelle Chaix I would not have found 
+               this. Problem with "?" as the last character in a file
+               transported between different operating systems fixed 
+               [R. Chaix]. Error in new replicate-summarizing code fixed
+               [S. Irvin].
+April 11       Migrate-N 1.0.1 Glitch in single locus likelihood ratio test
+               fixed (technically you should not use this anyway).
+               Some small formatting issues when saving parmfile.
+April 10       MIGRATE-N 1.0 several memory leaks fixed, plotting
+               option changed and will plot only over all loci.
+               Many internal changes/speedups that should not affect users,
+               although may introduce no bugs. Gamma deviated mutation rate
+               among loci changed considerably but still has difficulties
+               to converge. Sumfile run with "allelic" data broke,    
+               fixed now.
+February 12    MIGRATE-N 0.9.14 some cleanup on freeing memory in profile
+               evaluation. Fixed a bug in the heating code when the dataset
+               is "allelic data" [Robb Brumfield].
+------------------------------------------------------------------------
+                                     2000
+-------------------------------------------------------------------------
+December 16    MIGRATE-N 0.9.13 Speed up: memcpy() in site rate category code
+               is replaced by pointer swapping [C++ newsgroup contribution],
+               more precalculation of parts of the acceptance-ratio 
+               calculation. Can use now a geographical distance file to 
+               specify a kind of an isolation by distance model. 
+               Rearrangement of likelihood ratio test menu [Steven Irvine], 
+               removal of the l-ratio=LOCUS option, l-ratio=MEAN is replace 
+               by l-ratio=MLE, this actually should not break old parmfiles. 
+December 05    MIGRATE-N 0.9.12 Bug fix: I broke the infinite allele code
+               and it is fixed now again [Ron Goldthwaite]
+November 26    MIGRATE-N 0.9.11 Bug fix: when compiled optimized on SUNs
+               the program showed odd and wrong behavior, and did not
+               accept any new genealogy after a while, perhaps it is
+               a compiler problem, because it does not occur on Linux
+               Intel and I have not found a memory problem. A more
+               restrictive array copying seems to remedy the problem.
+               Additions: Adapted for compiles in a MAC OS X terminal
+               window, it runs about twice as fast as in MAC OS 9.
+               Addition of an option for more accurate calculations 
+               during the data likelihood calculations with large data
+               sets where the individual probabilities underflow and the
+               program crashes, this option is not necessary for many 
+               data sets, but slows the down run around 20-40%.   
+October 18     MIGRATE-N 0.9.10 Bug fix: Multiple microsatellite loci analyzed
+               with Brownian motion model, populations with no data, and a
+               missing value in at least one of the sampled populations 
+               crashed, because the whole locus was discarded, it should 
+               work properly now [Martin Damus] 
+October 13     MIGRATE-N 0.9.9 Bug fix: Parallele evaluation on symmetric 
+               multiprocessor machines now works with rate categories (more 
+               than one process wrote to the same unguarded memory).
+               Further redesign to easy transition to parallele processing 
+               of loci. 
+October 6      MIGRATE-N 0.9.8 Bug fix: The reanalysis of a sumfile
+               with one locus failed in the profile likelihood calculation.
+               Addition of saveguards for machines (Dec Alphas) 
+               that return for EXP(-1000) = NaN instead of a very small 
+               number or zero. 
+               Addition of a sequencing error 
+               possibility [see under Datatype with Sequence data]. 
+               Heating scheme expanded from 4 chains to n<20 chains.
+July 28        MIGRATE-N 0.9.7 Bug fix: in cases where a population size
+               cannot be well estimated (the likelihood surface is flat)
+               the reset function failed to calculate an average size, 
+               and returned 0.0 which resulted in erratic behavior
+               [Patricia Brito].
+July 22        MIGRATE-N 0.9.6 Addition of a logfile option, 
+               the Gamma-deviated mutation rate among loci seems to work
+               but needs more rigorous testing, so sometimes it will still
+               fail. 
+July 11        MIGRATE-N 0.9.5 Bug fixes: the addition of a null population
+               should work now for all datatypes [Martin Damus], 
+               under some conditions the maximizer
+               gave up too quickly, and (an embarassing one) for profile 
+               likelihood percentiles miscalculation of percentile values: 
+               some of the  old percentiles were wrong, To see what impact it
+               had on your conclusions see below 
+               correct/:1%   5%   10% 25%   50% 75%   90% 95%   99%
+               wrong/old:  0.5% 2.5%  5% 12.5% 50% 87.5% 95% 97.5% 99.5%
+               The old tables were using the 1,5,10... labels but calculated
+               values under "wrong/old".
+               [the likelihood ratio tests are not affected by this]
+               The new profile tables are set so that you can generate
+               99%, 95%, 90%, 50% confidence intervals. 
+               [mutation=Gamma is still broken, sigh]  
+May 30         MIGRATE-N 0.9.4
+               Fixed a bug in reading and writing summary files
+               (options affected were write-summary and datatype=genealogy).
+               mutation=Gamma is still broken [Eric Simandle], 
+               do not use it.
+May 12         MIGRATE-N 0.9.3
+               embarrased to say but the last fixed introduced a problem,
+               in the likelihood calculation, hopefully  fixed now.
+               mutation=Gamma is still broken [Eric Simandle], 
+               do not use it.
+April 22       MIGRATE-N 0.9.2
+               inconsistency in likelihood calculation with replication
+               fixed.
+April 21       MIGRATE-N 0.9.1
+               Bug in Mac-version of automatic random number seed
+               generation, and in recording start migration parameters fixed,
+               and migration start parameter mix up in parmfile 
+               fixed [all Ken Wahrheit]. 
+               Heating scheme changed, implemented a 4 parallel chain
+               heating scheme (simulated tempering) based on Geyer and
+               Thompson. The Tempered transition method (Neal) will 
+               be reimplemented in a later version.
+               Fixes: ttratio now works for different values 
+               [Judite Alves],
+               Registered users: 423 
+                                 (tried to find this time all doubles)
+March 3        MIGRATE-N 0.9
+               First introduction of estimation of parameters 
+               over multiple chains or multiple runs. 
+               Problems: Multiple chain/runs 
+               with the combination of gamma deviated mutation rate 
+               does not work yet. Heating scheme is broken.
+------------------------------------------------------------------------
+                                     1999
+-------------------------------------------------------------------------
+December 10    MIGRATE-N 0.8.5
+               Change of defaults: plot=FALSE, moved eventloop()
+               in plot routine for Macintosh.
+December 2     MIGRATE-N 0.8.4
+               Revision of likelihood ratio test output. Change
+               of "burn-in" default from 200 to 10000.
+               Minor speedups in several functions.
+November 23    MIGRATE-N 0.8.3
+               Revision of heating scheme. But still needs more testing.
+November 5     MIGRATE-N 0.8.2
+               Addition of a convergence criterium: Gelman's R,
+               (use progress=verbose)
+               Added material to the 
+               likelihood ratio test documentation.  
+               Several minor bugfixes (sumfile related [Tonya Bitner],
+               Profile Quantile table, verbose Progress reporting)
+               Registered users: 372 
+September 7    MIGRATE-N 0.8.1
+               More cleanup of C-code, incorporation of new spline
+               routine ( but this is still experimental). Improvement
+               of documentation.
+August 20      MIGRATE-N 0.8
+               A problem with the UPGMA starting tree fixed,
+               with many individuals the starting tree contained 
+               some silly ordering, that produced uneven number of
+               migration events on this tree and needs rather a long
+               time to recover from this.
+               profile likelihood speed improvements when there is a
+               custom-migration matrix with zeroes.
+               Registered users: 322
+June 4         MIGRATE-N 0.7.1
+               Division by 0 bug fixed in fst-calculation, this seems
+               to bother only DEC Alphas.
+June 1         MIGRATE-N 0.7
+               Updated documentation, several minor things, warnings and error
+               reporting should be more consistent, I am adding a section to
+               the manual that describes all error/warning messages [partly
+               done], the plotting graphics are more flexible now, but still
+               need more work. You can specify the range and type of 
+               axes (log-scale, std-scale), and if the migration parameter
+               shall be plotted as M=m/mu or 4Nm. Fix of inconsistency 
+               in migration value menu input [Reinaldo Brito]. 
+               Fix of an error in the
+               profile-method=FAST (it will need now more time to finish,
+               because it is doing the final maximization over all other
+               parameters), if you want its old behavior, that assumes that 
+               Theta and M are not correlated [not a too bad assumption], 
+               then use profile=YES:QUICK.  
+March 8        MIGRATE-N 0.6.3
+               Updated documentation (fixed errors in description of
+               random-seed options, added important material 
+               to profile-likelihood) , 
+               inclusion of improved man page,
+               fixed configure for SGI's with out gcc. 
+Feb 14         MIGRATE-N 0.6.2 
+               Tree traversal debug code removed,
+               this killed runs with many individuals [Lisle Gibbs]
+               Configure for SGI changed, does it work?
+               MIGRATE-0.4: no change.
+               Registered users: 280.
+------------------------------------------------------------------------
+                                     1998
+-------------------------------------------------------------------------
+December 29    MIGRATE-N 0.6.1 Multilocus estimates are all wrong 
+               in version 0.6, silly programming mistake found an fixed.
+               If you have used microsatellites or electrophoretic markers
+               or several sequence loci you need to rerun that analysis.
+               Result table should print now nicer with population numbers 
+               above 3.  
+               MIGRATE-0.4: no change.
+               Registered users: 234
+Oct 29         MIGRATE-N 0.6
+               Addition of datatype=n that is for single nucleotide
+               polymorphism data, no simulation with this kind of data
+               is yet done, so I do not know about biases etc. 
+               Profile tables now report 4Nm instead of m/mu for
+               the migration parameters.
+               Documentation changed and contains now more about 
+               how to read the outfile and what you can and 
+               cannot do with the reported log(likelihood) values 
+               [Mats Bjorklund].
+               Binaries for OPENSTEP available [thanks to Magnus Nordborg
+               giving me an account on his machine].
+               Registered users: 206
+Sep 1          MIGRATE-N 0.4/0.5 [was not released, was too busy with 
+               other things]
+               FST start values work now also for microsatellite data
+               but I still need to check  the correctedness of the FST table
+               when the data are microsatellites.
+               Fixed wrong emmigration plots. Fixed wrong start 
+               calculations for allelic data when a delimiter was used,
+               and several minor bug fixes. Profile-method
+               "uncorrelated" from version alpha.1 recovered.
+               Registered users: 197
+June 14        MIGRATE-N alpha.3 and MIGRATE-0.4.2
+               Several minor changes in migrate-n: menu addition for
+               -profile method: 
+               profile-method=<Spline | Percentiles | Discrete>
+               Spline: uses 1-dimensional splines to find percentiles,
+               faster than the "Percentiles" option but not so accurate,
+               "Discrete" evaluates at "fixed" (0.02, 0.1, 0.2, 0.5, 1, 2,
+               5, 10, 50) * MLE of parameter.
+               -with progress=yes you can see now a rough prognosed time 
+               of end of sampling genealogies and if you use profiles 
+               an estimated time of finishing.
+               -Fix of reading in intermediate results (sumfile).
+               -Most importantly a (hopefully) stable compile for 
+               Windows, I failed to find the cause why the program
+               compiled with WATCOM failed to finish with "bigger" data sets,
+               it is now compiled with mingw32/gcc-win32, this is
+               a windows port of the same system I am using on my workstation.
+               Please report failures, I can only try a limited set of 
+               examples.
+               Migrate-0.4.2: new windows binary (using mingw32/gcc-win32)
+               Registered users: 163
+May 30         MIGRATE-N alpha.2 and MIGRATE-0.4.1
+               With more than 2 sequence loci, there was a problem
+               with the T/T-ratio, when the ratio was not specified 
+               for each locus.
+               Start parameter problems with microsatellite data fixed
+               [Mats Bjorklund]. 
+               Persistent problems with Windows executable
+               sometimes I get floating point errors, on all other systems
+               this does not occur.
+               Registered users: 153
+May 29         MIGRATE-N alpha.1 and MIGRATE-0.4
+               Memory bug in FST calculation found and fixed
+               [Daniel Yeh] 
+               No change of Migrate-0.4
+               Registered users: 148.
+May 26         MIGRATE-N and MIGRATE-0.4
+               This release has the two population version (Migrate-0.4) 
+               and an alpha-version of Migrate-n that can solve migration
+               matrix population model with unequal population sizes and
+               unequal migration rates for n populations, I tried up to 10
+               and the results where fine, but I am pretty sure that if 
+               you try to feed in all your date of 100 subpopulation it
+               will (a) probably crash, but more importantly (b) will
+               need TERRIBLY long to run. 
+               I would like to get some 
+               feedback about what you want to see in the outfile,
+               menu etc. Registered Users: ~138.
+February 25    MIGRATE 0.4 (was not put up onto the website, I was to busy)
+               More complex sequence evolution models (categories,
+               weights, autocorrelation etc.) should work now, 
+               it was broken. Cleanup of some output file lines, and
+               some menu entries. The FST estimation (Remember FST is only 
+               used to generate start parameter values) is 
+               in pre 0.4 versions logically flawed. It estimates 
+               2 parameters per population using F_within and F_between,
+               but there is only 1 F_between. Correctly, we can
+               only estimate maximally 3 parameters with 1 locus for
+               two populations. I added an option into the MENU and into
+               the PARMFILE (fst-type=<Theta | Migration >) with which you 
+               can decide which parameter is considered the same for both
+               populations.
+               Registered users:89
+------------------------------------------------------------------------
+                                     1997
+------------------------------------------------------------------------
+August 20      MIGRATE 0.3.1
+               Confusing menu entries for start theta and 4Nm values
+               fixed [Carol Reeb], the start migration values are now
+               4Nm and *not* m/mu values as before. Automatic Random
+               number seed on Macs and perhaps on other Systems 
+               delivered sometimes negative values, now fixed 
+               [Carol Reeb], although I would recommend to use your
+               own random number seeds: best values are 4n + 1 in the 
+               range of 5 .. 2147483647, so there are plenty of 
+               start random number seeds. Menu entry for
+               usertree options should be now more clear, the usertree
+               options needs a genealogy with migration events on
+               it [Tony Metcalf]. Currently MIGRATE can construct 
+               those, or you have to do it by hand, if you need to do 
+               this send me email, because the doc is not updated. 
+               Registered users:52
+June 20        MIGRATE 0.3.0. 
+               Brownian motion approximation to stepwise mutation
+               model for microsatellites added.  Solved problems:
+               Input problems with microsatellites data, major memory
+               allocation problem for datasets with more than 100
+               gene copies fixed [Carol Reeb].  Update of some
+               citation  and FST output tables [Byron Adams].
+               Persistent problems: Long sequences AND high number of
+               individuals need nuch longer chains than the proposed
+               default. Try ten times longer "long" chains. Or use
+               the option "moving-steps".  
+               Registered users:38
+May 12         MIGRATE 0.2.1a. 
+               Fixed problems: Interleaved sequence data
+               should work now, last character of individual names is
+               now printing, and printing of second population data
+               should work, too, although the EP data printout is
+               still ugly.  [Allen Rodrigo]. Memory problem with some
+               Allelic data fixed.  
+               Registered users: 30
+April 30       MIGRATE 0.2a released.
+               Fixed problems or changes:  Corrections of several
+               minor problems, Printing of the data fixed, but still
+               ugly; Memory problem with large sequences fixed.
+               Options: treefile added, can write now a genealogy
+               with migrations; the option progress=Verbose for more
+               information during a run, the progress=Yes gives now
+               less information than before. Output: covariance
+               matrix for combined loci now prints, too.  Persistent
+               problems:  -Long sequences need very long chains to
+               remove the starting conditions for the migration rate
+               from the first tree (see documentation).
+               -Microsatellites still have probably a bias downwards
+               in Theta, but I need more simulations to make this
+               more clear.  
+               Registered users: 8
+March 4        First trial release of MIGRATE 0.1a
+               This release is not announced widely, because I have
+               to test, almost everything including all HTMLs,
+               registration, and the program itself: simulations need
+               time.  Registered users: 1
+
+
+
+
+--------
+$Id: HISTORY 1849 2011-03-21 12:15:40Z beerli $
+
+

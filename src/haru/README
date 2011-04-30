@@ -1,0 +1,387 @@
+#
+#  Haru Free PDF Library Version 1.2.0(BETA2) 
+#  
+#  Copyright 2000-2004 © Takeshi Kanno
+#  
+
+*
+*  Introduction
+*
+
+Haru is a library that has the ability to generate PDF document for free.
+It supports most of the standard features of the Portable Document Format.
+
+*
+*  The features of HARU.
+*
+
+The features of HARU is the following.
+ 1. Generation of PDF file with text, graphics, images and so on.
+ 2. Using Base14 Fonts.
+ 3. Type1 font embededing.
+ 4. Compression of contents stream of deflator.
+ 5. PNG and JPEG images.
+ 6. Using Multibyte Fonts (Japanese, Chinese, Korean).
+ 7. Generating PDF files with outline.
+ 8. Link annotation.
+ 9. Using font with custom encoding.
+10. Vertical writing of Japanese fonts.
+11. 40bit key length encryption.
+
+*
+*  Supported platforms.
+*
+
+Haru is written in C++ and uses only standard features of C++. Thus with
+modifying the makefile, it can be used in many platforms.
+Haru is tested in the following environment.
+1. Linux with gcc(2.95, 3.2)
+2. Cygwin + gcc (2.95, 3.2)
+3. Windows + Borland C++ 5.5
+4. Windows + Open Watcom Compiler Version 1.0
+5. AIX(4.3,5L) + gcc(2.9)
+6. AIX(5L) + IBM C/C++ Compiler
+7. BeOS(Intel) + gcc(2.9)
+8. Windows + Microsoft Visual C++ 5.0
+9. Linux with Intel C++ Compiler
+10.Windows + mingw -- Thanks to Andrew.
+
+*
+*  Required Libraries
+*
+
+1. Zlib compression library(version 1.1.4 is recommended)
+   To use flate-decode compression, zlib is required.
+   Zlib compression library is available at the following URL:
+
+   http://www.gzip.org/zlib/
+
+2. PNG Reference Library(version 1.1.X, 1.2.X)
+   To use png images, libpng is required.
+   PNG Reference Library is available at the following URL:
+
+   http://www.libpng.org/pub/png/libpng.html
+
+3. JPEGLIB(IJG JPEG LIBRARY)
+   To use jpeg images, jpeglib is required.
+   The IJG JPEG LIBRARY is available at the following URL:
+
+   http://www.ijg.org/
+
+*
+*  Make Library
+*
+
+Make files for some platforms are prepared named makefile.XXX.
+If the makefile for your platform is prepared and all required libraries are
+installed, simply run make command as following.
+
+   Linux + gcc                                ==> make -f makefile.gcc
+   Cygwin + gcc                               ==> make -f makefile.cygwin
+   Windows + Borland C++ 5.5                  ==> make -f makefile.bcc
+   Windows + Open Watcom Compiler Version 1.0 ==> wmake -f makefile.watcom
+   AIX + gcc                                  ==> make -f makefile.aixgcc
+   AIX + IBM C/C++ Compiler                   ==> make -f makefile.aixcc
+   BeOS(Intel) + gcc                          ==> make -f makefile.beos
+   Windows + Visual C++                       ==> nmake -f makefile.msvc
+   Linux + Intel C++ Compiler                 ==> make -f makefile.icc
+
+*
+*  Installation of the Library Files
+*
+
+To install the library file and the include files, run make command as
+following.
+
+   make -f makefile.XXX install.
+
+The default installation directory for library file is the following.
+
+   UNIX, cygwin   ==> /usr/local/lib
+   BeOS           ==> /home/config/lib
+   Windows        ==> Install command is not prepared.
+
+The default installation directory for include files are the following.
+
+   UNIX, cygwin   ==> /usr/local/include
+   BeOS           ==> /home/config/include
+   Windows        ==> Install command is not prepared.
+
+If you want to install HARU to your own library directory, modify the PREFIX
+variable of the makefile.
+
+*
+* Compile and Run the Example Programs
+*
+
+To make the C++ sample programs, Run make command as the following.
+
+   make -f makefile.XXX example
+
+To make the C sample programs, change directory to examples_c, and run make 
+command as following.
+
+   make -f makefile.XXX
+
+*
+* Example programs (for C++)
+*
+
+1. EncodingList.cc
+   Is character lists of various encodings, and an example of loading 
+   type1 font file.
+
+2. FontExample1.cc
+   Is an example of using Base 14 fonts.
+
+3. FontExample2.cc
+   Is an example of various properties of test.
+
+4. LineExample.cc
+   Is an example of how to use various graphics states.
+
+5. PngExample.cc
+   Is an example of using PNG image.
+
+6. JpegExample.cc
+   Is an example of using JPEG image.
+
+7. LinkExample.cc
+   Is an example of using Link Annotation.
+
+8. ViewStyle.cc
+   Is an example of using page-mode and page-layout.
+
+9. OpenAction.cc
+   Is an example of using open-action.
+
+10. EncodingListMb_XX.cc
+   Is character lists of Multibyte fonts.
+
+11. JpFontExample1.cc
+   Is an example of using Multibyte fonts.
+
+12. JpFontExample2.cc
+   Is an example of using Multibyte fonts (virtical writing).
+
+13. Encrypt.cc
+   Is an example of encrypting document. To open this document, input "user" to
+   the password dialog.
+
+14. Permission.cc
+   Is an example of creating document with restriction. 
+
+NOTE: 
+To display sample pdf files including multibyte-font, It is required to install
+asian-font-pack.
+   
+*
+*  Make program with using HARU
+*
+
+To compile a program with using haru, it is required to link libharu.a
+to your program. 
+If you install libharu.a to /usr/local/lib and install include files to
+/usr/local/include, the command to compile the program is the following.
+
+	gcc -o test test.cc -I/usr/local/include -L/usr/local/lib -lharu 
+        -lz -lstdc++
+
+NOTE: Some of the compiler may require -lm and -lbsd option.
+      To compile a program which uses PNG image, -lpng option is required.
+      To compile a program which uses JPEG image, -ljpeg option is required.
+        
+The classes of standerd exception of Borland C++ Compiler are different from
+what of other compiler. So some optional parameters are required.
+
+    bcc32 -etest.exe -P -O2 -w-par -D_BCC32 -D_WIN32 
+        -D_NO_EXCEPT_LIST zlib.lib libharu.lib test.cc
+
+Open Watcom C++ Compiler does not support standerd exception, So to compile
+program with Open Watcom C++ Compiler, _NOT_SUPPORT_STD option is required.
+
+    wcl386 -xs -bc -zq -D_NOT_SUPPORT_STD -DALL_STATIC libharu.lib test.cc
+
+*
+*  Example programs (for C)
+*
+
+1. encoding_list.c
+   the C version of EncodingList.cc
+
+2. font_example1.c
+   the C version of FontExample1.cc
+
+3. font_example2.c
+   the C version of FontExample2.cc
+
+4. png_example.c
+   the C version of PngExample.cc
+   
+*   
+*  Copyright Permission.
+*
+
+HARU takes the ZLIB/PNG license. The license is discribing bellow.
+
+Copyright (C) 1999-2003 Takeshi Kanno <takeshi_kanno@est.hi-ho.ne.jp>
+
+This software is provided 'as-is', without any express or implied warranty. 
+In no event will the authors be held liable for any damages arising from the 
+use of this software.
+
+Permission is granted to anyone to use this software for any purpose,including 
+commercial applications, and to alter it and redistribute it freely, subject 
+to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim
+   that you wrote the original software. If you use this software in a product, 
+   an acknowledgment in the product documentation would be appreciated but is 
+   not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+*
+* PDF Resources.
+*
+
+1. Adobe Reader (Acrobat Reader).
+   URL: http://www.adobe.com/products/acrobat/readermain.html
+   
+2. Asian Font Pack
+   To display Japanese, Chinese, Korean fonts, It is requred to install 
+   asian-font-pack.
+   URL: http://www.adobe.com/products/acrobat/acrrasianfontpack.html
+
+*
+*  Programing Resources.
+*
+
+1. PDF References
+   URL: http://partners.adobe.com/asn/developer/acrosdk/docs.html
+
+2. Charsets Index
+   URL: http://www.kostis.net/charsets/
+
+3. The Programmer's File Format Collection
+   URL: http://www.wotsit.org/
+
+4. UNICODE Resources (mapping tables of unicode and ISO 8859 series)
+   URL: http://www.unicode.org/Public/MAPPINGS/ISO8859/
+
+5. Postscript Glyph List
+   URL: http://partners.adobe.com/asn/tech/type/unicodegn-old.jsp
+   
+*
+* Type1 Font Resources.
+*
+
+1. Adobe Type 1 Font Format
+   URL: http://partners.adobe.com/asn/tech/type/opentype/otover.jsp
+
+2. Ghostscript 6.0 fonts
+   URL: http://sourceforge.net/projects/gs-fonts/
+
+3. Type1 KOI8-R font set
+   URL: ftp://ftp.kapella.gpi.ru/pub/cyrillic/psfonts/
+
+4. CM-Super font package
+   URL: http://www.ctan.org/tex-archive/fonts/ps-type1/cm-super/
+
+5. TTF2PTF (True Type Font to Type 1 Font Converter)
+   URL: http://ttf2pt1.sourceforge.net/
+
+6. Caslon style, ISO 8859 series fonts
+   URL: http://bibliofile.mc.duke.edu/gww/fonts/ISO8859.html
+   
+*
+* Copyright Notice.
+*
+
+ The IJG JPEG LIBRARY
+ Copyright(c) 1991-1998, Thomas G. Lane.
+
+ The PNG Reference Library
+ Copyright(c) 1998-2001 Glenn Randers-Pehrson
+
+ The Zlib compression library
+ Copyright(c) 1995-2002 Jean-loup Gailly and Mark Adler
+
+ ARC4 encryption source code 
+ Copyright(c) 2003 Markus Friedl <markus@openbsd.org>
+
+ Adobe, Acrobat are registered trademarks of Adobe Systems Incorporated.
+ 
+*
+* Changes.
+*
+
+2003.06.20 The version 1.0.0 was released.
+2003.07.09 Devided libharu.h and move C functions to libharuc.h.
+2003.07.09 Implemented multibyte font feature.
+2003.07.09 Added Japanese SJIS encoding.
+2003.07.10 Added Japanese EUC encoding.
+2003.07.11 Added ViewStyle examples.
+2003.08.01 Implemented vertical writing of Japanese fonts.
+2003.08.10 Fixed a memory leak problem of PdfJpegImage class.
+2003.08.11 Modified the implementation of PdfEncoding class and PdfFontDef
+           class.
+2003.08.18 Modified open action featuer.
+2003.08.23 Added ISO8859-3 encoding.
+2003.08.24 Fixed bugs of TextWidths method of CID font.
+2003.08.27 Added GB(Chinese --Simplified) encoding.
+2003.08.28 Added KSC(Korean) encoding.
+2003.09.04 Added ETen-B5(Chinese --Traditional) encoding.
+2003.09.08 Added C interface for KSC, GB, ETenB5 encodings.
+2003.09.09 Modified the implementation of PdfBinary class.
+2003.09.15 Modified example programs(LineExample.cc and Tests.cc).
+2003.09.17 Modified libharu.h (for Watcom compiler)
+2003.09.20 Added compiled library files for Open Watcom C++ Compiler.
+2003.09.21 The version 1.1.0RC1 was released.
+2003.09.22 Eraced unneeded messages of PdfBorderStyle.cc, PdfFontDef.cc.
+2003.09.22 Modified PdfInfo.cc that raising exception when setting value is 
+           failed.
+2003.09.28 Changed all of the float-type parameter to double.
+2003.09.29 Modified the operator "<<(double d)" of PdfStream.cc
+2003.10.01 Added example programs for C.
+2003.10.14 Changed the implementation of PdfAutoPtrOBject.
+2003.10.20 Fixed bugs of PdfPages::AddPages method.
+2003.11.10 Added encryption feature.
+2003.11.16 Modified the implementation of PdfObject::WriteEscapeText() method.
+           Modified the implementation of PdfMbText.cc.
+2003.11.18 Fixed bugs of TextWidths method of CID font.
+2003.11.19 Added unicode feature for text object.
+2003.11.11 Apply unicode feature to PdfOutline and PdfInfo.
+2003.11.30 Fixed the bugs of SetCMYKStroke() and SetCMYKFill() of PdfContents 
+           class.
+2003.11.30 Fixed bugs of PdfType1Font::LoadAfmFile().
+2003.12.10 Modified the algorithm of unicode conversion feature.
+2003.12.10 Added unicode map of GB-EUC and ETen-B5 encodings.
+2003.12.26 Added KSCms-UHC encoding.
+2003.12.26 Changed the constructor of PdfEncoding class.
+2004.01.04 The version 1.1.0 was released.
+2004.01.05 Added makefile for Microsoft VC++.
+2004.01.25 Fixed bugs of PdfText class and PdfName class.
+2004.02.25 Added PdfContents::TextRect() method and TextOut() method.
+2004.03.03 Set Default Encoding of Symbol font and ZapfDingbats font.
+2004.03.10 Added makefile for Intel C++ Compiler.
+2004.03.15 Added unicode feature of PdfEncoding class.
+2004.03.19 Modified implementation of PdfEncoding class.
+           Added ISO8859-4,5,6,7,8,9,10,13,14,15,16 encodings.
+2004.03.20 Fixed a bug of PdfFont::CharWidth().
+           Added unicode feature to PdfInfo, PdfOutline object. 
+           Fixed bugs of encryption feature on AIX.
+2004.03.26 Fixed bugs to which an invalid chatset is set.
+           Added Microsoft CP1251-1258 encodings.
+           Added PdfTextAnnot class.
+2004.07.18 Added Fontdef->Duplicate() method. (Thanks to Thomas.)
+           Fixed the problem by which the header for jpeglib is not contained 
+           in the include files for MSVC++ compilers.
+2004.11.03 Fixed a memory leak problem of PdfDoc::WriteStream().
+2004.11.04 Supported CMYK JPEG image.
+2004.12.02 Fixed a bugs of indexed color image.
+2005.02.11 Fixed a problem of empty filters. (Thanks to janbarnholt)
+2005.03.19 Fixed a problem which crashes ghostscript.
+           Fixed a bugs of header file of C.
+2005.05.20 Fixed a bugs of Stream object. (Thanks to Par Hogberg)

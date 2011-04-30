@@ -1,0 +1,63 @@
+  5 2 . Allozyme data: Anatolian water frogs [Bayes run, geo+cust-bothway]
+16 SELCUK
+SELC ?1072 E.E B.B B.B B.B B.B A.A A.A B.C B.B B.B ?.? C.D A.A ?.? A.A C.C D.D D.D B.B B.B A.A C.C B.B A.A A.A ?.? E.E B.D A.A B.C B.B
+SELC ?1071 E.E B.B B.B B.B A.B A.A A.A C.J B.B ?.? ?.? C.C A.A ?.? A.C C.C D.D D.D B.B B.B ?.? C.C B.B A.A A.A ?.? E.E B.B ?.? B.B B.B
+SELC ?1074 E.E B.B B.B B.B A.B A.A A.A B.C B.B ?.? B.B C.C A.A ?.? B.C C.C D.D D.D B.B B.B ?.? C.C B.B A.A A.A B.B E.E B.D ?.? B.C B.B
+SELC ?1073 E.E B.B B.B B.B A.A A.A A.A C.C B.B ?.? ?.? C.C A.A ?.? C.C C.C D.D D.D B.B B.B ?.? A.C B.B A.A A.A ?.? E.E B.B ?.? B.C B.B
+SELC ?1068 E.E B.B B.B B.B A.A A.A A.A C.C B.B ?.? ?.? C.C A.A ?.? ?.? C.C D.D D.D B.B B.B ?.? C.C B.B A.A A.A ?.? E.E B.B ?.? B.C B.B
+SELC ?1067 E.G B.B B.B B.B A.B A.A A.A C.J B.B ?.? ?.? C.C A.A B.B B.B C.C C.D D.D B.B B.B ?.? C.C B.B A.A A.A ?.? E.E D.D ?.? B.B B.B
+SELC ?1070 E.E B.B B.B B.B A.B A.A A.A B.C B.B ?.? B.B C.C A.A ?.? C.C C.C D.D D.D B.B B.B ?.? C.C B.B A.A A.A B.B E.E D.D ?.? B.C B.B
+SELC ?1069 E.E B.B B.B B.B A.B A.A A.A C.C B.B ?.? ?.? C.C A.A ?.? B.C C.C C.D D.D B.B B.B ?.? A.C B.B A.A A.A ?.? E.E B.B ?.? B.B B.B
+SELC ?1080 E.E B.B B.B B.B B.B A.A A.A ?.? B.B ?.? ?.? C.C A.A ?.? C.C C.C D.D D.D B.B B.B ?.? A.C B.B A.A A.A ?.? E.E D.D ?.? B.B B.B
+SELC ?1079 E.E B.B B.B B.B A.A A.A A.A C.C B.B ?.? ?.? D.D A.A ?.? C.C C.C D.D D.D B.B B.B ?.? C.C B.B A.A A.A ?.? E.E D.D ?.? B.C B.B
+SELC 17164 E.E B.B B.B B.B A.A A.A ?.? C.C B.B ?.? ?.? C.C A.A ?.? B.B C.C ?.? ?.? B.B B.C ?.? ?.? B.B A.A ?.? ?.? E.E B.B ?.? B.B B.B
+SELC 17163 E.E B.B ?.? B.B B.B A.A ?.? C.C B.B ?.? ?.? C.C A.A ?.? C.C C.C ?.? ?.? B.B B.B ?.? ?.? B.B A.A ?.? ?.? E.E B.B ?.? B.B B.B
+SELC ?1076 E.E B.B B.B B.B A.A A.A A.A C.C B.B ?.? ?.? C.D A.A ?.? C.C C.C D.D D.D B.B B.B ?.? C.C B.B A.A A.A ?.? E.E B.D ?.? B.C B.B
+SELC ?1075 E.E B.B B.B B.B A.A A.A A.A C.C B.B ?.? ?.? C.C A.A ?.? C.C C.C D.D D.D B.B B.B ?.? A.C B.B A.A A.A ?.? E.E B.D ?.? B.B B.B
+SELC ?1078 E.E B.B B.B B.B A.B A.A A.A B.C B.B ?.? ?.? C.C A.A ?.? C.C C.C D.D D.D B.B B.B ?.? A.C B.B A.A A.A ?.? E.E D.D ?.? B.B B.B
+SELC ?1077 E.E B.B B.B B.B A.A A.A A.A C.C B.B ?.? B.B C.C A.A ?.? A.C C.C D.D D.D B.B B.B ?.? A.A B.B A.A A.A B.B E.E B.D ?.? B.B B.B
+15 AKCAPINAR 
+AKCA 16804 E.E B.B A.B B.B ?.? A.A A.A C.C B.B B.B ?.? C.C A.A B.B B.B ?.? D.D D.D B.B B.B A.A A.C B.B A.A A.C B.B E.E D.D A.A C.C B.B
+AKCA ?1065 E.E B.B B.B B.B E.E A.A A.A C.C B.B ?.? ?.? C.C A.A ?.? D.D C.C D.D D.D ?.? B.C A.A A.C B.B A.A A.A B.B E.E D.D ?.? C.C B.B
+AKCA ?1064 E.E B.B B.B B.B A.B A.A A.A B.B B.B ?.? ?.? C.C A.A ?.? D.D C.C D.D D.D ?.? C.C A.A C.C B.B A.A A.A B.B E.E D.D ?.? C.C B.B
+AKCA 16805 ?.? ?.? B.B ?.? ?.? A.A A.A B.C B.B ?.? ?.? C.C A.A B.B B.B ?.? D.E D.D B.B C.C A.A A.C B.B A.A A.A B.B E.E D.D A.A C.C B.B
+AKCA 16808 ?.? ?.? A.B ?.? B.E A.A ?.? ?.? B.B ?.? ?.? ?.? ?.? B.B ?.? ?.? D.D D.D B.B B.B A.A C.C B.B A.A A.A ?.? ?.? D.D ?.? C.C B.B
+AKCA 16807 ?.? ?.? ?.? B.B A.B A.A ?.? ?.? B.B ?.? ?.? ?.? ?.? B.B ?.? ?.? D.D D.D B.B B.C A.A A.C B.B A.A A.A ?.? ?.? D.D ?.? C.C B.B
+AKCA 16806 E.E B.B B.B B.B ?.? A.A A.A B.J B.B ?.? ?.? C.C A.A B.B B.C ?.? D.D D.D B.B B.B A.A C.C B.B A.A A.A B.B E.E D.D A.A C.C B.B
+AKCA ?1063 E.E B.B B.B B.B A.B A.A A.A B.C B.B ?.? ?.? C.C A.A B.B D.D C.C D.D D.D B.B B.C A.A C.C B.B A.A A.A B.B E.E D.D ?.? C.C B.B
+AKCA ?1058 E.E B.B B.B B.B A.B A.A A.A ?.? B.B ?.? B.B C.C A.A B.B C.D C.C ?.? D.D B.B B.C A.A A.A B.D A.A A.C B.B ?.? D.D ?.? C.C B.B
+AKCA ?1057 E.E B.B A.B B.B B.B A.A A.A ?.? B.B ?.? B.B C.C A.A B.B D.D C.C ?.? D.D B.B B.E A.A A.A B.B A.A A.J B.B ?.? D.D ?.? C.C B.B
+AKCA ?1066 E.E B.B A.B B.B B.B A.A A.A ?.? B.B ?.? ?.? C.C A.A ?.? C.D C.C D.D D.D B.B B.B A.A ?.? B.B A.A ?.? B.B E.E ?.? ?.? C.C B.B
+AKCA ?1059 E.E B.B A.A B.B A.A A.A A.A ?.? B.B ?.? B.B C.C ?.? B.B B.C C.C ?.? D.D B.B B.B A.A A.C B.B A.A A.J B.B ?.? D.D ?.? C.C B.B
+AKCA ?1062 E.E B.B A.A B.B A.B A.A A.A B.C B.B ?.? ?.? C.C A.A B.B D.D C.C D.D D.D B.B B.C A.A C.C B.B A.A A.A ?.? E.E D.H ?.? C.C B.B
+AKCA ?1061 E.E B.B B.B B.B A.B A.A A.A B.C B.B ?.? ?.? C.C A.A B.B C.C C.C D.D D.D B.B B.B A.A C.C B.B A.A A.A B.B E.E D.H ?.? C.C B.B
+AKCA ?1060 E.E B.B B.B A.B B.E A.A A.A ?.? B.B ?.? ?.? C.C ?.? B.B D.D ?.? ?.? D.D B.B B.B A.A A.C B.B A.A A.C B.B ?.? D.D ?.? C.C B.B
+11 EZINE
+EZIN ?1081 E.E B.B B.B B.B ?.? A.A A.A C.C B.B B.B ?.? C.C A.A ?.? B.C C.C D.D D.D B.B ?.? A.A C.C B.B A.A A.A B.B E.E B.B A.A B.B B.B
+EZIN 16782 E.E B.B ?.? B.B B.B A.A ?.? C.C B.B ?.? B.B C.C ?.? ?.? B.B C.C ?.? D.D B.B B.B ?.? ?.? B.B A.A A.A B.B E.E B.B A.A ?.? ?.?
+EZIN 16781 E.E B.B B.B B.B A.A A.A ?.? C.C B.B ?.? B.B C.C ?.? B.B B.B C.C C.D D.D B.B B.B A.A A.C B.B A.A C.C B.B C.E B.D A.A B.B B.B
+EZIN 16783 E.E B.B B.B ?.? B.B A.A ?.? C.C B.B ?.? ?.? C.D ?.? ?.? B.B C.C D.D D.D B.B B.C A.A C.C B.B A.A A.A ?.? E.E B.D A.A B.B B.B
+EZIN 16785 ?.? B.B B.B ?.? A.B A.A ?.? C.C B.B ?.? ?.? C.C A.A ?.? B.B C.C D.D D.D B.B B.B A.A A.C B.B A.A A.C B.B E.E B.D A.A B.B B.B
+EZIN 16784 E.E B.B B.B ?.? ?.? A.A ?.? C.C B.B ?.? ?.? C.C A.A ?.? B.B C.C D.D D.D B.B B.C A.A C.C B.B A.A A.C ?.? C.E B.D A.A B.B B.B
+EZIN ?1083 E.E B.B B.B B.B A.B A.A A.A C.C B.B ?.? ?.? C.C A.A ?.? B.B C.C C.D D.D B.B B.B A.A C.C B.B A.A A.A B.B E.E B.B A.A B.B B.B
+EZIN ?1082 E.E B.B A.B B.B A.A A.A A.A C.C B.B ?.? ?.? C.C A.A B.B B.B C.C D.D D.D B.B B.B A.A C.C B.B A.A A.A B.B E.E B.B A.A B.B B.B
+EZIN ?1084 E.E B.B A.B B.B A.A A.A A.A C.C B.B ?.? ?.? C.C A.A ?.? B.C C.C C.D D.D B.B B.B A.A C.C B.B A.A A.C A.B E.E B.B A.A B.B B.B
+EZIN 16780 ?.? B.B A.B ?.? A.B A.A ?.? C.C B.B ?.? ?.? C.C A.A B.B B.B C.C D.D D.D B.B B.B A.A A.C B.B A.A A.A B.B E.E B.D A.A B.B B.B
+EZIN ?1085 E.E B.B A.B B.B B.B A.A A.A C.C B.B ?.? ?.? C.C A.A B.B B.B C.C B.B D.D B.B B.B ?.? C.C B.B A.A A.C B.B E.E B.B A.A B.B B.B
+11 IKARIA
+IKAR 17331 E.E B.B B.B B.B A.A A.A A.A C.C B.B ?.? ?.? C.D A.A B.B D.D ?.? D.D D.D B.B B.B A.A C.C B.B A.A A.J ?.? E.E B.B A.A C.C B.B
+IKAR 17330 E.E B.B B.B B.B A.A A.A ?.? C.C B.B B.B ?.? C.D A.A B.B D.D ?.? D.D D.D B.B B.B A.A C.C B.B A.A A.A ?.? E.E B.B A.A C.C B.B
+IKAR 17332 E.E B.B B.B B.B A.A A.A ?.? C.C B.B B.B B.B C.D A.A B.B D.D ?.? ?.? D.D B.B B.B A.A C.C B.B A.A A.A ?.? E.E B.D A.A C.C B.B
+IKAR 17379 E.E B.B B.B ?.? A.A A.A ?.? C.C ?.? ?.? ?.? C.C A.A ?.? D.D C.C D.D ?.? ?.? B.B A.A C.C B.B A.A A.A B.B E.E B.D A.A C.C B.B
+IKAR 17378 E.E B.B B.B B.B A.A A.A ?.? C.C ?.? ?.? B.B D.D A.A ?.? D.D C.C D.D ?.? B.B B.B A.A C.C B.B A.A A.A B.B E.E B.B A.A C.C B.B
+IKAR 17329 E.E B.B B.B B.B A.A A.A ?.? C.C B.B B.B ?.? D.D A.A B.B D.D ?.? D.D A.D B.B B.B A.A C.C B.B A.A A.A ?.? E.E D.D A.A C.C B.B
+IKAR 17325 E.E B.B B.B B.B A.A A.A ?.? C.C ?.? B.B ?.? D.D A.A ?.? C.C ?.? D.D A.D ?.? B.B A.A C.C B.B A.A A.A ?.? E.E B.B A.A C.C B.B
+IKAR 17324 E.E B.B B.B B.B A.A A.A ?.? C.C ?.? B.B B.B D.D A.A ?.? D.D C.C D.D D.D B.B B.B A.A C.C B.B A.A A.A B.B E.E B.B A.A C.C B.B
+IKAR 17326 E.E B.B B.B B.B A.A A.A ?.? C.C ?.? B.B B.B D.D A.A ?.? D.D ?.? D.D D.D ?.? B.B ?.? C.C B.B A.A A.A ?.? E.E B.B A.A C.C B.B
+IKAR 17328 E.E B.B B.B B.B A.A A.A ?.? B.C B.B B.B ?.? C.D A.A B.B D.D ?.? D.D D.D B.B B.B A.A C.C B.B A.A A.A ?.? E.E B.B A.A B.C B.B
+IKAR 17327 E.E B.B B.B B.B A.A A.A ?.? C.C ?.? B.B B.B C.D A.A ?.? C.D C.C D.D D.D ?.? B.B ?.? C.C B.B A.A A.A B.B E.E B.D A.A C.C B.B
+4 SAMOS
+SAMO 17320 E.E B.B A.B B.B A.A A.A A.A C.C B.B ?.? ?.? D.D A.A B.B B.B ?.? D.D D.D ?.? B.B A.A A.C B.B A.A A.A B.B E.E D.D A.A B.C B.B
+SAMO 17321 E.E B.B B.B B.B A.A A.A ?.? C.C B.B B.D B.B D.D A.A B.B D.D C.C D.D ?.? ?.? B.B A.A C.C B.B A.A A.A B.B E.E D.D A.A B.C B.B
+SAMO 17323 E.E B.B A.B B.B A.A A.A ?.? C.C B.B B.B ?.? ?.? A.A B.B B.B C.C D.D D.D B.B B.B A.A A.C B.B A.A A.A ?.? E.E D.D A.A C.E B.B
+SAMO 17322 E.E B.B A.B B.B A.A A.A ?.? ?.? B.B B.D B.B C.D A.A B.B D.D ?.? D.D D.D ?.? B.B A.A A.A B.B A.A A.A A.A E.E D.D A.A C.C B.B

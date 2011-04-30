@@ -1,0 +1,54 @@
+# sample makefile for C examples
+# Copyright (C) 2003 Takeshi Kanno
+
+CC=gcc
+CPP=gcc
+
+MYLDFLAGS=-lpng -lz -ljpeg
+
+CFLAGS=-I.. -Wall -O3 -DDEBUG 
+LDFLAGS=-L.. -lharu -lstdc++ -lm $(MYLDFLAGS)
+
+OBJS = \
+	encoding_list.exe \
+	font_example1.exe \
+	font_example2.exe \
+	line_example.exe \
+	jp_font_example.exe \
+	png_example.exe \
+
+all: $(OBJS)
+
+clean:
+	rm -rf $(OBJS)
+	
+encoding_list.exe: encoding_list.c
+	$(CPP) -o $@ encoding_list.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+font_example1.exe: font_example1.c 
+	$(CPP) -o $@ font_example1.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+font_example2.exe: font_example2.c
+	$(CPP) -o $@ font_example2.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+png_example.exe: png_example.c
+	$(CPP) -o $@ png_example.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+line_example.exe: line_example.c
+	$(CPP) -o $@ line_example.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+jp_font_example.exe: jp_font_example.c
+	$(CPP) -o $@ jp_font_example.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+

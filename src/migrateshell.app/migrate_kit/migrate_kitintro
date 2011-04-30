@@ -1,0 +1,23 @@
+#!/bin/bash
+echo "==================================================================="
+echo "                Shell to run the program MIGRATE-N"
+echo "                   (website: popgen.sc.fsu.edu)"
+echo "==================================================================="
+echo " "
+echo "to run migrate use a command from  below."
+echo "If the commands do not work send an email to me at"
+echo "beerli at fsu.edu"
+echo " "
+cores=`findcores`;
+echo "This machine has $cores cores. With more than 1 core you can run"
+echo "multiple loci or multiple replicates in parallel and get about a speed"
+echo " improvement of $cores x."
+echo " "
+echo "Commands:               Explanation:"
+echo "   migrate-n            Single CPU version using multiple cores"
+echo "   fastmigrate-n        Multiple CPU/cores version [this computer has $cores ]"
+echo "   findcores            Shows the number of available computer cores"
+echo "   migratehelp          Shows the available commands"
+echo " "
+
+

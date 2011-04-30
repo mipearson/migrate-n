@@ -1,0 +1,6939 @@
+%PDF-1.2
+%·¾­ª
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [8 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R 26 0 R 29 0 R 32 0 R 35 0 R 38 0 R 41 0 R 44 0 R ]
+/Count 13
+>>
+endobj
+3 0 obj
+<<
+/Producer (HARU\040Free\040PDF\040Library\040Version\0401.2.0\040Beta5)
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/FirstChar 32
+/LastChar 255
+/Encoding /StandardEncoding
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Oblique
+/FirstChar 32
+/LastChar 255
+/Encoding /StandardEncoding
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Symbol
+/FirstChar 32
+/LastChar 254
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Courier
+/FirstChar 32
+/LastChar 255
+/Encoding /StandardEncoding
+>>
+endobj
+8 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 5 0 R
+/F2 6 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 9 0 R
+>>
+endobj
+9 0 obj
+<<
+/Length 10 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0401) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\040\135) Tj
+ET
+/F0 10 Tf
+/F1 24 Tf
+BT
+129.936 692 Td
+(\040\040Example:\040Microsatellite\040data\040set) Tj
+ET
+0 0 0 RG
+50 666 m
+562 666 l
+S
+/F0 12 Tf
+BT
+55 642 Td
+(MIGRATION\040RATE\040AND\040POPULATION\040SIZE\040ESTIMATION) Tj
+ET
+BT
+55 627 Td
+(using\040the\040coalescent\040and\040maximum\040likelihood\040or\040Bayesian\040inference) Tj
+ET
+BT
+55 612 Td
+(Migrate-n\040version\0403.2\040\1331717\135) Tj
+ET
+BT
+55 597 Td
+(\040\040Compiled\040for\040a\040SYMMETRIC\040MULTIPROCESSORS\012) Tj
+ET
+BT
+55 582 Td
+(Program\040started\040at\040\040\040\040Thu\040Oct\040\0407\04015:25:09\0402010) Tj
+ET
+50 552 m
+562 552 l
+S
+1 w
+0 0 0 RG
+0.99 0 0 rg
+460.5982 631.717 m
+460.5982 638.4596 467.9981 643.9254 477.1266 643.9254 c
+486.2551 643.9254 493.655 638.4596 493.655 631.7171 c
+493.655 624.9745 486.2551 619.5087 477.1266 619.5087 c
+467.9981 619.5087 460.5982 624.9745 460.5982 631.7171 c
+B
+0 0.1 0.9 rg
+496.5982 631.717 m
+496.5982 638.4596 503.9981 643.9254 513.1266 643.9254 c
+522.2551 643.9254 529.655 638.4596 529.655 631.7171 c
+529.655 624.9745 522.2551 619.5087 513.1266 619.5087 c
+503.9981 619.5087 496.5982 624.9745 496.5982 631.7171 c
+B
+4 w
+467.3599 632.7612 m
+467.3599 614.7156 l
+478.2535 614.7156 l
+478.2861 632.7612 l
+S
+487.9539 632.7612 m
+488.0202 609.8318 l
+500.4166 609.8318 l
+500.341 632.7612 l
+S
+511.3683 632.7612 m
+511.3103 604.1974 l
+494.5865 604.1974 l
+494.5865 609.8318 l
+S
+521.8285 632.7612 m
+521.8285 595.9329 l
+503.2266 595.9329 l
+503.2521 604.0561 l
+S
+512.8543 579.5554 m
+512.9199 595.8985 l
+S
+472.9904 579.7076 m
+472.9904 614.6422 l
+S
+/F1 18 Tf
+0 0 0 RG
+0 0 0 rg
+1 w
+BT
+274.98599 507 Td
+(Options) Tj
+ET
+50 487 m
+562 487 l
+S
+/F0 10 Tf
+BT
+55 467 Td
+(Datatype:) Tj
+ET
+BT
+390.83002 467 Td
+(Microsatellite\040data\040\133Brownian\040motion\135\012) Tj
+ET
+BT
+55 452 Td
+(Missing\040data:) Tj
+ET
+BT
+500.29999 452 Td
+(not\040included\012) Tj
+ET
+BT
+55 437 Td
+(Random\040number\040seed:) Tj
+ET
+BT
+405.82001 437 Td
+(\050from\040parmfile\051\040\040\040\040\040\040\040\040\040\040\0401407071073) Tj
+ET
+BT
+55 422 Td
+(Start\040parameters:) Tj
+ET
+BT
+55 392 Td
+(Theta\040values\040were\040generated) Tj
+ET
+BT
+445.29999 392 Td
+(\040from\040the\040FST-calculation) Tj
+ET
+BT
+55 362 Td
+(M\040values\040were\040generated) Tj
+ET
+BT
+461.95999 362 Td
+(\040from\040guessed\040values) Tj
+ET
+BT
+65 347 Td
+(M-matrix:) Tj
+ET
+BT
+65 332 Td
+(\040\040\040-\040\040\040) Tj
+ET
+BT
+115 332 Td
+(\040\040\0401.0,\040) Tj
+ET
+BT
+55 317 Td
+(\040\040\0401.0,\040) Tj
+ET
+BT
+105 317 Td
+(\040\040\040-\040\040\040) Tj
+ET
+BT
+55 272 Td
+(Connection\040type\040matrix:) Tj
+ET
+BT
+60 257 Td
+(where\040m\040=\040average\040\050average\040over\040a\040group\040of\040Thetas\040or\040M,) Tj
+ET
+BT
+60 242 Td
+(s\040=\040symmetric\040M,\040S\040=\040symmetric\0404Nm,\012\0400\040=\040zero,\040and\040not\040estimated,) Tj
+ET
+BT
+60 227 Td
+(*\040=\040free\040to\040vary,\040Thetas\040are\040on\040diagonal\012) Tj
+ET
+BT
+55 197 Td
+(Population) Tj
+ET
+BT
+160 197 Td
+(\040\0401) Tj
+ET
+BT
+180 197 Td
+(\040\0402) Tj
+ET
+BT
+55 182 Td
+(\040\0401\040population__num) Tj
+ET
+BT
+165 182 Td
+(\040*) Tj
+ET
+BT
+185 182 Td
+(\040*) Tj
+ET
+BT
+55 167 Td
+(\040\0402\040population__num) Tj
+ET
+BT
+165 167 Td
+(\040*) Tj
+ET
+BT
+185 167 Td
+(\040*) Tj
+ET
+BT
+60 122 Td
+(Order\040of\040parameters:) Tj
+ET
+BT
+60 107 Td
+(\040\040\0401\040) Tj
+ET
+/F2 12 Tf
+BT
+140 107 Td
+(Q) Tj
+ET
+/F2 9 Tf
+BT
+149.60001 102.5 Td
+(1) Tj
+ET
+/F0 10 Tf
+BT
+290 107 Td
+(\074displayed\076) Tj
+ET
+BT
+60 92 Td
+(\040\040\0402\040) Tj
+ET
+/F2 12 Tf
+BT
+140 92 Td
+(Q) Tj
+ET
+/F2 9 Tf
+BT
+149.60001 87.5 Td
+(2) Tj
+ET
+/F0 10 Tf
+BT
+290 92 Td
+(\074displayed\076) Tj
+ET
+BT
+60 77 Td
+(\040\040\0403\040) Tj
+ET
+/F0 12 Tf
+BT
+140 77 Td
+(M) Tj
+ET
+/F2 9 Tf
+BT
+155.60001 72.5 Td
+(2-\0761) Tj
+ET
+/F0 10 Tf
+BT
+290 77 Td
+(\074displayed\076) Tj
+ET
+BT
+60 62 Td
+(\040\040\0404\040) Tj
+ET
+/F0 12 Tf
+BT
+140 62 Td
+(M) Tj
+ET
+/F2 9 Tf
+BT
+155.60001 57.5 Td
+(1-\0762) Tj
+ET
+/F0 10 Tf
+BT
+290 62 Td
+(\074displayed\076) Tj
+ET
+/F0 12 Tf
+BT
+55 567 Td
+(Program\040finished\040at\040\040\040Thu\040Oct\040\0407\04015:26:34\0402010) Tj
+ET
+
+endstream
+endobj
+10 0 obj
+4224
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 13 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0402) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+BT
+55 692 Td
+(Mutation\040rate\040among\040loci:) Tj
+ET
+BT
+403.04999 692 Td
+(Mutation\040rate\040is\040constant\040for\040all\040loci) Tj
+ET
+BT
+55 662 Td
+(Analysis\040strategy\040is) Tj
+ET
+BT
+469.20999 662 Td
+(Maximum\040likelihood) Tj
+ET
+BT
+55 632 Td
+(Markov\040chain\040settings:) Tj
+ET
+BT
+355 632 Td
+(Short\040chain) Tj
+ET
+BT
+508.08002 632 Td
+(Long\040chain) Tj
+ET
+BT
+55 617 Td
+(Number\040of\040chains) Tj
+ET
+BT
+333.84 617 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\04010) Tj
+ET
+BT
+488.62 617 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\0403) Tj
+ET
+BT
+65 602 Td
+(Recorded\040steps\040\133a\135) Tj
+ET
+BT
+331.06 602 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040500) Tj
+ET
+BT
+480.28 602 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\0401000) Tj
+ET
+BT
+65 587 Td
+(Increment\040\050record\040every\040x\040step\040\133b\135) Tj
+ET
+BT
+336.62 587 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\0402) Tj
+ET
+BT
+488.62 587 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\0402) Tj
+ET
+BT
+65 572 Td
+(Visited\040\050sampled\051\040genealogies\040\133a*b\135) Tj
+ET
+BT
+328.28 572 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\0401000) Tj
+ET
+BT
+480.28 572 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\0402000) Tj
+ET
+BT
+65 557 Td
+(Number\040of\040discard\040trees\040per\040chain\040\050burn-in\051) Tj
+ET
+BT
+375 557 Td
+(\0401000) Tj
+ET
+BT
+521.97998 557 Td
+(\0401000) Tj
+ET
+BT
+55 527 Td
+(Multiple\040Markov\040chains:) Tj
+ET
+BT
+65 512 Td
+(Averaging\040over\040replicates) Tj
+ET
+BT
+429.16 512 Td
+(Over\040indepedent\0402\040replicates) Tj
+ET
+BT
+65 497 Td
+(Static\040heating\040scheme) Tj
+ET
+BT
+434.73001 497 Td
+(4\040chains\040with\040\040temperatures) Tj
+ET
+BT
+351.39999 482 Td
+(1000000.00\040) Tj
+ET
+BT
+431.98001 482 Td
+(\0403.00\040) Tj
+ET
+BT
+481.98001 482 Td
+(\0401.50\040) Tj
+ET
+BT
+531.97998 482 Td
+(\0401.00\040) Tj
+ET
+BT
+456.95999 467 Td
+(Swapping\040interval\040is\0401\012) Tj
+ET
+BT
+55 437 Td
+(Print\040options:\012) Tj
+ET
+BT
+65 422 Td
+(Data\040file:) Tj
+ET
+BT
+511.98999 422 Td
+(infile.msat) Tj
+ET
+BT
+65 407 Td
+(Output\040file:) Tj
+ET
+BT
+516.44 407 Td
+(outfile-ml) Tj
+ET
+BT
+65 392 Td
+(Summary\040of\040genealogies\040for\040further\040run:) Tj
+ET
+BT
+525.33002 392 Td
+(sumfile) Tj
+ET
+BT
+65 377 Td
+(Print\040data:) Tj
+ET
+BT
+424.67999 377 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040No) Tj
+ET
+BT
+65 362 Td
+(Print\040genealogies\040\133only\040some\040for\040some\040data\040type\135:) Tj
+ET
+BT
+533.09998 362 Td
+(None) Tj
+ET
+BT
+65 347 Td
+(Plot\040log\050likelihood\051\040surface:) Tj
+ET
+BT
+544.21997 347 Td
+(No) Tj
+ET
+BT
+65 332 Td
+(Profile\040likelihood:) Tj
+ET
+BT
+444.17999 332 Td
+(Yes,\040tables\040and\040summary) Tj
+ET
+BT
+473.63 317 Td
+(Percentile\040method\012) Tj
+ET
+BT
+393.03 302 Td
+(with\040df=1\040and\040for\040Theta\040and\040M=m\057mu) Tj
+ET
+
+endstream
+endobj
+13 0 obj
+3343
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 5 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 15 0 R
+>>
+endobj
+15 0 obj
+<<
+/Length 16 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0403) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+/F1 18 Tf
+BT
+247.491 697 Td
+(Data\040summary) Tj
+ET
+0 0 0 RG
+50 677 m
+562 677 l
+S
+/F0 10 Tf
+BT
+55 657 Td
+(Datatype:) Tj
+ET
+BT
+476.41998 657 Td
+(Microsatellite\040data) Tj
+ET
+BT
+55 642 Td
+(Number\040of\040loci:) Tj
+ET
+BT
+545.88 642 Td
+(10) Tj
+ET
+BT
+55 597 Td
+(Population) Tj
+ET
+BT
+355 597 Td
+(Locus) Tj
+ET
+BT
+455 597 Td
+(Gene\040copies) Tj
+ET
+BT
+455 582 Td
+(data) Tj
+ET
+BT
+516.45001 582 Td
+(\050missing\051) Tj
+ET
+BT
+55 567 Td
+(1\040population__number___0) Tj
+ET
+BT
+369.44 567 Td
+(1) Tj
+ET
+BT
+443.88 567 Td
+(50) Tj
+ET
+BT
+534.78003 567 Td
+(\0500\051) Tj
+ET
+BT
+369.44 552 Td
+(2) Tj
+ET
+BT
+443.88 552 Td
+(50) Tj
+ET
+BT
+534.78003 552 Td
+(\0500\051) Tj
+ET
+BT
+369.44 537 Td
+(3) Tj
+ET
+BT
+443.88 537 Td
+(50) Tj
+ET
+BT
+534.78003 537 Td
+(\0500\051) Tj
+ET
+BT
+369.44 522 Td
+(4) Tj
+ET
+BT
+443.88 522 Td
+(50) Tj
+ET
+BT
+534.78003 522 Td
+(\0500\051) Tj
+ET
+BT
+369.44 507 Td
+(5) Tj
+ET
+BT
+443.88 507 Td
+(50) Tj
+ET
+BT
+534.78003 507 Td
+(\0500\051) Tj
+ET
+BT
+369.44 492 Td
+(6) Tj
+ET
+BT
+443.88 492 Td
+(50) Tj
+ET
+BT
+534.78003 492 Td
+(\0500\051) Tj
+ET
+BT
+369.44 477 Td
+(7) Tj
+ET
+BT
+443.88 477 Td
+(50) Tj
+ET
+BT
+534.78003 477 Td
+(\0500\051) Tj
+ET
+BT
+369.44 462 Td
+(8) Tj
+ET
+BT
+443.88 462 Td
+(50) Tj
+ET
+BT
+534.78003 462 Td
+(\0500\051) Tj
+ET
+BT
+369.44 447 Td
+(9) Tj
+ET
+BT
+443.88 447 Td
+(50) Tj
+ET
+BT
+534.78003 447 Td
+(\0500\051) Tj
+ET
+BT
+363.88 432 Td
+(10) Tj
+ET
+BT
+443.88 432 Td
+(50) Tj
+ET
+BT
+534.78003 432 Td
+(\0500\051) Tj
+ET
+BT
+55 417 Td
+(2\040population__number___1) Tj
+ET
+BT
+369.44 417 Td
+(1) Tj
+ET
+BT
+443.88 417 Td
+(42) Tj
+ET
+BT
+534.78003 417 Td
+(\0500\051) Tj
+ET
+BT
+369.44 402 Td
+(2) Tj
+ET
+BT
+443.88 402 Td
+(42) Tj
+ET
+BT
+534.78003 402 Td
+(\0500\051) Tj
+ET
+BT
+369.44 387 Td
+(3) Tj
+ET
+BT
+443.88 387 Td
+(42) Tj
+ET
+BT
+534.78003 387 Td
+(\0500\051) Tj
+ET
+BT
+369.44 372 Td
+(4) Tj
+ET
+BT
+443.88 372 Td
+(42) Tj
+ET
+BT
+534.78003 372 Td
+(\0500\051) Tj
+ET
+BT
+369.44 357 Td
+(5) Tj
+ET
+BT
+443.88 357 Td
+(42) Tj
+ET
+BT
+534.78003 357 Td
+(\0500\051) Tj
+ET
+BT
+369.44 342 Td
+(6) Tj
+ET
+BT
+443.88 342 Td
+(42) Tj
+ET
+BT
+534.78003 342 Td
+(\0500\051) Tj
+ET
+BT
+369.44 327 Td
+(7) Tj
+ET
+BT
+443.88 327 Td
+(42) Tj
+ET
+BT
+534.78003 327 Td
+(\0500\051) Tj
+ET
+BT
+369.44 312 Td
+(8) Tj
+ET
+BT
+443.88 312 Td
+(42) Tj
+ET
+BT
+534.78003 312 Td
+(\0500\051) Tj
+ET
+BT
+369.44 297 Td
+(9) Tj
+ET
+BT
+443.88 297 Td
+(42) Tj
+ET
+BT
+534.78003 297 Td
+(\0500\051) Tj
+ET
+BT
+363.88 282 Td
+(10) Tj
+ET
+BT
+443.88 282 Td
+(42) Tj
+ET
+BT
+534.78003 282 Td
+(\0500\051) Tj
+ET
+BT
+55 267 Td
+(Total\040of\040all\040populations) Tj
+ET
+BT
+369.44 267 Td
+(1) Tj
+ET
+BT
+443.88 267 Td
+(92) Tj
+ET
+BT
+534.78003 267 Td
+(\0500\051) Tj
+ET
+BT
+369.44 252 Td
+(2) Tj
+ET
+BT
+443.88 252 Td
+(92) Tj
+ET
+BT
+534.78003 252 Td
+(\0500\051) Tj
+ET
+BT
+369.44 237 Td
+(3) Tj
+ET
+BT
+443.88 237 Td
+(92) Tj
+ET
+BT
+534.78003 237 Td
+(\0500\051) Tj
+ET
+BT
+369.44 222 Td
+(4) Tj
+ET
+BT
+443.88 222 Td
+(92) Tj
+ET
+BT
+534.78003 222 Td
+(\0500\051) Tj
+ET
+BT
+369.44 207 Td
+(5) Tj
+ET
+BT
+443.88 207 Td
+(92) Tj
+ET
+BT
+534.78003 207 Td
+(\0500\051) Tj
+ET
+BT
+369.44 192 Td
+(6) Tj
+ET
+BT
+443.88 192 Td
+(92) Tj
+ET
+BT
+534.78003 192 Td
+(\0500\051) Tj
+ET
+BT
+369.44 177 Td
+(7) Tj
+ET
+BT
+443.88 177 Td
+(92) Tj
+ET
+BT
+534.78003 177 Td
+(\0500\051) Tj
+ET
+BT
+369.44 162 Td
+(8) Tj
+ET
+BT
+443.88 162 Td
+(92) Tj
+ET
+BT
+534.78003 162 Td
+(\0500\051) Tj
+ET
+BT
+369.44 147 Td
+(9) Tj
+ET
+BT
+443.88 147 Td
+(92) Tj
+ET
+BT
+534.78003 147 Td
+(\0500\051) Tj
+ET
+BT
+363.88 132 Td
+(10) Tj
+ET
+BT
+443.88 132 Td
+(92) Tj
+ET
+BT
+534.78003 132 Td
+(\0500\051) Tj
+ET
+
+endstream
+endobj
+16 0 obj
+3618
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 5 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Length 19 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0404) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+/F1 18 Tf
+BT
+209.961 697 Td
+(Allele\040frequency\040spectra) Tj
+ET
+0 0 0 RG
+50 677 m
+562 677 l
+S
+/F0 10 Tf
+BT
+55 642 Td
+(Locus\0401) Tj
+ET
+BT
+55 627 Td
+(Allele) Tj
+ET
+BT
+90.02 627 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 627 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 627 Td
+(All) Tj
+ET
+55 617 m
+557 617 l
+S
+BT
+55 597 Td
+(\040\040\040\04016\040) Tj
+ET
+BT
+90.02 597 Td
+(0.220) Tj
+ET
+BT
+128.93001 597 Td
+(0.167) Tj
+ET
+BT
+167.84001 597 Td
+(0.193) Tj
+ET
+BT
+55 582 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 582 Td
+(0.040) Tj
+ET
+BT
+128.93001 582 Td
+(0.071) Tj
+ET
+BT
+167.84001 582 Td
+(0.056) Tj
+ET
+BT
+55 567 Td
+(\040\040\040\04018\040) Tj
+ET
+BT
+90.02 567 Td
+(0.060) Tj
+ET
+BT
+128.93001 567 Td
+(0.119) Tj
+ET
+BT
+167.84001 567 Td
+(0.090) Tj
+ET
+BT
+55 552 Td
+(\040\040\040\04015\040) Tj
+ET
+BT
+90.02 552 Td
+(0.220) Tj
+ET
+BT
+128.93001 552 Td
+(0.024) Tj
+ET
+BT
+167.84001 552 Td
+(0.122) Tj
+ET
+BT
+55 537 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 537 Td
+(0.020) Tj
+ET
+BT
+128.93001 537 Td
+(0.167) Tj
+ET
+BT
+167.84001 537 Td
+(0.093) Tj
+ET
+BT
+55 522 Td
+(\040\040\040\04023\040) Tj
+ET
+BT
+90.02 522 Td
+(0.020) Tj
+ET
+BT
+128.93001 522 Td
+(0.119) Tj
+ET
+BT
+167.84001 522 Td
+(0.070) Tj
+ET
+BT
+55 507 Td
+(\040\040\040\04017\040) Tj
+ET
+BT
+90.02 507 Td
+(0.280) Tj
+ET
+BT
+128.93001 507 Td
+(0.095) Tj
+ET
+BT
+167.84001 507 Td
+(0.188) Tj
+ET
+BT
+55 492 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 492 Td
+(0.060) Tj
+ET
+BT
+128.93001 492 Td
+(0.119) Tj
+ET
+BT
+167.84001 492 Td
+(0.090) Tj
+ET
+BT
+55 477 Td
+(\040\040\040\04025\040) Tj
+ET
+BT
+90.02 477 Td
+(0.060) Tj
+ET
+BT
+128.93001 477 Td
+(0.024) Tj
+ET
+BT
+167.84001 477 Td
+(0.042) Tj
+ET
+BT
+55 462 Td
+(\040\040\040\04024\040) Tj
+ET
+BT
+90.02 462 Td
+(0.020) Tj
+ET
+BT
+128.93001 462 Td
+(0.000) Tj
+ET
+BT
+167.84001 462 Td
+(0.010) Tj
+ET
+BT
+55 447 Td
+(\040\040\040\04026\040) Tj
+ET
+BT
+90.02 447 Td
+(0.000) Tj
+ET
+BT
+128.93001 447 Td
+(0.024) Tj
+ET
+BT
+167.84001 447 Td
+(0.012) Tj
+ET
+BT
+55 432 Td
+(\040\040\040\04027\040) Tj
+ET
+BT
+90.02 432 Td
+(0.000) Tj
+ET
+BT
+128.93001 432 Td
+(0.048) Tj
+ET
+BT
+167.84001 432 Td
+(0.024) Tj
+ET
+BT
+55 417 Td
+(\040\040\040\04029\040) Tj
+ET
+BT
+90.02 417 Td
+(0.000) Tj
+ET
+BT
+128.93001 417 Td
+(0.024) Tj
+ET
+BT
+167.84001 417 Td
+(0.012) Tj
+ET
+BT
+55 387 Td
+(Locus\0402) Tj
+ET
+BT
+55 372 Td
+(Allele) Tj
+ET
+BT
+90.02 372 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 372 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 372 Td
+(All) Tj
+ET
+55 362 m
+557 362 l
+S
+BT
+55 342 Td
+(\040\040\040\04016\040) Tj
+ET
+BT
+90.02 342 Td
+(0.520) Tj
+ET
+BT
+128.93001 342 Td
+(0.571) Tj
+ET
+BT
+167.84001 342 Td
+(0.546) Tj
+ET
+BT
+55 327 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 327 Td
+(0.040) Tj
+ET
+BT
+128.93001 327 Td
+(0.000) Tj
+ET
+BT
+167.84001 327 Td
+(0.020) Tj
+ET
+BT
+55 312 Td
+(\040\040\040\04018\040) Tj
+ET
+BT
+90.02 312 Td
+(0.220) Tj
+ET
+BT
+128.93001 312 Td
+(0.119) Tj
+ET
+BT
+167.84001 312 Td
+(0.170) Tj
+ET
+BT
+55 297 Td
+(\040\040\040\04017\040) Tj
+ET
+BT
+90.02 297 Td
+(0.160) Tj
+ET
+BT
+128.93001 297 Td
+(0.167) Tj
+ET
+BT
+167.84001 297 Td
+(0.163) Tj
+ET
+BT
+55 282 Td
+(\040\040\040\04015\040) Tj
+ET
+BT
+90.02 282 Td
+(0.020) Tj
+ET
+BT
+128.93001 282 Td
+(0.000) Tj
+ET
+BT
+167.84001 282 Td
+(0.010) Tj
+ET
+BT
+55 267 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 267 Td
+(0.020) Tj
+ET
+BT
+128.93001 267 Td
+(0.071) Tj
+ET
+BT
+167.84001 267 Td
+(0.046) Tj
+ET
+BT
+55 252 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 252 Td
+(0.020) Tj
+ET
+BT
+128.93001 252 Td
+(0.024) Tj
+ET
+BT
+167.84001 252 Td
+(0.022) Tj
+ET
+BT
+55 237 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 237 Td
+(0.000) Tj
+ET
+BT
+128.93001 237 Td
+(0.048) Tj
+ET
+BT
+167.84001 237 Td
+(0.024) Tj
+ET
+BT
+55 207 Td
+(Locus\0403) Tj
+ET
+BT
+55 192 Td
+(Allele) Tj
+ET
+BT
+90.02 192 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 192 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 192 Td
+(All) Tj
+ET
+55 182 m
+557 182 l
+S
+BT
+55 162 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 162 Td
+(0.240) Tj
+ET
+BT
+128.93001 162 Td
+(0.262) Tj
+ET
+BT
+167.84001 162 Td
+(0.251) Tj
+ET
+BT
+55 147 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 147 Td
+(0.280) Tj
+ET
+BT
+128.93001 147 Td
+(0.476) Tj
+ET
+BT
+167.84001 147 Td
+(0.378) Tj
+ET
+BT
+55 132 Td
+(\040\040\040\04018\040) Tj
+ET
+BT
+90.02 132 Td
+(0.080) Tj
+ET
+BT
+128.93001 132 Td
+(0.095) Tj
+ET
+BT
+167.84001 132 Td
+(0.088) Tj
+ET
+BT
+55 117 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 117 Td
+(0.280) Tj
+ET
+BT
+128.93001 117 Td
+(0.119) Tj
+ET
+BT
+167.84001 117 Td
+(0.200) Tj
+ET
+BT
+55 102 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 102 Td
+(0.120) Tj
+ET
+BT
+128.93001 102 Td
+(0.048) Tj
+ET
+BT
+167.84001 102 Td
+(0.084) Tj
+ET
+BT
+55 72 Td
+(Locus\0404) Tj
+ET
+BT
+55 57 Td
+(Allele) Tj
+ET
+BT
+90.02 57 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 57 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 57 Td
+(All) Tj
+ET
+
+endstream
+endobj
+19 0 obj
+4796
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 21 0 R
+>>
+endobj
+21 0 obj
+<<
+/Length 22 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0405) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+55 727 m
+557 727 l
+S
+BT
+55 722 Td
+(Allele) Tj
+ET
+BT
+90.02 722 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 722 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 722 Td
+(All) Tj
+ET
+55 707 m
+557 707 l
+S
+BT
+55 677 Td
+(\040\040\040\04016\040) Tj
+ET
+BT
+90.02 677 Td
+(0.080) Tj
+ET
+BT
+128.93001 677 Td
+(0.071) Tj
+ET
+BT
+167.84001 677 Td
+(0.076) Tj
+ET
+BT
+55 662 Td
+(\040\040\040\04024\040) Tj
+ET
+BT
+90.02 662 Td
+(0.180) Tj
+ET
+BT
+128.93001 662 Td
+(0.024) Tj
+ET
+BT
+167.84001 662 Td
+(0.102) Tj
+ET
+BT
+55 647 Td
+(\040\040\040\04015\040) Tj
+ET
+BT
+90.02 647 Td
+(0.020) Tj
+ET
+BT
+128.93001 647 Td
+(0.048) Tj
+ET
+BT
+167.84001 647 Td
+(0.034) Tj
+ET
+BT
+55 632 Td
+(\040\040\040\04025\040) Tj
+ET
+BT
+90.02 632 Td
+(0.160) Tj
+ET
+BT
+128.93001 632 Td
+(0.167) Tj
+ET
+BT
+167.84001 632 Td
+(0.163) Tj
+ET
+BT
+55 617 Td
+(\040\040\040\04014\040) Tj
+ET
+BT
+90.02 617 Td
+(0.020) Tj
+ET
+BT
+128.93001 617 Td
+(0.048) Tj
+ET
+BT
+167.84001 617 Td
+(0.034) Tj
+ET
+BT
+55 602 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 602 Td
+(0.100) Tj
+ET
+BT
+128.93001 602 Td
+(0.143) Tj
+ET
+BT
+167.84001 602 Td
+(0.121) Tj
+ET
+BT
+55 587 Td
+(\040\040\040\04012\040) Tj
+ET
+BT
+90.02 587 Td
+(0.060) Tj
+ET
+BT
+128.93001 587 Td
+(0.000) Tj
+ET
+BT
+167.84001 587 Td
+(0.030) Tj
+ET
+BT
+55 572 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 572 Td
+(0.080) Tj
+ET
+BT
+128.93001 572 Td
+(0.190) Tj
+ET
+BT
+167.84001 572 Td
+(0.135) Tj
+ET
+BT
+55 557 Td
+(\040\040\040\04023\040) Tj
+ET
+BT
+90.02 557 Td
+(0.060) Tj
+ET
+BT
+128.93001 557 Td
+(0.119) Tj
+ET
+BT
+167.84001 557 Td
+(0.090) Tj
+ET
+BT
+55 542 Td
+(\040\040\040\04028\040) Tj
+ET
+BT
+90.02 542 Td
+(0.020) Tj
+ET
+BT
+128.93001 542 Td
+(0.000) Tj
+ET
+BT
+167.84001 542 Td
+(0.010) Tj
+ET
+BT
+55 527 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 527 Td
+(0.060) Tj
+ET
+BT
+128.93001 527 Td
+(0.024) Tj
+ET
+BT
+167.84001 527 Td
+(0.042) Tj
+ET
+BT
+55 512 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 512 Td
+(0.160) Tj
+ET
+BT
+128.93001 512 Td
+(0.119) Tj
+ET
+BT
+167.84001 512 Td
+(0.140) Tj
+ET
+BT
+55 497 Td
+(\040\040\040\04013\040) Tj
+ET
+BT
+90.02 497 Td
+(0.000) Tj
+ET
+BT
+128.93001 497 Td
+(0.024) Tj
+ET
+BT
+167.84001 497 Td
+(0.012) Tj
+ET
+BT
+55 482 Td
+(\040\040\040\04026\040) Tj
+ET
+BT
+90.02 482 Td
+(0.000) Tj
+ET
+BT
+128.93001 482 Td
+(0.024) Tj
+ET
+BT
+167.84001 482 Td
+(0.012) Tj
+ET
+BT
+55 452 Td
+(Locus\0405) Tj
+ET
+BT
+55 437 Td
+(Allele) Tj
+ET
+BT
+90.02 437 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 437 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 437 Td
+(All) Tj
+ET
+55 427 m
+557 427 l
+S
+BT
+55 407 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 407 Td
+(0.400) Tj
+ET
+BT
+128.93001 407 Td
+(0.524) Tj
+ET
+BT
+167.84001 407 Td
+(0.462) Tj
+ET
+BT
+55 392 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 392 Td
+(0.420) Tj
+ET
+BT
+128.93001 392 Td
+(0.357) Tj
+ET
+BT
+167.84001 392 Td
+(0.389) Tj
+ET
+BT
+55 377 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 377 Td
+(0.180) Tj
+ET
+BT
+128.93001 377 Td
+(0.119) Tj
+ET
+BT
+167.84001 377 Td
+(0.150) Tj
+ET
+BT
+55 347 Td
+(Locus\0406) Tj
+ET
+BT
+55 332 Td
+(Allele) Tj
+ET
+BT
+90.02 332 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 332 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 332 Td
+(All) Tj
+ET
+55 322 m
+557 322 l
+S
+BT
+55 302 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 302 Td
+(0.060) Tj
+ET
+BT
+128.93001 302 Td
+(0.000) Tj
+ET
+BT
+167.84001 302 Td
+(0.030) Tj
+ET
+BT
+55 287 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 287 Td
+(0.100) Tj
+ET
+BT
+128.93001 287 Td
+(0.024) Tj
+ET
+BT
+167.84001 287 Td
+(0.062) Tj
+ET
+BT
+55 272 Td
+(\040\040\040\04018\040) Tj
+ET
+BT
+90.02 272 Td
+(0.300) Tj
+ET
+BT
+128.93001 272 Td
+(0.214) Tj
+ET
+BT
+167.84001 272 Td
+(0.257) Tj
+ET
+BT
+55 257 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 257 Td
+(0.200) Tj
+ET
+BT
+128.93001 257 Td
+(0.119) Tj
+ET
+BT
+167.84001 257 Td
+(0.160) Tj
+ET
+BT
+55 242 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 242 Td
+(0.120) Tj
+ET
+BT
+128.93001 242 Td
+(0.476) Tj
+ET
+BT
+167.84001 242 Td
+(0.298) Tj
+ET
+BT
+55 227 Td
+(\040\040\040\04016\040) Tj
+ET
+BT
+90.02 227 Td
+(0.060) Tj
+ET
+BT
+128.93001 227 Td
+(0.000) Tj
+ET
+BT
+167.84001 227 Td
+(0.030) Tj
+ET
+BT
+55 212 Td
+(\040\040\040\04024\040) Tj
+ET
+BT
+90.02 212 Td
+(0.160) Tj
+ET
+BT
+128.93001 212 Td
+(0.048) Tj
+ET
+BT
+167.84001 212 Td
+(0.104) Tj
+ET
+BT
+55 197 Td
+(\040\040\040\04017\040) Tj
+ET
+BT
+90.02 197 Td
+(0.000) Tj
+ET
+BT
+128.93001 197 Td
+(0.119) Tj
+ET
+BT
+167.84001 197 Td
+(0.060) Tj
+ET
+BT
+55 167 Td
+(Locus\0407) Tj
+ET
+BT
+55 152 Td
+(Allele) Tj
+ET
+BT
+90.02 152 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 152 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 152 Td
+(All) Tj
+ET
+55 142 m
+557 142 l
+S
+BT
+55 122 Td
+(\040\040\040\04023\040) Tj
+ET
+BT
+90.02 122 Td
+(0.040) Tj
+ET
+BT
+128.93001 122 Td
+(0.238) Tj
+ET
+BT
+167.84001 122 Td
+(0.139) Tj
+ET
+BT
+55 107 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 107 Td
+(0.660) Tj
+ET
+BT
+128.93001 107 Td
+(0.143) Tj
+ET
+BT
+167.84001 107 Td
+(0.401) Tj
+ET
+BT
+55 92 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 92 Td
+(0.180) Tj
+ET
+BT
+128.93001 92 Td
+(0.190) Tj
+ET
+BT
+167.84001 92 Td
+(0.185) Tj
+ET
+BT
+55 77 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 77 Td
+(0.100) Tj
+ET
+BT
+128.93001 77 Td
+(0.333) Tj
+ET
+BT
+167.84001 77 Td
+(0.217) Tj
+ET
+BT
+55 62 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 62 Td
+(0.020) Tj
+ET
+BT
+128.93001 62 Td
+(0.095) Tj
+ET
+BT
+167.84001 62 Td
+(0.058) Tj
+ET
+
+endstream
+endobj
+22 0 obj
+5260
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 24 0 R
+>>
+endobj
+24 0 obj
+<<
+/Length 25 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0406) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+BT
+55 707 Td
+(Locus\0408) Tj
+ET
+BT
+55 692 Td
+(Allele) Tj
+ET
+BT
+90.02 692 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 692 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 692 Td
+(All) Tj
+ET
+55 682 m
+557 682 l
+S
+BT
+55 662 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 662 Td
+(0.520) Tj
+ET
+BT
+128.93001 662 Td
+(0.524) Tj
+ET
+BT
+167.84001 662 Td
+(0.522) Tj
+ET
+BT
+55 647 Td
+(\040\040\040\04017\040) Tj
+ET
+BT
+90.02 647 Td
+(0.040) Tj
+ET
+BT
+128.93001 647 Td
+(0.048) Tj
+ET
+BT
+167.84001 647 Td
+(0.044) Tj
+ET
+BT
+55 632 Td
+(\040\040\040\04018\040) Tj
+ET
+BT
+90.02 632 Td
+(0.100) Tj
+ET
+BT
+128.93001 632 Td
+(0.071) Tj
+ET
+BT
+167.84001 632 Td
+(0.086) Tj
+ET
+BT
+55 617 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 617 Td
+(0.140) Tj
+ET
+BT
+128.93001 617 Td
+(0.190) Tj
+ET
+BT
+167.84001 617 Td
+(0.165) Tj
+ET
+BT
+55 602 Td
+(\040\040\040\04016\040) Tj
+ET
+BT
+90.02 602 Td
+(0.080) Tj
+ET
+BT
+128.93001 602 Td
+(0.000) Tj
+ET
+BT
+167.84001 602 Td
+(0.040) Tj
+ET
+BT
+55 587 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 587 Td
+(0.100) Tj
+ET
+BT
+128.93001 587 Td
+(0.048) Tj
+ET
+BT
+167.84001 587 Td
+(0.074) Tj
+ET
+BT
+55 572 Td
+(\040\040\040\04015\040) Tj
+ET
+BT
+90.02 572 Td
+(0.020) Tj
+ET
+BT
+128.93001 572 Td
+(0.048) Tj
+ET
+BT
+167.84001 572 Td
+(0.034) Tj
+ET
+BT
+55 557 Td
+(\040\040\040\04023\040) Tj
+ET
+BT
+90.02 557 Td
+(0.000) Tj
+ET
+BT
+128.93001 557 Td
+(0.071) Tj
+ET
+BT
+167.84001 557 Td
+(0.036) Tj
+ET
+BT
+55 527 Td
+(Locus\0409) Tj
+ET
+BT
+55 512 Td
+(Allele) Tj
+ET
+BT
+90.02 512 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 512 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 512 Td
+(All) Tj
+ET
+55 502 m
+557 502 l
+S
+BT
+55 482 Td
+(\040\040\040\04024\040) Tj
+ET
+BT
+90.02 482 Td
+(0.080) Tj
+ET
+BT
+128.93001 482 Td
+(0.024) Tj
+ET
+BT
+167.84001 482 Td
+(0.052) Tj
+ET
+BT
+55 467 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 467 Td
+(0.300) Tj
+ET
+BT
+128.93001 467 Td
+(0.429) Tj
+ET
+BT
+167.84001 467 Td
+(0.364) Tj
+ET
+BT
+55 452 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 452 Td
+(0.300) Tj
+ET
+BT
+128.93001 452 Td
+(0.167) Tj
+ET
+BT
+167.84001 452 Td
+(0.233) Tj
+ET
+BT
+55 437 Td
+(\040\040\040\04023\040) Tj
+ET
+BT
+90.02 437 Td
+(0.180) Tj
+ET
+BT
+128.93001 437 Td
+(0.143) Tj
+ET
+BT
+167.84001 437 Td
+(0.161) Tj
+ET
+BT
+55 422 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 422 Td
+(0.080) Tj
+ET
+BT
+128.93001 422 Td
+(0.024) Tj
+ET
+BT
+167.84001 422 Td
+(0.052) Tj
+ET
+BT
+55 407 Td
+(\040\040\040\04018\040) Tj
+ET
+BT
+90.02 407 Td
+(0.020) Tj
+ET
+BT
+128.93001 407 Td
+(0.071) Tj
+ET
+BT
+167.84001 407 Td
+(0.046) Tj
+ET
+BT
+55 392 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 392 Td
+(0.040) Tj
+ET
+BT
+128.93001 392 Td
+(0.095) Tj
+ET
+BT
+167.84001 392 Td
+(0.068) Tj
+ET
+BT
+55 377 Td
+(\040\040\040\04025\040) Tj
+ET
+BT
+90.02 377 Td
+(0.000) Tj
+ET
+BT
+128.93001 377 Td
+(0.048) Tj
+ET
+BT
+167.84001 377 Td
+(0.024) Tj
+ET
+BT
+55 347 Td
+(Locus\04010) Tj
+ET
+BT
+55 332 Td
+(Allele) Tj
+ET
+BT
+90.02 332 Td
+(Pop1\040\040) Tj
+ET
+BT
+128.93001 332 Td
+(Pop2\040\040) Tj
+ET
+BT
+167.84001 332 Td
+(All) Tj
+ET
+55 322 m
+557 322 l
+S
+BT
+55 302 Td
+(\040\040\040\04022\040) Tj
+ET
+BT
+90.02 302 Td
+(0.100) Tj
+ET
+BT
+128.93001 302 Td
+(0.214) Tj
+ET
+BT
+167.84001 302 Td
+(0.157) Tj
+ET
+BT
+55 287 Td
+(\040\040\040\04020\040) Tj
+ET
+BT
+90.02 287 Td
+(0.440) Tj
+ET
+BT
+128.93001 287 Td
+(0.214) Tj
+ET
+BT
+167.84001 287 Td
+(0.327) Tj
+ET
+BT
+55 272 Td
+(\040\040\040\04023\040) Tj
+ET
+BT
+90.02 272 Td
+(0.080) Tj
+ET
+BT
+128.93001 272 Td
+(0.167) Tj
+ET
+BT
+167.84001 272 Td
+(0.123) Tj
+ET
+BT
+55 257 Td
+(\040\040\040\04024\040) Tj
+ET
+BT
+90.02 257 Td
+(0.020) Tj
+ET
+BT
+128.93001 257 Td
+(0.000) Tj
+ET
+BT
+167.84001 257 Td
+(0.010) Tj
+ET
+BT
+55 242 Td
+(\040\040\040\04019\040) Tj
+ET
+BT
+90.02 242 Td
+(0.160) Tj
+ET
+BT
+128.93001 242 Td
+(0.167) Tj
+ET
+BT
+167.84001 242 Td
+(0.163) Tj
+ET
+BT
+55 227 Td
+(\040\040\040\04021\040) Tj
+ET
+BT
+90.02 227 Td
+(0.060) Tj
+ET
+BT
+128.93001 227 Td
+(0.048) Tj
+ET
+BT
+167.84001 227 Td
+(0.054) Tj
+ET
+BT
+55 212 Td
+(\040\040\040\04018\040) Tj
+ET
+BT
+90.02 212 Td
+(0.080) Tj
+ET
+BT
+128.93001 212 Td
+(0.000) Tj
+ET
+BT
+167.84001 212 Td
+(0.040) Tj
+ET
+BT
+55 197 Td
+(\040\040\040\04015\040) Tj
+ET
+BT
+90.02 197 Td
+(0.020) Tj
+ET
+BT
+128.93001 197 Td
+(0.071) Tj
+ET
+BT
+167.84001 197 Td
+(0.046) Tj
+ET
+BT
+55 182 Td
+(\040\040\040\04017\040) Tj
+ET
+BT
+90.02 182 Td
+(0.040) Tj
+ET
+BT
+128.93001 182 Td
+(0.048) Tj
+ET
+BT
+167.84001 182 Td
+(0.044) Tj
+ET
+BT
+55 167 Td
+(\040\040\040\04025\040) Tj
+ET
+BT
+90.02 167 Td
+(0.000) Tj
+ET
+BT
+128.93001 167 Td
+(0.071) Tj
+ET
+BT
+167.84001 167 Td
+(0.036) Tj
+ET
+
+endstream
+endobj
+25 0 obj
+4525
+endobj
+26 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 5 0 R
+/F2 6 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 27 0 R
+>>
+endobj
+27 0 obj
+<<
+/Length 28 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0407) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+/F1 18 Tf
+BT
+182.97 697 Td
+(Maximum\040Likelihood\040estimates) Tj
+ET
+0 0 0 RG
+50 677 m
+562 677 l
+S
+/F0 10 Tf
+BT
+55 642 Td
+(Population\040\133x\135) Tj
+ET
+BT
+140 642 Td
+(Loc.) Tj
+ET
+BT
+170 642 Td
+(Ln\050L\057L0\051) Tj
+ET
+/F2 12 Tf
+BT
+220 642 Td
+(Q) Tj
+ET
+/F2 9 Tf
+BT
+229.60001 637.5 Td
+(\040) Tj
+ET
+/F0 10 Tf
+BT
+270 642 Td
+(M\040\050m\057mu\051\040\133+=receiving\040population) Tj
+ET
+BT
+220 627 Td
+(\133x\040Ne\040mu\135) Tj
+ET
+BT
+270 627 Td
+(\0401,+) Tj
+ET
+BT
+320 627 Td
+(\0402,+) Tj
+ET
+55 612 m
+557 612 l
+S
+BT
+55 597 Td
+(\0401:population) Tj
+ET
+BT
+140 597 Td
+(1\0401) Tj
+ET
+BT
+170 597 Td
+(\040\040\0402.089\040) Tj
+ET
+BT
+220 597 Td
+(1.6491) Tj
+ET
+BT
+270 597 Td
+(-) Tj
+ET
+BT
+320 597 Td
+(3.840) Tj
+ET
+BT
+140 582 Td
+(1\0402) Tj
+ET
+BT
+170 582 Td
+(\040\04010.299\040) Tj
+ET
+BT
+220 582 Td
+(1.9423) Tj
+ET
+BT
+270 582 Td
+(-) Tj
+ET
+BT
+320 582 Td
+(1.555) Tj
+ET
+BT
+140 567 Td
+(1\040\040A) Tj
+ET
+BT
+170 567 Td
+(\040\04020.592\040) Tj
+ET
+BT
+220 567 Td
+(1.9423) Tj
+ET
+BT
+270 567 Td
+(-) Tj
+ET
+BT
+320 567 Td
+(1.555) Tj
+ET
+BT
+140 552 Td
+(2\0401) Tj
+ET
+BT
+170 552 Td
+(\040\040\0403.559\040) Tj
+ET
+BT
+220 552 Td
+(1.7127) Tj
+ET
+BT
+270 552 Td
+(-) Tj
+ET
+BT
+320 552 Td
+(2.081) Tj
+ET
+BT
+140 537 Td
+(2\0402) Tj
+ET
+BT
+170 537 Td
+(\040\040\0401.444\040) Tj
+ET
+BT
+220 537 Td
+(1.1927) Tj
+ET
+BT
+270 537 Td
+(-) Tj
+ET
+BT
+320 537 Td
+(3.298) Tj
+ET
+BT
+140 522 Td
+(2\040\040A) Tj
+ET
+BT
+170 522 Td
+(\040\040\0407.116\040) Tj
+ET
+BT
+220 522 Td
+(1.7129) Tj
+ET
+BT
+270 522 Td
+(-) Tj
+ET
+BT
+320 522 Td
+(2.081) Tj
+ET
+BT
+140 507 Td
+(3\0401) Tj
+ET
+BT
+170 507 Td
+(\040\040\0406.757\040) Tj
+ET
+BT
+220 507 Td
+(0.9067) Tj
+ET
+BT
+270 507 Td
+(-) Tj
+ET
+BT
+320 507 Td
+(8.650) Tj
+ET
+BT
+140 492 Td
+(3\0402) Tj
+ET
+BT
+170 492 Td
+(\040\040\0404.531\040) Tj
+ET
+BT
+220 492 Td
+(1.0758) Tj
+ET
+BT
+270 492 Td
+(-) Tj
+ET
+BT
+320 492 Td
+(4.638) Tj
+ET
+BT
+140 477 Td
+(3\040\040A) Tj
+ET
+BT
+170 477 Td
+(\040\04013.510\040) Tj
+ET
+BT
+220 477 Td
+(0.9067) Tj
+ET
+BT
+270 477 Td
+(-) Tj
+ET
+BT
+320 477 Td
+(8.650) Tj
+ET
+BT
+140 462 Td
+(4\0401) Tj
+ET
+BT
+170 462 Td
+(\040\040\0404.678\040) Tj
+ET
+BT
+220 462 Td
+(2.8509) Tj
+ET
+BT
+270 462 Td
+(-) Tj
+ET
+BT
+320 462 Td
+(2.442) Tj
+ET
+BT
+140 447 Td
+(4\0402) Tj
+ET
+BT
+170 447 Td
+(\040\04032.825\040) Tj
+ET
+BT
+220 447 Td
+(1.2221) Tj
+ET
+BT
+270 447 Td
+(-) Tj
+ET
+BT
+320 447 Td
+(2.732) Tj
+ET
+BT
+140 432 Td
+(4\040\040A) Tj
+ET
+BT
+170 432 Td
+(\040\04033.400\040) Tj
+ET
+BT
+220 432 Td
+(5.1827) Tj
+ET
+BT
+270 432 Td
+(-) Tj
+ET
+BT
+320 432 Td
+(3.601) Tj
+ET
+BT
+140 417 Td
+(5\0401) Tj
+ET
+BT
+170 417 Td
+(\040\040\0401.207\040) Tj
+ET
+BT
+220 417 Td
+(1.2896) Tj
+ET
+BT
+270 417 Td
+(-) Tj
+ET
+BT
+320 417 Td
+(4.979) Tj
+ET
+BT
+140 402 Td
+(5\0402) Tj
+ET
+BT
+170 402 Td
+(\040\040\0407.108\040) Tj
+ET
+BT
+220 402 Td
+(1.1033) Tj
+ET
+BT
+270 402 Td
+(-) Tj
+ET
+BT
+320 402 Td
+(6.195) Tj
+ET
+BT
+140 387 Td
+(5\040\040A) Tj
+ET
+BT
+170 387 Td
+(\040\04014.222\040) Tj
+ET
+BT
+220 387 Td
+(1.1033) Tj
+ET
+BT
+270 387 Td
+(-) Tj
+ET
+BT
+320 387 Td
+(6.195) Tj
+ET
+BT
+140 372 Td
+(6\0401) Tj
+ET
+BT
+170 372 Td
+(\040\040\0409.620\040) Tj
+ET
+BT
+220 372 Td
+(1.6447) Tj
+ET
+BT
+270 372 Td
+(-) Tj
+ET
+BT
+320 372 Td
+(2.150) Tj
+ET
+BT
+140 357 Td
+(6\0402) Tj
+ET
+BT
+170 357 Td
+(\040\040\0403.897\040) Tj
+ET
+BT
+220 357 Td
+(1.0342) Tj
+ET
+BT
+270 357 Td
+(-) Tj
+ET
+BT
+320 357 Td
+(3.706) Tj
+ET
+BT
+140 342 Td
+(6\040\040A) Tj
+ET
+BT
+170 342 Td
+(\040\040\0407.802\040) Tj
+ET
+BT
+220 342 Td
+(1.0343) Tj
+ET
+BT
+270 342 Td
+(-) Tj
+ET
+BT
+320 342 Td
+(3.706) Tj
+ET
+BT
+140 327 Td
+(7\0401) Tj
+ET
+BT
+170 327 Td
+(\040\040\0406.204\040) Tj
+ET
+BT
+220 327 Td
+(1.3098) Tj
+ET
+BT
+270 327 Td
+(-) Tj
+ET
+BT
+320 327 Td
+(3.454) Tj
+ET
+BT
+140 312 Td
+(7\0402) Tj
+ET
+BT
+170 312 Td
+(\040\040\0401.993\040) Tj
+ET
+BT
+220 312 Td
+(0.7932) Tj
+ET
+BT
+270 312 Td
+(-) Tj
+ET
+BT
+320 312 Td
+(6.602) Tj
+ET
+BT
+140 297 Td
+(7\040\040A) Tj
+ET
+BT
+170 297 Td
+(\040\040\0407.285\040) Tj
+ET
+BT
+220 297 Td
+(0.7388) Tj
+ET
+BT
+270 297 Td
+(-) Tj
+ET
+BT
+320 297 Td
+(2.558) Tj
+ET
+BT
+140 282 Td
+(8\0401) Tj
+ET
+BT
+170 282 Td
+(\040\040\0404.679\040) Tj
+ET
+BT
+220 282 Td
+(3.3260) Tj
+ET
+BT
+270 282 Td
+(-) Tj
+ET
+BT
+320 282 Td
+(8.865) Tj
+ET
+BT
+140 267 Td
+(8\0402) Tj
+ET
+BT
+170 267 Td
+(\040\040\0406.337\040) Tj
+ET
+BT
+220 267 Td
+(1.2341) Tj
+ET
+BT
+270 267 Td
+(-) Tj
+ET
+BT
+320 267 Td
+(5.311) Tj
+ET
+BT
+140 252 Td
+(8\040\040A) Tj
+ET
+BT
+170 252 Td
+(\040\04013.265\040) Tj
+ET
+BT
+220 252 Td
+(0.8690) Tj
+ET
+BT
+270 252 Td
+(-) Tj
+ET
+BT
+320 252 Td
+(8.477) Tj
+ET
+BT
+140 237 Td
+(9\0401) Tj
+ET
+BT
+170 237 Td
+(\040\040\0408.837\040) Tj
+ET
+BT
+220 237 Td
+(1.2251) Tj
+ET
+BT
+270 237 Td
+(-) Tj
+ET
+BT
+320 237 Td
+(2.158) Tj
+ET
+BT
+140 222 Td
+(9\0402) Tj
+ET
+BT
+170 222 Td
+(\040\040\0402.159\040) Tj
+ET
+BT
+220 222 Td
+(1.4120) Tj
+ET
+BT
+270 222 Td
+(-) Tj
+ET
+BT
+320 222 Td
+(4.113) Tj
+ET
+BT
+140 207 Td
+(9\040\040A) Tj
+ET
+BT
+170 207 Td
+(\040\04011.089\040) Tj
+ET
+BT
+220 207 Td
+(0.9899) Tj
+ET
+BT
+270 207 Td
+(-) Tj
+ET
+BT
+320 207 Td
+(2.072) Tj
+ET
+BT
+140 192 Td
+(10\0401) Tj
+ET
+BT
+170 192 Td
+(\040\040\0403.999\040) Tj
+ET
+BT
+220 192 Td
+(1.7189) Tj
+ET
+BT
+270 192 Td
+(-) Tj
+ET
+BT
+320 192 Td
+(3.961) Tj
+ET
+BT
+140 177 Td
+(10\0402) Tj
+ET
+BT
+170 177 Td
+(\040\040\0404.660\040) Tj
+ET
+BT
+220 177 Td
+(2.2860) Tj
+ET
+BT
+270 177 Td
+(-) Tj
+ET
+BT
+320 177 Td
+(2.763) Tj
+ET
+BT
+140 162 Td
+(10\040\040A) Tj
+ET
+BT
+170 162 Td
+(\040\040\0409.323\040) Tj
+ET
+BT
+220 162 Td
+(2.2870) Tj
+ET
+BT
+270 162 Td
+(-) Tj
+ET
+BT
+320 162 Td
+(2.764) Tj
+ET
+BT
+140 147 Td
+(All\040) Tj
+ET
+BT
+170 147 Td
+(\040\04064.733\040) Tj
+ET
+BT
+220 147 Td
+(1.2165) Tj
+ET
+BT
+270 147 Td
+(-) Tj
+ET
+BT
+320 147 Td
+(3.551) Tj
+ET
+BT
+55 132 Td
+(\0402:population) Tj
+ET
+BT
+140 132 Td
+(1\0401) Tj
+ET
+BT
+170 132 Td
+(\040\040\0402.089\040) Tj
+ET
+BT
+220 132 Td
+(2.5277) Tj
+ET
+BT
+270 132 Td
+(4.590) Tj
+ET
+BT
+320 132 Td
+(-) Tj
+ET
+BT
+140 117 Td
+(1\0402) Tj
+ET
+BT
+170 117 Td
+(\040\04010.299\040) Tj
+ET
+BT
+220 117 Td
+(2.6693) Tj
+ET
+BT
+270 117 Td
+(1.650) Tj
+ET
+BT
+320 117 Td
+(-) Tj
+ET
+BT
+140 102 Td
+(1\040\040A) Tj
+ET
+BT
+170 102 Td
+(\040\04020.592\040) Tj
+ET
+BT
+220 102 Td
+(2.6693) Tj
+ET
+BT
+270 102 Td
+(1.650) Tj
+ET
+BT
+320 102 Td
+(-) Tj
+ET
+BT
+140 87 Td
+(2\0401) Tj
+ET
+BT
+170 87 Td
+(\040\040\0403.559\040) Tj
+ET
+BT
+220 87 Td
+(1.4820) Tj
+ET
+BT
+270 87 Td
+(3.433) Tj
+ET
+BT
+320 87 Td
+(-) Tj
+ET
+BT
+140 72 Td
+(2\0402) Tj
+ET
+BT
+170 72 Td
+(\040\040\0401.444\040) Tj
+ET
+BT
+220 72 Td
+(1.0427) Tj
+ET
+BT
+270 72 Td
+(3.512) Tj
+ET
+BT
+320 72 Td
+(-) Tj
+ET
+BT
+140 57 Td
+(2\040\040A) Tj
+ET
+BT
+170 57 Td
+(\040\040\0407.116\040) Tj
+ET
+BT
+220 57 Td
+(1.4821) Tj
+ET
+BT
+270 57 Td
+(3.433) Tj
+ET
+BT
+320 57 Td
+(-) Tj
+ET
+
+endstream
+endobj
+28 0 obj
+6548
+endobj
+29 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 30 0 R
+>>
+endobj
+30 0 obj
+<<
+/Length 31 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0408) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+BT
+140 722 Td
+(3\0401) Tj
+ET
+BT
+170 722 Td
+(\040\040\0406.757\040) Tj
+ET
+BT
+220 722 Td
+(1.0901) Tj
+ET
+BT
+270 722 Td
+(6.549) Tj
+ET
+BT
+320 722 Td
+(-) Tj
+ET
+BT
+140 707 Td
+(3\0402) Tj
+ET
+BT
+170 707 Td
+(\040\040\0404.531\040) Tj
+ET
+BT
+220 707 Td
+(1.0413) Tj
+ET
+BT
+270 707 Td
+(10.546) Tj
+ET
+BT
+320 707 Td
+(-) Tj
+ET
+BT
+140 692 Td
+(3\040\040A) Tj
+ET
+BT
+170 692 Td
+(\040\04013.510\040) Tj
+ET
+BT
+220 692 Td
+(1.0901) Tj
+ET
+BT
+270 692 Td
+(6.549) Tj
+ET
+BT
+320 692 Td
+(-) Tj
+ET
+BT
+140 677 Td
+(4\0401) Tj
+ET
+BT
+170 677 Td
+(\040\040\0404.678\040) Tj
+ET
+BT
+220 677 Td
+(3.3363) Tj
+ET
+BT
+270 677 Td
+(1.725) Tj
+ET
+BT
+320 677 Td
+(-) Tj
+ET
+BT
+140 662 Td
+(4\0402) Tj
+ET
+BT
+170 662 Td
+(\040\04032.825\040) Tj
+ET
+BT
+220 662 Td
+(1.4512) Tj
+ET
+BT
+270 662 Td
+(2.696) Tj
+ET
+BT
+320 662 Td
+(-) Tj
+ET
+BT
+140 647 Td
+(4\040\040A) Tj
+ET
+BT
+170 647 Td
+(\040\04033.400\040) Tj
+ET
+BT
+220 647 Td
+(3.5154) Tj
+ET
+BT
+270 647 Td
+(2.598) Tj
+ET
+BT
+320 647 Td
+(-) Tj
+ET
+BT
+140 632 Td
+(5\0401) Tj
+ET
+BT
+170 632 Td
+(\040\040\0401.207\040) Tj
+ET
+BT
+220 632 Td
+(1.1072) Tj
+ET
+BT
+270 632 Td
+(0.075) Tj
+ET
+BT
+320 632 Td
+(-) Tj
+ET
+BT
+140 617 Td
+(5\0402) Tj
+ET
+BT
+170 617 Td
+(\040\040\0407.108\040) Tj
+ET
+BT
+220 617 Td
+(0.7192) Tj
+ET
+BT
+270 617 Td
+(5.106) Tj
+ET
+BT
+320 617 Td
+(-) Tj
+ET
+BT
+140 602 Td
+(5\040\040A) Tj
+ET
+BT
+170 602 Td
+(\040\04014.222\040) Tj
+ET
+BT
+220 602 Td
+(0.7192) Tj
+ET
+BT
+270 602 Td
+(5.106) Tj
+ET
+BT
+320 602 Td
+(-) Tj
+ET
+BT
+140 587 Td
+(6\0401) Tj
+ET
+BT
+170 587 Td
+(\040\040\0409.620\040) Tj
+ET
+BT
+220 587 Td
+(1.2616) Tj
+ET
+BT
+270 587 Td
+(6.438) Tj
+ET
+BT
+320 587 Td
+(-) Tj
+ET
+BT
+140 572 Td
+(6\0402) Tj
+ET
+BT
+170 572 Td
+(\040\040\0403.897\040) Tj
+ET
+BT
+220 572 Td
+(0.9465) Tj
+ET
+BT
+270 572 Td
+(2.740) Tj
+ET
+BT
+320 572 Td
+(-) Tj
+ET
+BT
+140 557 Td
+(6\040\040A) Tj
+ET
+BT
+170 557 Td
+(\040\040\0407.802\040) Tj
+ET
+BT
+220 557 Td
+(0.9466) Tj
+ET
+BT
+270 557 Td
+(2.740) Tj
+ET
+BT
+320 557 Td
+(-) Tj
+ET
+BT
+140 542 Td
+(7\0401) Tj
+ET
+BT
+170 542 Td
+(\040\040\0406.204\040) Tj
+ET
+BT
+220 542 Td
+(1.2138) Tj
+ET
+BT
+270 542 Td
+(9.105) Tj
+ET
+BT
+320 542 Td
+(-) Tj
+ET
+BT
+140 527 Td
+(7\0402) Tj
+ET
+BT
+170 527 Td
+(\040\040\0401.993\040) Tj
+ET
+BT
+220 527 Td
+(1.0432) Tj
+ET
+BT
+270 527 Td
+(7.233) Tj
+ET
+BT
+320 527 Td
+(-) Tj
+ET
+BT
+140 512 Td
+(7\040\040A) Tj
+ET
+BT
+170 512 Td
+(\040\040\0407.285\040) Tj
+ET
+BT
+220 512 Td
+(0.6415) Tj
+ET
+BT
+270 512 Td
+(8.891) Tj
+ET
+BT
+320 512 Td
+(-) Tj
+ET
+BT
+140 497 Td
+(8\0401) Tj
+ET
+BT
+170 497 Td
+(\040\040\0404.679\040) Tj
+ET
+BT
+220 497 Td
+(1.3944) Tj
+ET
+BT
+270 497 Td
+(4.780) Tj
+ET
+BT
+320 497 Td
+(-) Tj
+ET
+BT
+140 482 Td
+(8\0402) Tj
+ET
+BT
+170 482 Td
+(\040\040\0406.337\040) Tj
+ET
+BT
+220 482 Td
+(1.1093) Tj
+ET
+BT
+270 482 Td
+(12.088) Tj
+ET
+BT
+320 482 Td
+(-) Tj
+ET
+BT
+140 467 Td
+(8\040\040A) Tj
+ET
+BT
+170 467 Td
+(\040\04013.265\040) Tj
+ET
+BT
+220 467 Td
+(1.2516) Tj
+ET
+BT
+270 467 Td
+(5.256) Tj
+ET
+BT
+320 467 Td
+(-) Tj
+ET
+BT
+140 452 Td
+(9\0401) Tj
+ET
+BT
+170 452 Td
+(\040\040\0408.837\040) Tj
+ET
+BT
+220 452 Td
+(1.6186) Tj
+ET
+BT
+270 452 Td
+(1.761) Tj
+ET
+BT
+320 452 Td
+(-) Tj
+ET
+BT
+140 437 Td
+(9\0402) Tj
+ET
+BT
+170 437 Td
+(\040\040\0402.159\040) Tj
+ET
+BT
+220 437 Td
+(1.3239) Tj
+ET
+BT
+270 437 Td
+(3.407) Tj
+ET
+BT
+320 437 Td
+(-) Tj
+ET
+BT
+140 422 Td
+(9\040\040A) Tj
+ET
+BT
+170 422 Td
+(\040\04011.089\040) Tj
+ET
+BT
+220 422 Td
+(1.3159) Tj
+ET
+BT
+270 422 Td
+(3.562) Tj
+ET
+BT
+320 422 Td
+(-) Tj
+ET
+BT
+140 407 Td
+(10\0401) Tj
+ET
+BT
+170 407 Td
+(\040\040\0403.999\040) Tj
+ET
+BT
+220 407 Td
+(2.0964) Tj
+ET
+BT
+270 407 Td
+(2.655) Tj
+ET
+BT
+320 407 Td
+(-) Tj
+ET
+BT
+140 392 Td
+(10\0402) Tj
+ET
+BT
+170 392 Td
+(\040\040\0404.660\040) Tj
+ET
+BT
+220 392 Td
+(1.3044) Tj
+ET
+BT
+270 392 Td
+(2.390) Tj
+ET
+BT
+320 392 Td
+(-) Tj
+ET
+BT
+140 377 Td
+(10\040\040A) Tj
+ET
+BT
+170 377 Td
+(\040\040\0409.323\040) Tj
+ET
+BT
+220 377 Td
+(1.3029) Tj
+ET
+BT
+270 377 Td
+(2.388) Tj
+ET
+BT
+320 377 Td
+(-) Tj
+ET
+BT
+140 362 Td
+(All\040) Tj
+ET
+BT
+170 362 Td
+(\040\04064.733\040) Tj
+ET
+BT
+220 362 Td
+(1.3545) Tj
+ET
+BT
+270 362 Td
+(4.159) Tj
+ET
+BT
+320 362 Td
+(-) Tj
+ET
+BT
+55 332 Td
+(Comments:) Tj
+ET
+BT
+55 317 Td
+(The\040x\040is\0401,\0402,\040or\0404\040for\040mtDNA,\040haploid,\040or\040diploid\040data,\040respectively) Tj
+ET
+BT
+55 302 Td
+(There\040were\04010\040short\040chains\040\050500\040used\040trees\040out\040of\040sampled\0401000\051) Tj
+ET
+BT
+55 287 Td
+(and\0403\040long\040chains\040\0501000\040used\040trees\040out\040of\040sampled\0402000\051\012) Tj
+ET
+BT
+270 272 Td
+(Static\040heating\040with\0404\040chains\040was\040active\012) Tj
+ET
+BT
+55 272 Td
+(\040\040COMBINATION\040OF\0402\040MULTIPLE\040RUNS) Tj
+ET
+
+endstream
+endobj
+31 0 obj
+4684
+endobj
+32 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 5 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 33 0 R
+>>
+endobj
+33 0 obj
+<<
+/Length 34 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+397.5 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\0409) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+/F1 18 Tf
+BT
+164.448 697 Td
+(Approximate\040Likelihood\040Ratio\040Tests) Tj
+ET
+0 0 0 RG
+50 677 m
+562 677 l
+S
+/F0 10 Tf
+BT
+60 642 Td
+(Legend\040for\040the\040likelihood\040ratio\040tables) Tj
+ET
+60 627 m
+552 627 l
+S
+BT
+60 612 Td
+(Null-Hypothesis:\040your\040test\040model) Tj
+ET
+BT
+360 612 Td
+(Log\050likelihood\051\040of\040test\040model) Tj
+ET
+BT
+60 597 Td
+(is\040equal\040to) Tj
+ET
+BT
+360 597 Td
+(Log\050likelihood\051\040of\040full\040model) Tj
+ET
+BT
+60 582 Td
+(full\040model\040\050the\040model\040under\040which\040the) Tj
+ET
+BT
+360 582 Td
+(Likelihood\040ratio\040test\040value) Tj
+ET
+BT
+60 567 Td
+(genealogies\040were\040sampled\051) Tj
+ET
+BT
+360 567 Td
+(Degrees\040of\040freedom\040of\040test) Tj
+ET
+BT
+360 552 Td
+(\133Theta\040values\040are\040on\040the\040diagonal\040of\040the) Tj
+ET
+BT
+360 537 Td
+(Probability*) Tj
+ET
+BT
+60 522 Td
+(Migration\040matrix,\040migration\040rates\040are) Tj
+ET
+BT
+360 522 Td
+(Probability**) Tj
+ET
+BT
+60 507 Td
+(specified\040as\040M\135) Tj
+ET
+BT
+360 507 Td
+(Akaike's\040Information\040Criterion***) Tj
+ET
+BT
+360 492 Td
+(Number\040of\040parameters\040used) Tj
+ET
+60 477 m
+552 477 l
+S
+340 627 m
+340 477 l
+S
+BT
+60 462 Td
+(\040\040*\051\040Probability\040under\040the\040assumption\040that\040parameters\040have\040range\040-Inf\040to\040Inf) Tj
+ET
+BT
+60 447 Td
+(\040**\051\040Probability\040under\040the\040assumption\040that\040parameters\040have\040range\0400\040to\040Inf) Tj
+ET
+BT
+60 432 Td
+(***\051\040AIC:\040the\040smaller\040the\040value\040the\040better\040the\040model) Tj
+ET
+BT
+60 417 Td
+(\040\040\040\040\040\133the\040full\040model\040has\040AIC=-121.465291,\040num\050param\051=4\135) Tj
+ET
+60 402 m
+552 402 l
+S
+BT
+60 387 Td
+(H0:\0401.2855\0403.8551\0403.8551\0401.2855\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040) Tj
+ET
+BT
+360 387 Td
+(LnL\050test\051) Tj
+ET
+BT
+430 387 Td
+(=\04062.276883) Tj
+ET
+BT
+60 372 Td
+(\040=\040\0401.2165\0403.5509\0404.1593\0401.3545\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040) Tj
+ET
+BT
+360 372 Td
+(LnL\050full\051) Tj
+ET
+BT
+430 372 Td
+(=\04064.732645) Tj
+ET
+BT
+60 357 Td
+(\133\040m,\040m,\040m,\040m,\135\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040) Tj
+ET
+BT
+360 357 Td
+(LRT) Tj
+ET
+BT
+430 357 Td
+(=\0404.911524) Tj
+ET
+BT
+60 342 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040) Tj
+ET
+BT
+360 342 Td
+(df) Tj
+ET
+BT
+430 342 Td
+(=\0404) Tj
+ET
+BT
+60 327 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040) Tj
+ET
+BT
+360 327 Td
+(Prob) Tj
+ET
+BT
+430 327 Td
+(=\0400.296497) Tj
+ET
+BT
+60 312 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040) Tj
+ET
+BT
+360 312 Td
+(Probc) Tj
+ET
+BT
+430 312 Td
+(=\0400.296497) Tj
+ET
+BT
+60 297 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040) Tj
+ET
+BT
+360 297 Td
+(AIC) Tj
+ET
+BT
+430 297 Td
+(=\040-120.553767) Tj
+ET
+BT
+60 282 Td
+(\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040) Tj
+ET
+BT
+360 282 Td
+(num\050param\051) Tj
+ET
+BT
+430 282 Td
+(=\0402) Tj
+ET
+60 267 m
+552 267 l
+S
+340 402 m
+340 267 l
+S
+
+endstream
+endobj
+34 0 obj
+4087
+endobj
+35 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 5 0 R
+/F2 6 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 36 0 R
+>>
+endobj
+36 0 obj
+<<
+/Length 37 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+391.94 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\04010) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+/F1 18 Tf
+BT
+174.942 697 Td
+(Profile\040likelihood\040tables\040and\040plots) Tj
+ET
+0 0 0 RG
+50 677 m
+562 677 l
+S
+/F0 10 Tf
+55 647 m
+562 647 l
+S
+BT
+55 627 Td
+(Profile\040likelihood\040table\040and\040plot\040for\040parameter\040) Tj
+ET
+/F2 12 Tf
+BT
+260 627 Td
+(Q) Tj
+ET
+/F2 9 Tf
+BT
+269.60001 622.5 Td
+(1) Tj
+ET
+/F0 10 Tf
+BT
+55 612 Td
+(Parameters\040are\040evaluated\040at\040percentiles\040using\040bisection\040method\040\050slow,\040but\040exact\051.) Tj
+ET
+BT
+55 597 Td
+(Per.\040) Tj
+ET
+BT
+86.02 597 Td
+(Ln\050L\051) Tj
+ET
+/F2 10 Tf
+BT
+126.49001 597 Td
+(Q) Tj
+ET
+/F2 7 Tf
+BT
+134.49001 593.5 Td
+(1) Tj
+ET
+/F0 10 Tf
+/F2 10 Tf
+BT
+168.63 597 Td
+(Q) Tj
+ET
+/F2 7 Tf
+BT
+176.63 593.5 Td
+(1) Tj
+ET
+/F0 10 Tf
+/F2 10 Tf
+BT
+205.21001 597 Td
+(Q) Tj
+ET
+/F2 7 Tf
+BT
+213.21001 593.5 Td
+(2) Tj
+ET
+/F0 10 Tf
+/F0 10 Tf
+BT
+241.79001 597 Td
+(M) Tj
+ET
+/F2 7 Tf
+BT
+254.79001 593.5 Td
+(2-\0761) Tj
+ET
+/F0 10 Tf
+/F0 10 Tf
+BT
+281.97 597 Td
+(M) Tj
+ET
+/F2 7 Tf
+BT
+294.97 593.5 Td
+(1-\0762) Tj
+ET
+/F0 10 Tf
+55 587 m
+557 587 l
+S
+BT
+55 567 Td
+(0.005) Tj
+ET
+BT
+86.02 567 Td
+(61.415\040) Tj
+ET
+BT
+126.49001 567 Td
+(1.05395) Tj
+ET
+BT
+168.63 567 Td
+(1.0539) Tj
+ET
+BT
+205.21001 567 Td
+(1.2958) Tj
+ET
+BT
+241.79001 567 Td
+(3.735) Tj
+ET
+BT
+281.97 567 Td
+(4.042) Tj
+ET
+BT
+55 552 Td
+(0.025) Tj
+ET
+BT
+86.02 552 Td
+(62.811\040) Tj
+ET
+BT
+126.49001 552 Td
+(1.09006) Tj
+ET
+BT
+168.63 552 Td
+(1.0901) Tj
+ET
+BT
+205.21001 552 Td
+(1.3091) Tj
+ET
+BT
+241.79001 552 Td
+(3.694) Tj
+ET
+BT
+281.97 552 Td
+(4.066) Tj
+ET
+BT
+55 537 Td
+(0.050) Tj
+ET
+BT
+86.02 537 Td
+(63.380\040) Tj
+ET
+BT
+126.49001 537 Td
+(1.10919) Tj
+ET
+BT
+168.63 537 Td
+(1.1092) Tj
+ET
+BT
+205.21001 537 Td
+(1.3162) Tj
+ET
+BT
+241.79001 537 Td
+(3.670) Tj
+ET
+BT
+281.97 537 Td
+(4.080) Tj
+ET
+BT
+55 522 Td
+(0.250) Tj
+ET
+BT
+86.02 522 Td
+(64.506\040) Tj
+ET
+BT
+126.49001 522 Td
+(1.1708) Tj
+ET
+BT
+168.63 522 Td
+(1.1708) Tj
+ET
+BT
+205.21001 522 Td
+(1.3388) Tj
+ET
+BT
+241.79001 522 Td
+(3.595) Tj
+ET
+BT
+281.97 522 Td
+(4.129) Tj
+ET
+BT
+55 507 Td
+(MLE) Tj
+ET
+BT
+86.02 507 Td
+(64.733*) Tj
+ET
+BT
+126.49001 507 Td
+(1.21648) Tj
+ET
+BT
+168.63 507 Td
+(1.2165) Tj
+ET
+BT
+205.21001 507 Td
+(1.3545) Tj
+ET
+BT
+241.79001 507 Td
+(3.551) Tj
+ET
+BT
+281.97 507 Td
+(4.159) Tj
+ET
+BT
+55 492 Td
+(0.750) Tj
+ET
+BT
+86.02 492 Td
+(64.506\040) Tj
+ET
+BT
+126.49001 492 Td
+(1.26619) Tj
+ET
+BT
+168.63 492 Td
+(1.2662) Tj
+ET
+BT
+205.21001 492 Td
+(1.3730) Tj
+ET
+BT
+241.79001 492 Td
+(3.504) Tj
+ET
+BT
+281.97 492 Td
+(4.186) Tj
+ET
+BT
+55 477 Td
+(0.950) Tj
+ET
+BT
+86.02 477 Td
+(63.380\040) Tj
+ET
+BT
+126.49001 477 Td
+(1.34836) Tj
+ET
+BT
+168.63 477 Td
+(1.3484) Tj
+ET
+BT
+205.21001 477 Td
+(1.4041) Tj
+ET
+BT
+241.79001 477 Td
+(3.414) Tj
+ET
+BT
+281.97 477 Td
+(4.231) Tj
+ET
+BT
+55 462 Td
+(0.975) Tj
+ET
+BT
+86.02 462 Td
+(62.811\040) Tj
+ET
+BT
+126.49001 462 Td
+(1.37724) Tj
+ET
+BT
+168.63 462 Td
+(1.3772) Tj
+ET
+BT
+205.21001 462 Td
+(1.4118) Tj
+ET
+BT
+241.79001 462 Td
+(3.382) Tj
+ET
+BT
+281.97 462 Td
+(4.250) Tj
+ET
+BT
+55 447 Td
+(0.995) Tj
+ET
+BT
+86.02 447 Td
+(61.416\040) Tj
+ET
+BT
+126.49001 447 Td
+(1.43525) Tj
+ET
+BT
+168.63 447 Td
+(1.4352) Tj
+ET
+BT
+205.21001 447 Td
+(1.4208) Tj
+ET
+BT
+241.79001 447 Td
+(3.312) Tj
+ET
+BT
+281.97 447 Td
+(4.293) Tj
+ET
+100 332 m
+100 432 l
+S
+BT
+75.54 346.63107 Td
+(62.0) Tj
+ET
+100 349.63107 m
+97 349.63107 l
+S
+BT
+75.54 376.76971 Td
+(63.0) Tj
+ET
+100 379.76971 m
+97 379.76971 l
+S
+BT
+75.54 406.90833 Td
+(64.0) Tj
+ET
+100 409.90833 m
+97 409.90833 l
+S
+100 332 m
+512 332 l
+S
+BT
+140.0276 319 Td
+(1.10) Tj
+ET
+149.7576 332 m
+149.7576 329 l
+S
+BT
+194.0533 319 Td
+(1.15) Tj
+ET
+203.78329 332 m
+203.78329 329 l
+S
+BT
+248.07896 319 Td
+(1.20) Tj
+ET
+257.80896 332 m
+257.80896 329 l
+S
+BT
+302.10464 319 Td
+(1.25) Tj
+ET
+311.83466 332 m
+311.83466 329 l
+S
+BT
+356.13034 319 Td
+(1.30) Tj
+ET
+365.86035 332 m
+365.86035 329 l
+S
+BT
+410.15604 319 Td
+(1.35) Tj
+ET
+419.88605 332 m
+419.88605 329 l
+S
+BT
+464.1817 319 Td
+(1.40) Tj
+ET
+473.91171 332 m
+473.91171 329 l
+S
+1 w
+0.99 0 0 RG
+100 332 m
+139.0174 374.07352 l
+S
+139.0174 374.07352 m
+159.68762 391.22241 l
+S
+159.68762 391.22241 m
+226.25806 425.15839 l
+S
+226.25806 425.15839 m
+275.61597 432 l
+S
+275.61597 432 m
+329.32837 425.15839 l
+S
+329.32837 425.15839 m
+418.11404 391.22241 l
+S
+418.11404 391.22241 m
+449.31931 374.07352 l
+S
+449.31931 374.07352 m
+512 332.03012 l
+S
+0 0 0 RG
+0.99 0 0 rg
+98.5 330.5 m
+101.5 330.5 l
+101.5 333.5 l
+98.5 333.5 l
+98.5 330.5 l
+f
+0 0 0 rg
+0.99 0 0 rg
+137.5174 372.57352 m
+140.5174 372.57352 l
+140.5174 375.57352 l
+137.5174 375.57352 l
+137.5174 372.57352 l
+f
+0 0 0 rg
+0.99 0 0 rg
+158.18762 389.72241 m
+161.18762 389.72241 l
+161.18762 392.72241 l
+158.18762 392.72241 l
+158.18762 389.72241 l
+f
+0 0 0 rg
+0.99 0 0 rg
+224.75806 423.65839 m
+227.75806 423.65839 l
+227.75806 426.65839 l
+224.75806 426.65839 l
+224.75806 423.65839 l
+f
+0 0 0 rg
+0.99 0 0 rg
+274.11597 430.5 m
+277.11597 430.5 l
+277.11597 433.5 l
+274.11597 433.5 l
+274.11597 430.5 l
+f
+0 0 0 rg
+0.99 0 0 rg
+327.82837 423.65839 m
+330.82837 423.65839 l
+330.82837 426.65839 l
+327.82837 426.65839 l
+327.82837 423.65839 l
+f
+0 0 0 rg
+0.99 0 0 rg
+416.61404 389.72241 m
+419.61404 389.72241 l
+419.61404 392.72241 l
+416.61404 392.72241 l
+416.61404 389.72241 l
+f
+0 0 0 rg
+0.99 0 0 rg
+447.81931 372.57352 m
+450.81931 372.57352 l
+450.81931 375.57352 l
+447.81931 375.57352 l
+447.81931 372.57352 l
+f
+0 0 0 rg
+0.99 0 0 rg
+510.5 330.53012 m
+513.5 330.53012 l
+513.5 333.53012 l
+510.5 333.53012 l
+510.5 330.53012 l
+f
+0 0 0 rg
+55 307 m
+562 307 l
+S
+BT
+55 287 Td
+(Profile\040likelihood\040table\040and\040plot\040for\040parameter\040) Tj
+ET
+/F2 12 Tf
+BT
+260 287 Td
+(Q) Tj
+ET
+/F2 9 Tf
+BT
+269.60001 282.5 Td
+(2) Tj
+ET
+/F0 10 Tf
+BT
+55 272 Td
+(Parameters\040are\040evaluated\040at\040percentiles\040using\040bisection\040method\040\050slow,\040but\040exact\051.) Tj
+ET
+BT
+55 257 Td
+(Per.\040) Tj
+ET
+BT
+86.02 257 Td
+(Ln\050L\051) Tj
+ET
+/F2 10 Tf
+BT
+126.49001 257 Td
+(Q) Tj
+ET
+/F2 7 Tf
+BT
+134.49001 253.5 Td
+(2) Tj
+ET
+/F0 10 Tf
+/F2 10 Tf
+BT
+168.63 257 Td
+(Q) Tj
+ET
+/F2 7 Tf
+BT
+176.63 253.5 Td
+(1) Tj
+ET
+/F0 10 Tf
+/F2 10 Tf
+BT
+205.21001 257 Td
+(Q) Tj
+ET
+/F2 7 Tf
+BT
+213.21001 253.5 Td
+(2) Tj
+ET
+/F0 10 Tf
+/F0 10 Tf
+BT
+241.79001 257 Td
+(M) Tj
+ET
+/F2 7 Tf
+BT
+254.79001 253.5 Td
+(2-\0761) Tj
+ET
+/F0 10 Tf
+/F0 10 Tf
+BT
+281.97 257 Td
+(M) Tj
+ET
+/F2 7 Tf
+BT
+294.97 253.5 Td
+(1-\0762) Tj
+ET
+/F0 10 Tf
+55 247 m
+557 247 l
+S
+BT
+55 227 Td
+(0.005) Tj
+ET
+BT
+86.02 227 Td
+(61.416\040) Tj
+ET
+BT
+126.49001 227 Td
+(1.13393) Tj
+ET
+BT
+168.63 227 Td
+(1.1725) Tj
+ET
+BT
+205.21001 227 Td
+(1.1339) Tj
+ET
+BT
+241.79001 227 Td
+(3.676) Tj
+ET
+BT
+281.97 227 Td
+(4.049) Tj
+ET
+BT
+55 212 Td
+(0.025) Tj
+ET
+BT
+86.02 212 Td
+(62.813\040) Tj
+ET
+BT
+126.49001 212 Td
+(1.18228) Tj
+ET
+BT
+168.63 212 Td
+(1.1814) Tj
+ET
+BT
+205.21001 212 Td
+(1.1823) Tj
+ET
+BT
+241.79001 212 Td
+(3.642) Tj
+ET
+BT
+281.97 212 Td
+(4.082) Tj
+ET
+BT
+55 197 Td
+(0.050) Tj
+ET
+BT
+86.02 197 Td
+(63.379\040) Tj
+ET
+BT
+126.49001 197 Td
+(1.20843) Tj
+ET
+BT
+168.63 197 Td
+(1.1867) Tj
+ET
+BT
+205.21001 197 Td
+(1.2084) Tj
+ET
+BT
+241.79001 197 Td
+(3.625) Tj
+ET
+BT
+281.97 197 Td
+(4.099) Tj
+ET
+BT
+55 182 Td
+(0.250) Tj
+ET
+BT
+86.02 182 Td
+(64.505\040) Tj
+ET
+BT
+126.49001 182 Td
+(1.29316) Tj
+ET
+BT
+168.63 182 Td
+(1.2042) Tj
+ET
+BT
+205.21001 182 Td
+(1.2932) Tj
+ET
+BT
+241.79001 182 Td
+(3.580) Tj
+ET
+BT
+281.97 182 Td
+(4.139) Tj
+ET
+BT
+55 167 Td
+(MLE) Tj
+ET
+BT
+86.02 167 Td
+(64.733*) Tj
+ET
+BT
+126.49001 167 Td
+(1.35449) Tj
+ET
+BT
+168.63 167 Td
+(1.2165) Tj
+ET
+BT
+205.21001 167 Td
+(1.3545) Tj
+ET
+BT
+241.79001 167 Td
+(3.551) Tj
+ET
+BT
+281.97 167 Td
+(4.159) Tj
+ET
+BT
+55 152 Td
+(0.750) Tj
+ET
+BT
+86.02 152 Td
+(64.506\040) Tj
+ET
+BT
+126.49001 152 Td
+(1.4184) Tj
+ET
+BT
+168.63 152 Td
+(1.2300) Tj
+ET
+BT
+205.21001 152 Td
+(1.4184) Tj
+ET
+BT
+241.79001 152 Td
+(3.522) Tj
+ET
+BT
+281.97 152 Td
+(4.177) Tj
+ET
+BT
+55 137 Td
+(0.950) Tj
+ET
+BT
+86.02 137 Td
+(63.380\040) Tj
+ET
+BT
+126.49001 137 Td
+(1.51727) Tj
+ET
+BT
+168.63 137 Td
+(1.2529) Tj
+ET
+BT
+205.21001 137 Td
+(1.5173) Tj
+ET
+BT
+241.79001 137 Td
+(3.485) Tj
+ET
+BT
+281.97 137 Td
+(4.198) Tj
+ET
+BT
+55 122 Td
+(0.975) Tj
+ET
+BT
+86.02 122 Td
+(62.812\040) Tj
+ET
+BT
+126.49001 122 Td
+(1.55128) Tj
+ET
+BT
+168.63 122 Td
+(1.2601) Tj
+ET
+BT
+205.21001 122 Td
+(1.5513) Tj
+ET
+BT
+241.79001 122 Td
+(3.477) Tj
+ET
+BT
+281.97 122 Td
+(4.203) Tj
+ET
+BT
+55 107 Td
+(0.995) Tj
+ET
+BT
+86.02 107 Td
+(61.416\040) Tj
+ET
+BT
+126.49001 107 Td
+(1.62069) Tj
+ET
+BT
+168.63 107 Td
+(1.2717) Tj
+ET
+BT
+205.21001 107 Td
+(1.6207) Tj
+ET
+BT
+241.79001 107 Td
+(3.474) Tj
+ET
+BT
+281.97 107 Td
+(4.208) Tj
+ET
+
+endstream
+endobj
+37 0 obj
+8451
+endobj
+38 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 6 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 39 0 R
+>>
+endobj
+39 0 obj
+<<
+/Length 40 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+391.94 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\04011) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+100 622 m
+100 722 l
+S
+BT
+75.54 636.60626 Td
+(62.0) Tj
+ET
+100 639.60626 m
+97 639.60626 l
+S
+BT
+75.54 666.75397 Td
+(63.0) Tj
+ET
+100 669.75397 m
+97 669.75397 l
+S
+BT
+75.54 696.90167 Td
+(64.0) Tj
+ET
+100 699.90167 m
+97 699.90167 l
+S
+100 622 m
+512 622 l
+S
+BT
+146.19247 609 Td
+(1.20) Tj
+ET
+155.92247 622 m
+155.92247 619 l
+S
+BT
+230.83377 609 Td
+(1.30) Tj
+ET
+240.56377 622 m
+240.56377 619 l
+S
+BT
+315.47507 609 Td
+(1.40) Tj
+ET
+325.20508 622 m
+325.20508 619 l
+S
+BT
+400.11636 609 Td
+(1.50) Tj
+ET
+409.84637 622 m
+409.84637 619 l
+S
+BT
+484.75766 609 Td
+(1.60) Tj
+ET
+494.48767 622 m
+494.48767 619 l
+S
+1 w
+0.99 0 0 RG
+100 622 m
+140.92404 664.11633 l
+S
+140.92404 664.11633 m
+163.05783 681.17999 l
+S
+163.05783 681.17999 m
+234.77434 715.12616 l
+S
+234.77434 715.12616 m
+286.68491 722 l
+S
+286.68491 722 m
+340.77917 715.15631 l
+S
+340.77917 715.15631 m
+424.46396 681.21014 l
+S
+424.46396 681.21014 m
+453.25049 664.08618 l
+S
+453.25049 664.08618 m
+512 622 l
+S
+0 0 0 RG
+0.99 0 0 rg
+98.5 620.5 m
+101.5 620.5 l
+101.5 623.5 l
+98.5 623.5 l
+98.5 620.5 l
+f
+0 0 0 rg
+0.99 0 0 rg
+139.42404 662.61633 m
+142.42404 662.61633 l
+142.42404 665.61633 l
+139.42404 665.61633 l
+139.42404 662.61633 l
+f
+0 0 0 rg
+0.99 0 0 rg
+161.55783 679.67999 m
+164.55783 679.67999 l
+164.55783 682.67999 l
+161.55783 682.67999 l
+161.55783 679.67999 l
+f
+0 0 0 rg
+0.99 0 0 rg
+233.27434 713.62616 m
+236.27434 713.62616 l
+236.27434 716.62616 l
+233.27434 716.62616 l
+233.27434 713.62616 l
+f
+0 0 0 rg
+0.99 0 0 rg
+285.18491 720.5 m
+288.18491 720.5 l
+288.18491 723.5 l
+285.18491 723.5 l
+285.18491 720.5 l
+f
+0 0 0 rg
+0.99 0 0 rg
+339.27917 713.65631 m
+342.27917 713.65631 l
+342.27917 716.65631 l
+339.27917 716.65631 l
+339.27917 713.65631 l
+f
+0 0 0 rg
+0.99 0 0 rg
+422.96396 679.71014 m
+425.96396 679.71014 l
+425.96396 682.71014 l
+422.96396 682.71014 l
+422.96396 679.71014 l
+f
+0 0 0 rg
+0.99 0 0 rg
+451.75049 662.58618 m
+454.75049 662.58618 l
+454.75049 665.58618 l
+451.75049 665.58618 l
+451.75049 662.58618 l
+f
+0 0 0 rg
+0.99 0 0 rg
+510.5 620.5 m
+513.5 620.5 l
+513.5 623.5 l
+510.5 623.5 l
+510.5 620.5 l
+f
+0 0 0 rg
+55 597 m
+562 597 l
+S
+BT
+55 577 Td
+(Profile\040likelihood\040table\040and\040plot\040for\040parameter\040) Tj
+ET
+/F0 12 Tf
+BT
+260 577 Td
+(M) Tj
+ET
+/F1 9 Tf
+BT
+275.60001 572.5 Td
+(2-\0761) Tj
+ET
+/F0 10 Tf
+BT
+55 562 Td
+(Parameters\040are\040evaluated\040at\040percentiles\040using\040bisection\040method\040\050slow,\040but\040exact\051.) Tj
+ET
+BT
+55 547 Td
+(Per.\040) Tj
+ET
+BT
+86.02 547 Td
+(Ln\050L\051) Tj
+ET
+/F0 10 Tf
+BT
+126.49001 547 Td
+(M) Tj
+ET
+/F1 7 Tf
+BT
+139.49001 543.5 Td
+(2-\0761) Tj
+ET
+/F0 10 Tf
+/F1 10 Tf
+BT
+168.63 547 Td
+(Q) Tj
+ET
+/F1 7 Tf
+BT
+176.63 543.5 Td
+(1) Tj
+ET
+/F0 10 Tf
+/F1 10 Tf
+BT
+205.21001 547 Td
+(Q) Tj
+ET
+/F1 7 Tf
+BT
+213.21001 543.5 Td
+(2) Tj
+ET
+/F0 10 Tf
+/F0 10 Tf
+BT
+241.79001 547 Td
+(M) Tj
+ET
+/F1 7 Tf
+BT
+254.79001 543.5 Td
+(2-\0761) Tj
+ET
+/F0 10 Tf
+/F0 10 Tf
+BT
+281.97 547 Td
+(M) Tj
+ET
+/F1 7 Tf
+BT
+294.97 543.5 Td
+(1-\0762) Tj
+ET
+/F0 10 Tf
+55 537 m
+557 537 l
+S
+BT
+55 517 Td
+(0.005) Tj
+ET
+BT
+86.02 517 Td
+(61.416\040) Tj
+ET
+BT
+126.49001 517 Td
+(2.75315) Tj
+ET
+BT
+168.63 517 Td
+(1.2953) Tj
+ET
+BT
+205.21001 517 Td
+(1.3273) Tj
+ET
+BT
+241.79001 517 Td
+(2.753) Tj
+ET
+BT
+281.97 517 Td
+(4.387) Tj
+ET
+BT
+55 502 Td
+(0.025) Tj
+ET
+BT
+86.02 502 Td
+(62.812\040) Tj
+ET
+BT
+126.49001 502 Td
+(2.98025) Tj
+ET
+BT
+168.63 502 Td
+(1.2601) Tj
+ET
+BT
+205.21001 502 Td
+(1.3283) Tj
+ET
+BT
+241.79001 502 Td
+(2.980) Tj
+ET
+BT
+281.97 502 Td
+(4.307) Tj
+ET
+BT
+55 487 Td
+(0.050) Tj
+ET
+BT
+86.02 487 Td
+(63.381\040) Tj
+ET
+BT
+126.49001 487 Td
+(3.09618) Tj
+ET
+BT
+168.63 487 Td
+(1.2512) Tj
+ET
+BT
+205.21001 487 Td
+(1.3490) Tj
+ET
+BT
+241.79001 487 Td
+(3.096) Tj
+ET
+BT
+281.97 487 Td
+(4.261) Tj
+ET
+BT
+55 472 Td
+(0.250) Tj
+ET
+BT
+86.02 472 Td
+(64.505\040) Tj
+ET
+BT
+126.49001 472 Td
+(3.37596) Tj
+ET
+BT
+168.63 472 Td
+(1.2286) Tj
+ET
+BT
+205.21001 472 Td
+(1.3623) Tj
+ET
+BT
+241.79001 472 Td
+(3.376) Tj
+ET
+BT
+281.97 472 Td
+(4.189) Tj
+ET
+BT
+55 457 Td
+(MLE) Tj
+ET
+BT
+86.02 457 Td
+(64.733*) Tj
+ET
+BT
+126.49001 457 Td
+(3.55094) Tj
+ET
+BT
+168.63 457 Td
+(1.2165) Tj
+ET
+BT
+205.21001 457 Td
+(1.3545) Tj
+ET
+BT
+241.79001 457 Td
+(3.551) Tj
+ET
+BT
+281.97 457 Td
+(4.159) Tj
+ET
+BT
+55 442 Td
+(0.750) Tj
+ET
+BT
+86.02 442 Td
+(64.506\040) Tj
+ET
+BT
+126.49001 442 Td
+(3.72878) Tj
+ET
+BT
+168.63 442 Td
+(1.2038) Tj
+ET
+BT
+205.21001 442 Td
+(1.3421) Tj
+ET
+BT
+241.79001 442 Td
+(3.729) Tj
+ET
+BT
+281.97 442 Td
+(4.120) Tj
+ET
+BT
+55 427 Td
+(0.950) Tj
+ET
+BT
+86.02 427 Td
+(63.380\040) Tj
+ET
+BT
+126.49001 427 Td
+(3.99728) Tj
+ET
+BT
+168.63 427 Td
+(1.1854) Tj
+ET
+BT
+205.21001 427 Td
+(1.3234) Tj
+ET
+BT
+241.79001 427 Td
+(3.997) Tj
+ET
+BT
+281.97 427 Td
+(4.057) Tj
+ET
+BT
+55 412 Td
+(0.975) Tj
+ET
+BT
+86.02 412 Td
+(62.812\040) Tj
+ET
+BT
+126.49001 412 Td
+(4.08363) Tj
+ET
+BT
+168.63 412 Td
+(1.1814) Tj
+ET
+BT
+205.21001 412 Td
+(1.3198) Tj
+ET
+BT
+241.79001 412 Td
+(4.084) Tj
+ET
+BT
+281.97 412 Td
+(4.046) Tj
+ET
+BT
+55 397 Td
+(0.995) Tj
+ET
+BT
+86.02 397 Td
+(61.415\040) Tj
+ET
+BT
+126.49001 397 Td
+(4.24893) Tj
+ET
+BT
+168.63 397 Td
+(1.1760) Tj
+ET
+BT
+205.21001 397 Td
+(1.3161) Tj
+ET
+BT
+241.79001 397 Td
+(4.249) Tj
+ET
+BT
+281.97 397 Td
+(4.035) Tj
+ET
+100 282 m
+100 382 l
+S
+BT
+75.54 296.63107 Td
+(62.0) Tj
+ET
+100 299.63107 m
+97 299.63107 l
+S
+BT
+75.54 326.76971 Td
+(63.0) Tj
+ET
+100 329.76971 m
+97 329.76971 l
+S
+BT
+75.54 356.90833 Td
+(64.0) Tj
+ET
+100 359.90833 m
+97 359.90833 l
+S
+100 282 m
+512 282 l
+S
+BT
+105.95443 269 Td
+(2.8) Tj
+ET
+112.90443 282 m
+112.90443 279 l
+S
+BT
+161.04274 269 Td
+(3.0) Tj
+ET
+167.99274 282 m
+167.99274 279 l
+S
+BT
+216.13106 269 Td
+(3.2) Tj
+ET
+223.08105 282 m
+223.08105 279 l
+S
+BT
+271.21936 269 Td
+(3.4) Tj
+ET
+278.16937 282 m
+278.16937 279 l
+S
+BT
+326.30768 269 Td
+(3.6) Tj
+ET
+333.25769 282 m
+333.25769 279 l
+S
+BT
+381.396 269 Td
+(3.8) Tj
+ET
+388.34601 282 m
+388.34601 279 l
+S
+BT
+436.48431 269 Td
+(4.0) Tj
+ET
+443.43433 282 m
+443.43433 279 l
+S
+BT
+491.57263 269 Td
+(4.2) Tj
+ET
+498.52264 282 m
+498.52264 279 l
+S
+1 w
+0.99 0 0 RG
+100 282.03012 m
+162.55276 324.10364 l
+S
+162.55276 324.10364 m
+194.48471 341.25253 l
+S
+194.48471 341.25253 m
+271.54779 375.12827 l
+S
+271.54779 375.12827 m
+319.74457 382 l
+S
+319.74457 382 m
+368.7291 375.15839 l
+S
+368.7291 375.15839 m
+442.68512 341.22241 l
+S
+442.68512 341.22241 m
+466.46954 324.10364 l
+S
+466.46954 324.10364 m
+512 282 l
+S
+0 0 0 RG
+0.99 0 0 rg
+98.5 280.53012 m
+101.5 280.53012 l
+101.5 283.53012 l
+98.5 283.53012 l
+98.5 280.53012 l
+f
+0 0 0 rg
+0.99 0 0 rg
+161.05276 322.60364 m
+164.05276 322.60364 l
+164.05276 325.60364 l
+161.05276 325.60364 l
+161.05276 322.60364 l
+f
+0 0 0 rg
+0.99 0 0 rg
+192.98471 339.75253 m
+195.98471 339.75253 l
+195.98471 342.75253 l
+192.98471 342.75253 l
+192.98471 339.75253 l
+f
+0 0 0 rg
+0.99 0 0 rg
+270.04779 373.62827 m
+273.04779 373.62827 l
+273.04779 376.62827 l
+270.04779 376.62827 l
+270.04779 373.62827 l
+f
+0 0 0 rg
+0.99 0 0 rg
+318.24457 380.5 m
+321.24457 380.5 l
+321.24457 383.5 l
+318.24457 383.5 l
+318.24457 380.5 l
+f
+0 0 0 rg
+0.99 0 0 rg
+367.2291 373.65839 m
+370.2291 373.65839 l
+370.2291 376.65839 l
+367.2291 376.65839 l
+367.2291 373.65839 l
+f
+0 0 0 rg
+0.99 0 0 rg
+441.18512 339.72241 m
+444.18512 339.72241 l
+444.18512 342.72241 l
+441.18512 342.72241 l
+441.18512 339.72241 l
+f
+0 0 0 rg
+0.99 0 0 rg
+464.96954 322.60364 m
+467.96954 322.60364 l
+467.96954 325.60364 l
+464.96954 325.60364 l
+464.96954 322.60364 l
+f
+0 0 0 rg
+0.99 0 0 rg
+510.5 280.5 m
+513.5 280.5 l
+513.5 283.5 l
+510.5 283.5 l
+510.5 280.5 l
+f
+0 0 0 rg
+55 257 m
+562 257 l
+S
+BT
+55 237 Td
+(Profile\040likelihood\040table\040and\040plot\040for\040parameter\040) Tj
+ET
+/F0 12 Tf
+BT
+260 237 Td
+(M) Tj
+ET
+/F1 9 Tf
+BT
+275.60001 232.5 Td
+(1-\0762) Tj
+ET
+/F0 10 Tf
+BT
+55 222 Td
+(Parameters\040are\040evaluated\040at\040percentiles\040using\040bisection\040method\040\050slow,\040but\040exact\051.) Tj
+ET
+BT
+55 207 Td
+(Per.\040) Tj
+ET
+BT
+86.02 207 Td
+(Ln\050L\051) Tj
+ET
+/F0 10 Tf
+BT
+126.49001 207 Td
+(M) Tj
+ET
+/F1 7 Tf
+BT
+139.49001 203.5 Td
+(1-\0762) Tj
+ET
+/F0 10 Tf
+/F1 10 Tf
+BT
+168.63 207 Td
+(Q) Tj
+ET
+/F1 7 Tf
+BT
+176.63 203.5 Td
+(1) Tj
+ET
+/F0 10 Tf
+/F1 10 Tf
+BT
+205.21001 207 Td
+(Q) Tj
+ET
+/F1 7 Tf
+BT
+213.21001 203.5 Td
+(2) Tj
+ET
+/F0 10 Tf
+/F0 10 Tf
+BT
+241.79001 207 Td
+(M) Tj
+ET
+/F1 7 Tf
+BT
+254.79001 203.5 Td
+(2-\0761) Tj
+ET
+/F0 10 Tf
+/F0 10 Tf
+BT
+281.97 207 Td
+(M) Tj
+ET
+/F1 7 Tf
+BT
+294.97 203.5 Td
+(1-\0762) Tj
+ET
+/F0 10 Tf
+55 197 m
+557 197 l
+S
+BT
+55 177 Td
+(0.005) Tj
+ET
+BT
+86.02 177 Td
+(61.415\040) Tj
+ET
+BT
+126.49001 177 Td
+(3.5305) Tj
+ET
+BT
+168.63 177 Td
+(1.1816) Tj
+ET
+BT
+205.21001 177 Td
+(1.3137) Tj
+ET
+BT
+241.79001 177 Td
+(3.718) Tj
+ET
+BT
+281.97 177 Td
+(3.530) Tj
+ET
+BT
+55 162 Td
+(0.025) Tj
+ET
+BT
+86.02 162 Td
+(62.813\040) Tj
+ET
+BT
+126.49001 162 Td
+(3.67573) Tj
+ET
+BT
+168.63 162 Td
+(1.1897) Tj
+ET
+BT
+205.21001 162 Td
+(1.3249) Tj
+ET
+BT
+241.79001 162 Td
+(3.685) Tj
+ET
+BT
+281.97 162 Td
+(3.676) Tj
+ET
+BT
+55 147 Td
+(0.050) Tj
+ET
+BT
+86.02 147 Td
+(63.379\040) Tj
+ET
+BT
+126.49001 147 Td
+(3.75153) Tj
+ET
+BT
+168.63 147 Td
+(1.1938) Tj
+ET
+BT
+205.21001 147 Td
+(1.3303) Tj
+ET
+BT
+241.79001 147 Td
+(3.664) Tj
+ET
+BT
+281.97 147 Td
+(3.752) Tj
+ET
+BT
+55 132 Td
+(0.250) Tj
+ET
+BT
+86.02 132 Td
+(64.505\040) Tj
+ET
+BT
+126.49001 132 Td
+(3.99087) Tj
+ET
+BT
+168.63 132 Td
+(1.2078) Tj
+ET
+BT
+205.21001 132 Td
+(1.3464) Tj
+ET
+BT
+241.79001 132 Td
+(3.590) Tj
+ET
+BT
+281.97 132 Td
+(3.991) Tj
+ET
+BT
+55 117 Td
+(MLE) Tj
+ET
+BT
+86.02 117 Td
+(64.733*) Tj
+ET
+BT
+126.49001 117 Td
+(4.15932) Tj
+ET
+BT
+168.63 117 Td
+(1.2165) Tj
+ET
+BT
+205.21001 117 Td
+(1.3545) Tj
+ET
+BT
+241.79001 117 Td
+(3.551) Tj
+ET
+BT
+281.97 117 Td
+(4.159) Tj
+ET
+BT
+55 102 Td
+(0.750) Tj
+ET
+BT
+86.02 102 Td
+(64.506\040) Tj
+ET
+BT
+126.49001 102 Td
+(4.32972) Tj
+ET
+BT
+168.63 102 Td
+(1.2237) Tj
+ET
+BT
+205.21001 102 Td
+(1.3605) Tj
+ET
+BT
+241.79001 102 Td
+(3.522) Tj
+ET
+BT
+281.97 102 Td
+(4.330) Tj
+ET
+BT
+55 87 Td
+(0.950) Tj
+ET
+BT
+86.02 87 Td
+(63.380\040) Tj
+ET
+BT
+126.49001 87 Td
+(4.58284) Tj
+ET
+BT
+168.63 87 Td
+(1.2335) Tj
+ET
+BT
+205.21001 87 Td
+(1.3674) Tj
+ET
+BT
+241.79001 87 Td
+(3.482) Tj
+ET
+BT
+281.97 87 Td
+(4.583) Tj
+ET
+BT
+55 72 Td
+(0.975) Tj
+ET
+BT
+86.02 72 Td
+(62.813\040) Tj
+ET
+BT
+126.49001 72 Td
+(4.66714) Tj
+ET
+BT
+168.63 72 Td
+(1.2368) Tj
+ET
+BT
+205.21001 72 Td
+(1.3691) Tj
+ET
+BT
+241.79001 72 Td
+(3.466) Tj
+ET
+BT
+281.97 72 Td
+(4.667) Tj
+ET
+BT
+55 57 Td
+(0.995) Tj
+ET
+BT
+86.02 57 Td
+(61.414\040) Tj
+ET
+BT
+126.49001 57 Td
+(4.8373) Tj
+ET
+BT
+168.63 57 Td
+(1.2444) Tj
+ET
+BT
+205.21001 57 Td
+(1.3696) Tj
+ET
+BT
+241.79001 57 Td
+(3.419) Tj
+ET
+BT
+281.97 57 Td
+(4.837) Tj
+ET
+
+endstream
+endobj
+40 0 obj
+10426
+endobj
+41 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 42 0 R
+>>
+endobj
+42 0 obj
+<<
+/Length 43 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+391.94 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\04012) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+100 622 m
+100 722 l
+S
+BT
+75.54 636.65588 Td
+(62.0) Tj
+ET
+100 639.65588 m
+97 639.65588 l
+S
+BT
+75.54 666.78546 Td
+(63.0) Tj
+ET
+100 669.78546 m
+97 669.78546 l
+S
+BT
+75.54 696.91498 Td
+(64.0) Tj
+ET
+100 699.91498 m
+97 699.91498 l
+S
+100 622 m
+512 622 l
+S
+BT
+114.96161 609 Td
+(3.6) Tj
+ET
+121.91161 622 m
+121.91161 619 l
+S
+BT
+178.0164 609 Td
+(3.8) Tj
+ET
+184.9664 622 m
+184.9664 619 l
+S
+BT
+241.07121 609 Td
+(4.0) Tj
+ET
+248.02121 622 m
+248.02121 619 l
+S
+BT
+304.12598 609 Td
+(4.2) Tj
+ET
+311.07599 622 m
+311.07599 619 l
+S
+BT
+367.18079 609 Td
+(4.4) Tj
+ET
+374.1308 622 m
+374.1308 619 l
+S
+BT
+430.2356 609 Td
+(4.6) Tj
+ET
+437.18561 622 m
+437.18561 619 l
+S
+BT
+493.29041 609 Td
+(4.8) Tj
+ET
+500.24042 622 m
+500.24042 619 l
+S
+1 w
+0.99 0 0 RG
+100 622.03009 m
+145.78726 664.15118 l
+S
+145.78726 664.15118 m
+169.685 681.20459 l
+S
+169.685 681.20459 m
+245.1427 715.13031 l
+S
+245.1427 715.13031 m
+298.25055 722 l
+S
+298.25055 722 m
+351.9733 715.16046 l
+S
+351.9733 715.16046 m
+431.77545 681.23468 l
+S
+431.77545 681.23468 m
+458.35306 664.15118 l
+S
+458.35306 664.15118 m
+512 622 l
+S
+0 0 0 RG
+0.99 0 0 rg
+98.5 620.53009 m
+101.5 620.53009 l
+101.5 623.53009 l
+98.5 623.53009 l
+98.5 620.53009 l
+f
+0 0 0 rg
+0.99 0 0 rg
+144.28726 662.65118 m
+147.28726 662.65118 l
+147.28726 665.65118 l
+144.28726 665.65118 l
+144.28726 662.65118 l
+f
+0 0 0 rg
+0.99 0 0 rg
+168.185 679.70459 m
+171.185 679.70459 l
+171.185 682.70459 l
+168.185 682.70459 l
+168.185 679.70459 l
+f
+0 0 0 rg
+0.99 0 0 rg
+243.6427 713.63031 m
+246.6427 713.63031 l
+246.6427 716.63031 l
+243.6427 716.63031 l
+243.6427 713.63031 l
+f
+0 0 0 rg
+0.99 0 0 rg
+296.75055 720.5 m
+299.75055 720.5 l
+299.75055 723.5 l
+296.75055 723.5 l
+296.75055 720.5 l
+f
+0 0 0 rg
+0.99 0 0 rg
+350.4733 713.66046 m
+353.4733 713.66046 l
+353.4733 716.66046 l
+350.4733 716.66046 l
+350.4733 713.66046 l
+f
+0 0 0 rg
+0.99 0 0 rg
+430.27545 679.73468 m
+433.27545 679.73468 l
+433.27545 682.73468 l
+430.27545 682.73468 l
+430.27545 679.73468 l
+f
+0 0 0 rg
+0.99 0 0 rg
+456.85306 662.65118 m
+459.85306 662.65118 l
+459.85306 665.65118 l
+456.85306 665.65118 l
+456.85306 662.65118 l
+f
+0 0 0 rg
+0.99 0 0 rg
+510.5 620.5 m
+513.5 620.5 l
+513.5 623.5 l
+510.5 623.5 l
+510.5 620.5 l
+f
+0 0 0 rg
+
+endstream
+endobj
+43 0 obj
+2414
+endobj
+44 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F0 4 0 R
+/F1 5 0 R
+/F2 6 0 R
+>>
+>>
+/MediaBox [0 0 612 792 ]
+/Contents 45 0 R
+>>
+endobj
+45 0 obj
+<<
+/Length 46 0 R
+>>
+stream
+/F0 10 Tf
+1 w
+50 50 512 682 re
+S
+BT
+391.94 742 Td
+(\040\040Example:\040Microsatellite\040data\040set\040--\04013) Tj
+ET
+/F0 6 Tf
+BT
+50 42 Td
+(Migrate\0403.2:\040\050http:\057\057popgen.sc.fsu.edu\051\040\133program\040run\040on\04015:25:09\135) Tj
+ET
+/F0 10 Tf
+/F1 18 Tf
+BT
+74.925 697 Td
+(Summary\040of\040profile\040likelihood\040percentiles\040of\040all\040parameters) Tj
+ET
+0 0 0 RG
+50 677 m
+562 677 l
+S
+/F0 10 Tf
+BT
+55 627 Td
+(Parameter) Tj
+ET
+BT
+155 627 Td
+(Percentiles) Tj
+ET
+100 612 m
+557 612 l
+S
+BT
+55 597 Td
+(\040) Tj
+ET
+BT
+110.03 597 Td
+(0.005) Tj
+ET
+BT
+150.61 597 Td
+(0.025) Tj
+ET
+BT
+191.19 597 Td
+(0.05) Tj
+ET
+BT
+231.77 597 Td
+(0.25) Tj
+ET
+BT
+272.35001 597 Td
+(MLE) Tj
+ET
+BT
+312.92999 597 Td
+(0.75) Tj
+ET
+BT
+353.50998 597 Td
+(0.95) Tj
+ET
+BT
+394.08997 597 Td
+(0.975) Tj
+ET
+BT
+434.66995 597 Td
+(0.995) Tj
+ET
+55 587 m
+557 587 l
+S
+/F2 10 Tf
+BT
+55 567 Td
+(Q) Tj
+ET
+/F2 7 Tf
+BT
+63 563.5 Td
+(1) Tj
+ET
+/F0 10 Tf
+BT
+110.03 567 Td
+(1.0539) Tj
+ET
+BT
+150.61 567 Td
+(1.0901) Tj
+ET
+BT
+191.19 567 Td
+(1.1092) Tj
+ET
+BT
+231.77 567 Td
+(1.1708) Tj
+ET
+BT
+272.35001 567 Td
+(1.2165) Tj
+ET
+BT
+312.92999 567 Td
+(1.2662) Tj
+ET
+BT
+353.50998 567 Td
+(1.3484) Tj
+ET
+BT
+394.08997 567 Td
+(1.3772) Tj
+ET
+BT
+434.66995 567 Td
+(1.4352) Tj
+ET
+/F2 10 Tf
+BT
+55 552 Td
+(Q) Tj
+ET
+/F2 7 Tf
+BT
+63 548.5 Td
+(2) Tj
+ET
+/F0 10 Tf
+BT
+110.03 552 Td
+(1.1339) Tj
+ET
+BT
+150.61 552 Td
+(1.1823) Tj
+ET
+BT
+191.19 552 Td
+(1.2084) Tj
+ET
+BT
+231.77 552 Td
+(1.2932) Tj
+ET
+BT
+272.35001 552 Td
+(1.3545) Tj
+ET
+BT
+312.92999 552 Td
+(1.4184) Tj
+ET
+BT
+353.50998 552 Td
+(1.5173) Tj
+ET
+BT
+394.08997 552 Td
+(1.5513) Tj
+ET
+BT
+434.66995 552 Td
+(1.6207) Tj
+ET
+BT
+55 537 Td
+(\040\040M_21\040\040\040\040) Tj
+ET
+BT
+110.03 537 Td
+(2.7531) Tj
+ET
+BT
+150.61 537 Td
+(2.9803) Tj
+ET
+BT
+191.19 537 Td
+(3.0962) Tj
+ET
+BT
+231.77 537 Td
+(3.3760) Tj
+ET
+BT
+272.35001 537 Td
+(3.5509) Tj
+ET
+BT
+312.92999 537 Td
+(3.7288) Tj
+ET
+BT
+353.50998 537 Td
+(3.9973) Tj
+ET
+BT
+394.08997 537 Td
+(4.0836) Tj
+ET
+BT
+434.66995 537 Td
+(4.2489) Tj
+ET
+BT
+55 522 Td
+(\040\040M_12\040\040\040\040) Tj
+ET
+BT
+110.03 522 Td
+(3.5305) Tj
+ET
+BT
+150.61 522 Td
+(3.6757) Tj
+ET
+BT
+191.19 522 Td
+(3.7515) Tj
+ET
+BT
+231.77 522 Td
+(3.9909) Tj
+ET
+BT
+272.35001 522 Td
+(4.1593) Tj
+ET
+BT
+312.92999 522 Td
+(4.3297) Tj
+ET
+BT
+353.50998 522 Td
+(4.5828) Tj
+ET
+BT
+394.08997 522 Td
+(4.6671) Tj
+ET
+BT
+434.66995 522 Td
+(4.8373) Tj
+ET
+
+endstream
+endobj
+46 0 obj
+2305
+endobj
+xref
+0 47
+0000000000 65535 f
+0000000016 00000 n
+0000000071 00000 n
+0000000221 00000 n
+0000000319 00000 n
+0000000455 00000 n
+0000000599 00000 n
+0000000703 00000 n
+0000000837 00000 n
+0000001023 00000 n
+0000005309 00000 n
+0000005333 00000 n
+0000005499 00000 n
+0000008905 00000 n
+0000008929 00000 n
+0000009106 00000 n
+0000012787 00000 n
+0000012811 00000 n
+0000012988 00000 n
+0000017847 00000 n
+0000017871 00000 n
+0000018037 00000 n
+0000023360 00000 n
+0000023384 00000 n
+0000023550 00000 n
+0000028138 00000 n
+0000028162 00000 n
+0000028350 00000 n
+0000034961 00000 n
+0000034985 00000 n
+0000035151 00000 n
+0000039898 00000 n
+0000039922 00000 n
+0000040099 00000 n
+0000044249 00000 n
+0000044273 00000 n
+0000044461 00000 n
+0000052975 00000 n
+0000052999 00000 n
+0000053176 00000 n
+0000063665 00000 n
+0000063690 00000 n
+0000063856 00000 n
+0000066333 00000 n
+0000066357 00000 n
+0000066545 00000 n
+0000068913 00000 n
+trailer
+<<
+/Root 1 0 R
+/Info 3 0 R
+/Size 47
+>>
+startxref
+68937
+%%EOF

@@ -1,0 +1,51 @@
+# sample makefile for C examples
+# Copyright (C) 2003 Takeshi Kanno
+
+CC=gcc
+CPP=gcc
+
+MYLDFLAGS=-lpng -lz -ljpeg
+
+CFLAGS=-I.. -Wall -O3 -DNDEBUG 
+LDFLAGS=-L.. -lharu -lstdc++ -lm $(MYLDFLAGS)
+
+OBJS = \
+	encoding_list \
+	font_example1 \
+	font_example2 \
+	line_example \
+	jp_font_example \
+	png_example \
+
+all: $(OBJS)
+	
+encoding_list: encoding_list.c
+	$(CPP) -o $@ encoding_list.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+font_example1: font_example1.c
+	$(CPP) -o $@ font_example1.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+font_example2: font_example2.c
+	$(CPP) -o $@ font_example2.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+png_example: png_example.c
+	$(CPP) -o $@ png_example.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+line_example: line_example.c
+	$(CPP) -o $@ line_example.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+
+jp_font_example: jp_font_example.c
+	$(CPP) -o $@ jp_font_example.c $(CFLAGS) $(LDFLAGS)
+	strip $@
+	./$@
+

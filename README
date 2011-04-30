@@ -1,0 +1,202 @@
+------------
+Migrate 3.x
+------------
+3.2.7 released January 12  2011 
+
+Quick installation guide 
+------------------------
+- Unpack the compressed distribution file
+- Macos, Unix: double click the file: install_migrate
+  Source files: configure; make  or make install_migrateshell or make mpis or ....  
+
+Content
+-------
+- Overview
+- Analyses summary
+- Computer systems
+- History of MIGRATE
+- Distribution
+- Installation
+- Documentation
+- Example folder
+- Troubleshoothing
+- Disclaimer
+
+
+Migrate estimates population parameters, effective population sizes
+and migration rates of n populations, using genetic data.  It 
+uses a coalescent theory approach
+taking into account history of mutations and uncertainty of the
+genealogy. The estimates of the parameter values are achieved by
+either a Maximum likelihood (ML_ approach or Bayesian inference (BI).
+The output is presented in an TEXT file and in a PDF file. The PDF file
+eventually will contain all possible analyses including histograms 
+of posterior distributions. Currently only main tables (ML + BI), 
+profile likelihood tables (ML), percentiles tables (ML), and 
+posterior histograms (BI) are supported in the PDF.
+ 
+Currently the following data types are supported:
+
+-DNA sequence data
+ - finite sites model: F84, Kimura two-parameter
+ - finite sites model + rate variation among sites: 
+   F84 + Gamma, F84 + arbitrary rates
+-SNP data (single nucleotide polymorphism)
+ - SNP are derived from sampled sequences and are completely linked
+   except that we know that the sites are variable [not thoroughly tested] 
+-Microsatellite data 
+ - stepwise mutation model
+ - brownian motion model: a continuous approximation to the stepwise mutation model.
+   the approximation breaks down when the population sizes are small (Theta<5)
+-Electrophoretic marker data (infinite allele model).
+
+Analyses (+ = new in this version)
+----------------------------------
+- Estimation of population sizes and migration rates of a migration matrix
+  model, or arbitrarily subsets of a migration matrix model, or an n-island
+  model. Allowing for a geographic distance matrix so that effects geographic
+  can be removed out of the analysis.(ML + BI)
+- Profile likelihood curves deliver approximate confidence intervals.(ML)
+- Allows approximate likelihood ratio tests and model selection using
+  Akaike's Information criterion. (ML)
++ Marginal likelihood calculation to assist calculation of Bayes Factor (BI)
+- Plots of overall immigration and emigration per population. (ML)
++ Allows a variable mutation rate AMONG loci. (ML [+BI])
+- For sequences: allows a variable substitution rate among sites. (ML+BI)
++ For microsatellites: allows the definition of repeatnumber and use of fragment length as input
+- Facilitates analyses of multimodal search space distributions with heating
+  scheme and/or multi-run analyses. (ML+BI)
+- Histogram of migration events over time (ML + BI)
++ Plot of expected parameters through time (skyline plots) for all sizes and migration rates. 
++ Dated samples (ML + BI)
++ Relabeling and mergin of populations
++ Random subset of individuals per population
+
+Computer systems
+----------------
+You can fetch Migrate from the website http://popgen.sc.fsu.edu 
+as source code or binary executables. Currently I supply
+
+- Macintosh 
+  - Macintosh G4 (PPC): migrate-n
+  - Macintosh Intel:    migrate-n
+                        migrateshell.app (includes migrate-n and fastmigrate-n
+- Windows: migrate-n.exe
+- Linux
+  - 32bit: migrate-n
+  - 64bit Opteron: migrate-n
+
+The file is compressed as tar.gz or as zip file. 	
+The documentation contains information about
+how to compile and use a parallelized version of migrate 
+so that it can run concurrently on computer clusters
+(using MPI [preferrably OpenMPI]).
+
+
+History about bug fixes and new features
+----------------------------------------
+read the HISTORY file.
+
+Distribution
+------------
+Migrate can be fetched from the www-site 
+http://popgen.sc.fsu.edu/ 
+
+
+Installation
+------------
+
+(a) Binaries
+Unpack, download and read the documentation and try the program
+on a small data set.
+ 
+For UNIX systems
+the binary can go to standard directories (e.g. /usr/local/bin),
+the rudimentary man page can go to the /usr/local/man/man1.
+
+(b) Source (UNIX)
+1. gunzip -c migrate-3.1.2.src.tar.gz | tar xf -
+   or use 
+   tar xvfz migrate-3.1.2.src.tar.gz
+   [this creates a directory "migrate-3.1.2" with subdirectories 
+   "src", and "examples" in it.]
+2. cd migrate-3.1.2/src
+3. type "./configure"
+   This will create the Makefile [on some machines, you can 
+    squeeze out a little more speed by trying to use
+    (if you use the bash shell:) CC=cc ./configure or (if you use
+    a csh shell type:) env CC=cc ./configure; or use the Intel compiler icc 
+    on Linux machines] 	
+4. type "make" (please report warnings and especially errors).
+   If you have a multiprocessor machine you perhaps want to try 
+   "make thread" (this allows parallel execution of chains when 
+   using the heating scheme). "make" will produce migrate with PDF support,
+   this might not work on all machines, if it fails please tell me.
+
+   The result of the compilation should be an executable 
+   "migrate-n" in the src directory [it is called "migrate-n" because
+   on some computer system there is a system program called "migrate"]
+
+5. make install 
+   This will install the programs and man-page into usr/local/bin, 
+   /usr/local/man/man1
+   [you need to be root to do this; this step is not necessary, 
+   to use the program, but it would be convenient for all users
+   of your system]
+   or 
+   move migrate-n to $HOME/bin or some 
+   other convenient place.
+
+6. change directory to example
+   run "migrate-n parmfile.testml" and "migrate-n parmfile.testbayes", 
+   on my 2008 macosx laptop the BI run took about 2 minutes.
+   If these two tests fail, please let me know!
+
+Documentation
+-------------
+You need to download it separately from
+http://popgen.scs.fsu.edu/Downloads.html
+
+It is a PDF file and called  migratedoc.pdf.
+The pdf file can be viewed and printed using Acrobat 
+or any other PDF viewer.
+
+
+Examples
+--------
+In the directory "example" you can find some example data sets.
+You might wan to try the two parmfiles.testml and parmfile.testbayes
+Use the Terminal.app (on macosx), or xterm (Linux), or cmd (Windows),
+change directory to the example directory and then execute
+for mac and unix: ../migrate-n parmfile.testbayes
+for windows: ..\migrate parmfile.testbayes
+or the ml version.
+
+Disclaimers
+-----------
+This software is distributed free of charge for non-commercial use
+and is copyrighted. Of course, we do not guarantee that the software 
+works and are not responsible for any damage you may cause or have.
+
+Copyright
+---------
+(c) 1997-2003, Peter Beerli and Joseph Felsenstein, Seattle.
+(c) 2004-2011, Peter Beerli, Tallahassee
+
+Fan-mail, complaints, questions and error-reports
+-------------------------------------------------
+Peter Beerli
+beerli@fsu.edu
+
+
+Last update:
+December 6 2010
+
+
+
+
+
+
+
+
+

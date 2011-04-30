@@ -1,0 +1,46 @@
+
+___________________________________________________________________
+
+GenoDive 2.0b18, 2011-03-19 08:41:07 -0400
+K-Means clustering.
+File: infile.msat
+46 of 46 individuals included, 10 of 10 loci included
+
+Clustering of 46 individuals using among clusters sums of squares from an Analysis of Molecular Variance.
+Simulated annealing using 50000 steps
+
+
+- Clustering statistics from k = 2 to k = 10
+
+k	SSD(T)	SSD(AC)	SSD(WC)	r-squared	pseudo-F	AIC	Phi_st
+2*	412.82	64.14	348.68	0.155	8.094	97.452	0.237
+3	412.82	100.79	312.02	0.244	6.945	94.635	0.289
+4	412.82	134.09	278.72	0.325	6.735	91.848	0.346
+5	412.82	163.60	249.22	0.396	6.729	89.225	0.391
+6	412.82	186.67	226.14	0.452	6.604	87.410	0.423
+7	412.82	208.32	204.50	0.505	6.621	85.575	0.463
+8	412.82	224.26	188.56	0.543	6.456	84.787	0.490
+9#	412.82	236.59	176.23	0.573	6.209	84.784	0.508
+10	412.82	248.06	164.75	0.601	6.023	84.973	0.528
+
+* Best clustering according to Calinski & Harabasz' pseudo-F: k = 2
+# Best clustering according to Akaike Information Criterion: k = 9
+Best pseudo-F clustering has been stored as clones.
+
+
+- Analysis of Molecular Variance on best clustering (according to pseudo-F):
+
+Source of Variation	SSD	d.f.	MS	%var	Phi_xx	Phi-value
+
+Within Clusters:	348.68	44	7.92	0.763	--	--
+Among Clusters:	64.14	1	64.14	0.237	Phi_st	0.237
+Total (SST):       	412.82	45	9.17	--	--	--
+
+
+- Statistics for current population assignments:
+
+Series	k	SSD(T)	SSD(AC)	SSD(WC)	r-squared	pseudo-F	AIC	Phi_st
+Populations	2	412.82	30.93	381.89	0.075	3.563	101.638	0.101
+
+
+___________________________________________________________________

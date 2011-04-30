@@ -1,0 +1,9 @@
+cp SFMT-src-1.3.3/SFMT-alti.c .
+cp SFMT-src-1.3.3/SFMT-params19937.h .
+cp SFMT-src-1.3.3/SFMT-sse2.h .
+cp SFMT-src-1.3.3/SFMT.c .
+cp SFMT-src-1.3.3/SFMT-alti.h .
+cp SFMT-src-1.3.3/SFMT-sse2.c .
+cp SFMT-src-1.3.3/SFMT.h .
+cp SFMT-src-1.3.3/SFMT-params.h .
+
